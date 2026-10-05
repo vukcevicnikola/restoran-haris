@@ -1,0 +1,668 @@
+# Hari's creperie website
+
+Multilingual (5 languages) website with a QR-code menu for a restaurant / creperie in Montenegro.
+Domain: **https://restoranharis.com**
+
+This file is the single source of truth for the project. Read it fully before making changes.
+
+> If an older `CLAUDE.md` exists in this project, **this README replaces it** (the old one has the wrong brand assumptions, old font variable names and no design system).
+
+---
+
+## 1. Brand and open questions
+
+The logo reads **"creperie hari's, waffle ice cream"**: a round badge, maroon and peach on a transparent background (an older version said "waffle pan cake"). The business is therefore a **creperie** (crepes, waffles, ice cream), a sweet place, and not a traditional restaurant.
+
+**Not yet confirmed with the client. Do not hardcode these, keep them in one place (`data/site.ts`) so they are easy to change:**
+
+- Public name: "Hari's" vs "Restoran Haris" (domain is `restoranharis.com`). Provisional: **Hari's**
+- Address, phone, opening hours, social links, GPS coordinates: **unknown. Use clearly marked TODO placeholders, never invent them.**
+- Menu items, categories and prices: **unknown.** The example data below is placeholder only.
+- Original vector logo (SVG/AI/PDF): the provided file is `public/logoharis.png` (1200x1200 PNG, transparent background, the same badge as the printed menu). The older `public/logo.png` ("waffle pan cake", 567x529) is no longer used.
+
+---
+
+## 2. Hard rules (never break these)
+
+1. **`/meni` is the QR code target and must work forever.** Never rename, move or remove this route. Printed QR codes cannot be edited.
+2. **Default language is Montenegrin (`me`) with NO URL prefix.** `restoranharis.com/meni` is always Montenegrin. Other languages use a prefix and a translated slug (see section 5).
+3. **`localeDetection: false`** must stay in the routing config. Otherwise a tourist's browser language redirects the QR scan away from Montenegrin.
+4. **No hardcoded text in components.** Website text goes in `messages/*.json`, dishes in `data/menu.ts`, contact info and brand name in `data/site.ts`. This includes `alt` text and `aria-label`s.
+5. **All five `messages/*.json` files must have exactly the same keys.** Run `npm run i18n:check` before finishing any task.
+6. Montenegrin is written in the **Latin script, ijekavian** ("preusmjerava", "mlijeko"). Customer-facing text uses formal **"Vi"**.
+7. **Light theme only.** No dark mode, no theme toggle. Every page uses the cream background; the only non-cream surface is the maroon header bar (and its mobile panel).
+8. **Do not invent business facts** (prices, address, hours, phone, dish names). Use `TODO` placeholders.
+9. Keep pages as **server components**. Use `'use client'` only for interactive parts (language switcher, category nav).
+
+---
+
+## 3. Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4 + **shadcn/ui** (generated with ui.shadcn.com/create) + blocks from shadcn space
+- Base UI (`@base-ui/react`) under the shadcn components: they use the `render` prop, not `asChild`
+- next-intl for i18n
+- `next/font/local` for fonts (self-hosted, see section 9), `next/image` for images
+- `tsx` for scripts (`i18n:check` now, `qr` later together with `qrcode`)
+- Hosting: Vercel
+
+Notes:
+- Next.js 16.3 with Turbopack. In Next.js 15+, `params` is a Promise: `const { locale } = await params`.
+- In Next.js 16, `middleware.ts` is named `proxy.ts`.
+- `next/image`: `priority` is deprecated in Next 16. Use `loading="eager"` (or `preload`) for above-the-fold images.
+- Page and layout props use the generated global types `PageProps<'/[locale]/meni'>` and `LayoutProps<'/[locale]'>`. They come from `next typegen` (run automatically by `dev` and `build`). If `npm run typecheck` cannot find them, run `npx next typegen` first.
+- Prettier style: double quotes, no semicolons. The i18n and font snippets follow it. The older snippets (menu data, SEO, QR) still use single quotes and semicolons, so run `npm run format` after copying them.
+
+### shadcn/create choices (already made)
+
+| Setting | Value |
+|---|---|
+| Style | Maia (soft, rounded) |
+| Base color | Stone |
+| Theme / Chart color | Red (overridden by brand tokens in `globals.css`) |
+| Heading font | Nunito (placeholder Inter if unavailable; real font set in `lib/fonts.ts`) |
+| Font | Inter |
+| Icon library | Lucide |
+| Radius | Largest option |
+
+---
+
+## 4. Languages
+
+| Code | Language | `<html lang>` | hreflang | og:locale |
+|---|---|---|---|---|
+| `me` (default) | Montenegrin | `sr-Latn-ME` | `sr-Latn-ME` | `sr_ME` |
+| `en` | English | `en` | `en` | `en_US` |
+| `it` | Italian | `it` | `it` | `it_IT` |
+| `ru` | Russian | `ru` | `ru` | `ru_RU` |
+| `tr` | Turkish | `tr` | `tr` | `tr_TR` |
+
+The switcher shows uppercase codes in this order: **EN, RU, IT, TR, ME**. The native names (**Crnogorski, English, Italiano, Русский, Türkçe**) are read only by screen readers.
+
+---
+
+## 5. Localized URLs
+
+| Page | me (default, no prefix) | en | it | ru | tr |
+|---|---|---|---|---|---|
+| Home | `/` | `/en` | `/it` | `/ru` | `/tr` |
+| Menu | `/meni` | `/en/menu` | `/it/menu` | `/ru/menyu` | `/tr/menu` |
+| About | `/o-nama` | `/en/about` | `/it/chi-siamo` | `/ru/o-nas` | `/tr/hakkimizda` |
+| Contact | `/kontakt` | `/en/contact` | `/it/contatti` | `/ru/kontakty` | `/tr/iletisim` |
+
+- The **folder name in `app/[locale]/` is the internal key** (`meni/`, `o-nama/`, `kontakt/`). Do not rename folders to match translations.
+- In code always use the internal key: `<Link href="/meni">`, `getPathname({ locale, href: "/meni" })`, `buildAlternates(locale, "/meni")`. Never hardcode `/en/menu` strings.
+- Every new page must also be added to `pathnames` in `i18n/routing.ts` (and to `pages` in `app/sitemap.ts`).
+- The QR code always points to `https://restoranharis.com/meni`.
+- Verified in dev: `/me/meni` redirects to `/meni`, and a mixed path like `/en/meni` redirects (307) to `/en/menu`.
+- The About slugs for EN/IT/RU/TR (`about`, `chi-siamo`, `o-nas`, `hakkimizda`) are provisional until a native speaker checks them. Change them only before launch, as they become public URLs.
+
+---
+
+## 6. Project structure
+
+Items marked *(todo)* do not exist yet.
+
+```
+restoranharis/
+├── app/
+│   ├── [locale]/
+│   │   ├── layout.tsx            <html>, fonts, header, footer, metadata (this is the ROOT layout)
+│   │   ├── page.tsx              home (only composes sections)
+│   │   ├── meni/page.tsx         MENU: the QR target (internal key)
+│   │   ├── o-nama/page.tsx       about
+│   │   ├── kontakt/page.tsx      contact and map
+│   │   └── not-found.tsx         (todo)
+│   ├── fonts/                    self-hosted Nunito.woff2, Inter.woff2 + OFL licences
+│   ├── globals.css               Tailwind + shadcn tokens + brand theme
+│   ├── icon.png                  favicon (square crop of the logo) (todo)
+│   ├── sitemap.ts                (todo)
+│   └── robots.ts                 (todo)
+├── components/
+│   ├── ui/                       shadcn primitives (generated by CLI, edit sparingly)
+│   ├── sections/                 hero, about, gallery, contact-cta... (todo)
+│   ├── layout/                   site-header, nav-links, mobile-nav, language-switcher,
+│   │                             header-styles.ts; footer (todo)
+│   └── menu/                     category-nav, menu-item, menu-section (todo)
+├── data/
+│   ├── menu.ts                   dishes and categories (5 languages) (todo)
+│   └── site.ts                   brand name, address, phone, hours, socials, coordinates
+├── i18n/                         routing.ts, navigation.ts, request.ts
+├── messages/                     me.json en.json it.json ru.json tr.json
+├── lib/
+│   ├── utils.ts                  shadcn cn()
+│   ├── fonts.ts                  next/font/local setup
+│   └── seo.ts                    hreflang map now; URL + alternates helpers (todo)
+├── public/
+│   ├── logoharis.png             the logo (replace with SVG when available)
+│   ├── flags/                    round flag SVGs for the language switcher (circle-flags, MIT)
+│   └── og.jpg                    1200x630: logo on cream (todo)
+├── scripts/                      check-translations.ts; generate-qr.ts (todo)
+├── qr/                           generated QR files (todo)
+├── global.d.ts                   next-intl AppConfig types (Locale, Messages)
+├── proxy.ts                      next-intl middleware (Next 16 name for middleware.ts)
+└── next.config.ts
+```
+
+The generator's `app/layout.tsx` and `app/page.tsx` were moved into `app/[locale]/`, which is now the only root layout. It imports the stylesheet as `import "../globals.css"`.
+
+---
+
+## 7. i18n setup
+
+Implemented. The files are the source of truth; the snippets show their shape.
+
+**`i18n/routing.ts`**
+```ts
+import { defineRouting } from "next-intl/routing"
+
+export const routing = defineRouting({
+  locales: ["me", "en", "it", "ru", "tr"],
+  defaultLocale: "me",
+  localePrefix: "as-needed",
+  // Must stay false: a tourist's browser language must never redirect the
+  // QR scan (/meni) away from Montenegrin.
+  localeDetection: false,
+  pathnames: {
+    "/": "/",
+    "/meni": { me: "/meni", en: "/menu", it: "/menu", ru: "/menyu", tr: "/menu" },
+    "/o-nama": { me: "/o-nama", en: "/about", it: "/chi-siamo", ru: "/o-nas", tr: "/hakkimizda" },
+    "/kontakt": { me: "/kontakt", en: "/contact", it: "/contatti", ru: "/kontakty", tr: "/iletisim" },
+  },
+})
+
+// Order of the codes in the language switcher
+export const switcherLocales = ["en", "ru", "it", "tr", "me"] as const
+
+// Native names, read by screen readers next to the codes in the switcher.
+// The same in every language.
+export const localeNames = {
+  me: "Crnogorski", en: "English", it: "Italiano", ru: "Русский", tr: "Türkçe",
+} satisfies Record<(typeof routing.locales)[number], string>
+```
+`switcherLocales` and `localeNames` live here and not in `messages/*.json` because they are identical in every language.
+
+**`i18n/navigation.ts`**
+```ts
+import { createNavigation } from "next-intl/navigation"
+import { routing } from "./routing"
+
+export const { Link, redirect, usePathname, useRouter, getPathname } =
+  createNavigation(routing)
+```
+
+**`i18n/request.ts`**
+```ts
+import { hasLocale } from "next-intl"
+import { getRequestConfig } from "next-intl/server"
+import { routing } from "./routing"
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requested = await requestLocale
+  const locale = hasLocale(routing.locales, requested)
+    ? requested
+    : routing.defaultLocale
+
+  return {
+    locale,
+    messages: (await import(`../messages/${locale}.json`)).default,
+  }
+})
+```
+
+**`proxy.ts`** (Next 16 name for `middleware.ts`)
+```ts
+import createMiddleware from "next-intl/middleware"
+import { routing } from "./i18n/routing"
+
+export default createMiddleware(routing)
+
+export const config = {
+  matcher: "/((?!api|_next|_vercel|.*\\..*).*)",
+}
+```
+The matcher skips API routes, Next/Vercel internals and any path with a dot, so `/sitemap.xml`, `/robots.txt` and images are untouched.
+
+**`next.config.ts`**
+```ts
+import type { NextConfig } from "next"
+import createNextIntlPlugin from "next-intl/plugin"
+
+const withNextIntl = createNextIntlPlugin()
+
+const nextConfig: NextConfig = {}
+
+export default withNextIntl(nextConfig)
+```
+
+**`global.d.ts`**: types `useLocale()`, `Link` and `t()` keys against the real config. A missing or misspelled message key is a type error.
+```ts
+import type { routing } from "@/i18n/routing"
+import type messages from "./messages/me.json"
+
+declare module "next-intl" {
+  interface AppConfig {
+    Locale: (typeof routing.locales)[number]
+    Messages: typeof messages
+  }
+}
+```
+
+**Static rendering:** `app/[locale]/layout.tsx` exports `generateStaticParams`, checks the locale with `hasLocale` (else `notFound()`), and sets `<html lang={hreflang[locale]}>`, which is `sr-Latn-ME` for `me`. Every layout/page under `[locale]` calls `setRequestLocale(locale)` first. Because `Locale` is typed, pages cast the param (the layout has already validated it):
+
+```tsx
+import type { Locale } from "next-intl"
+import { getTranslations, setRequestLocale } from "next-intl/server"
+
+export default async function MenuPage({ params }: PageProps<"/[locale]/meni">) {
+  const { locale } = await params
+  setRequestLocale(locale as Locale)
+  const t = await getTranslations("menu")
+  // ...
+}
+```
+
+---
+
+## 8. Content workflow
+
+Text lives in files, never in components.
+
+- `messages/*.json`: website text, grouped by page/section (`home.title`, `contact.hours`, `meta.homeTitle`). Current groups: `nav` (header links, mobile menu labels), `localeSwitcher`, `menu`, `about`, `contact`.
+- `data/menu.ts`: dishes and categories
+- `data/site.ts`: brand name, address, phone, hours, socials (same in every language; only the labels go in JSON)
+
+Process:
+1. The client's owner writes everything in **Montenegrin first** (`messages/me.json` and the `me` fields in `menu.ts`).
+2. Until translations exist, copy `me.json` into `en/it/ru/tr.json` so the site builds.
+3. When the Montenegrin content is final, translate into EN, IT, RU, TR. Keep keys identical and do not touch `{placeholders}` or HTML tags.
+4. Run `npm run i18n:check`.
+5. Native speakers proofread IT, RU, TR (food terms and allergen information especially).
+
+**`data/menu.ts` format** (the example is placeholder only):
+```ts
+type L = Record<'me' | 'en' | 'it' | 'ru' | 'tr', string>;
+
+export const menu: {
+  id: string;
+  title: L;
+  items: { name: L; desc?: L; price: number }[];
+}[] = [
+  {
+    id: 'crepes',
+    title: { me: 'Palačinke', en: 'Crepes', it: 'Crêpes', ru: 'Блины', tr: 'Krep' },
+    items: [
+      {
+        name: { me: 'Palačinka s nutelom', en: 'Crepe with Nutella', it: 'Crêpe alla Nutella', ru: 'Блин с нутеллой', tr: 'Nutellalı krep' },
+        price: 0, // TODO real price
+      },
+    ],
+  },
+];
+```
+Prices are numbers in EUR, shown with `toFixed(2)` and the € sign.
+
+---
+
+## 9. Design system
+
+**Look:** warm, friendly, sweet. Round shapes echo the circular logo. Cream background on every page, maroon as the main color, peach for highlights. Restraint: one memorable element per screen, everything else quiet. The header (a maroon bar with the logo badge) is the site's one strong element; page sections stay on cream.
+
+### Colors (sampled from the logo)
+
+| Role | Hex | Use |
+|---|---|---|
+| Maroon | `#892E30` | Primary: buttons, prices, active states, links; header bar and mobile menu panel. The logo's exact maroon |
+| Peach | `#FFD29F` | Secondary: chips, highlights, section backgrounds; header line and active header link |
+| Cream | `#FFF9F2` | Page background (all pages); header link text |
+| Cocoa | `#2E1517` | Body text |
+
+Contrast: cocoa on cream 16.3:1, maroon on cream 8.0:1, cream on maroon 8.0:1 (header links), maroon on peach 6.0:1, peach on maroon 6.0:1 (active header link), `muted-foreground` on cream 5.9:1. **Never put peach text on a light background** (peach on cream is 1.3:1).
+
+Tokens are defined in `app/globals.css` (shadcn variables overridden with the brand values, plus `bg-brand-maroon`, `bg-brand-peach`, `bg-brand-cream`, `bg-brand-cocoa` and the matching `text-`/`border-` classes). Use semantic classes (`bg-primary`, `text-muted-foreground`) first and brand classes only when needed. No white anywhere: cards and popovers (`--card`, `--popover`) are cream `#FFF9F2` too. They stand out from the page only through their shadow/ring or border, so keep those when restyling.
+
+### Typography
+
+- Headings: **Nunito**, weights 700 to 900, rounded terminals like the logo (`font-heading`, applied to h1 to h4 globally)
+- Body: **Inter** (`font-sans`)
+- Both must cover `latin`, `latin-ext`, `cyrillic` (č ć š ž đ, ğ ı ş, Russian)
+- Line length under about 70 characters. Sentence case. No ALL CAPS eyebrow labels above headings.
+
+**Fonts are self-hosted with `next/font/local`. Do not go back to `next/font/google`.** With Turbopack, Google Fonts sometimes returns `fonts.gstatic.com/l/font?kit=...&skey=...` URLs, which break the build with `Module not found: Can't resolve '@vercel/turbopack-next/internal/font/google/font'` / `next/font/google queries have exactly one entry`. The broken CSS is also saved in `.next/dev`, so the error survives restarts.
+
+**`lib/fonts.ts`**
+```ts
+import localFont from "next/font/local"
+
+export const nunito = localFont({
+  src: "../app/fonts/Nunito.woff2",
+  weight: "700 900",
+  variable: "--font-nunito",
+  display: "swap",
+})
+
+export const inter = localFont({
+  src: "../app/fonts/Inter.woff2",
+  weight: "100 900",
+  variable: "--font-inter",
+  display: "swap",
+})
+```
+The files in `app/fonts/` are variable woff2 fonts built from the originals in github.com/google/fonts (`ofl/nunito`, `ofl/inter`), cut down to the latin + latin-ext + cyrillic character ranges. Nunito is limited to weights 700–900 (50 KB). Inter has all weights 100–900, with its optical-size axis fixed at 14 (142 KB). Their OFL licence files sit next to them. To add a weight or a font, build a new file the same way (the npm package `subset-font` works; this machine has no Python pip/venv).
+
+In `app/[locale]/layout.tsx`: `<html lang={...} className={cn(nunito.variable, inter.variable, ...)}>`. The variable names must stay `--font-nunito` and `--font-inter`, because `globals.css` maps them to `--font-heading` and `--font-sans`. Do not rename them to `--font-sans`.
+
+### Shape and layout
+
+- Radius: large. Cards `rounded-2xl`/`rounded-3xl`, buttons and chips pill-shaped (`rounded-full`).
+- Spacing: 8px grid, sections `py-16 md:py-24`, content `max-w-6xl`, menu page `max-w-2xl`.
+- Mobile-first. Design at 375px width first, then scale up.
+- Russian and Italian text is 20 to 30% longer than Montenegrin: no fixed-width buttons or headings.
+
+### Components
+
+Install with the CLI as needed: `button`, `tabs`, `card`, `badge`, `sheet` (mobile nav), `dropdown-menu`, `separator`, `skeleton`. Installed so far: `button`, `sheet`, `dropdown-menu`.
+
+The generated components contain some hardcoded English (for example the Sheet close button's `sr-only` "Close"). Do not ship that text: turn the built-in part off (`showCloseButton={false}`) and render your own with a translated label.
+
+### Logo and images
+
+- Header: the real logo (`public/logoharis.png`, static import) via `next/image`, with `site.name` as `alt`. Do not type the brand name as text instead of the logo.
+- Favicon: square version of the logo as `app/icon.png`.
+- OG image: `public/og.jpg`, 1200x630, logo on cream.
+- Food photos: warm natural light, close-ups, one consistent aspect ratio, `rounded-2xl`, always `next/image`, compressed.
+
+### Header (`components/layout/site-header.tsx`)
+
+Based on the printed menu: a dark bar with the round logo badge hanging over a peach line. Built and checked at 375px, 640px and 1280px.
+
+- Bar: `bg-brand-maroon`, `h-16` (`md:h-20`), 2px `border-brand-peach` at the bottom. Content `max-w-6xl`, `px-4`.
+- Logo badge: `h-24` (`md:h-34`), absolutely positioned at the left and centred on the peach line, so its lower half hangs into the page. The first section of every page needs top padding of at least 48px (68px from `md`), which `py-16 md:py-24` already gives. Do not go above about `h-32`/`md:h-40`, or the badge pokes out of the top of the bar.
+- Links: Meni · O nama · Kontakt (`nav.*` messages), Nunito bold, cream text. The current page is peach with `aria-current="page"` (`nav-links.tsx`, a client component because it reads the pathname).
+- Right side: links (from `sm`), then the language switcher. Below `sm`: globe + hamburger, and the links open in a `Sheet` from the right (maroon panel, own translated close button, closes when a link is clicked).
+- **Not sticky.** A sticky header would put the hanging badge over the menu page's sticky category chips.
+- Focus on the bar: the default focus ring is maroon and invisible on the maroon bar, so header controls use a peach outline/ring (`header-styles.ts` for the icon buttons).
+- The server component `site-header.tsx` renders three client parts: `nav-links.tsx`, `mobile-nav.tsx` and `language-switcher.tsx`.
+
+### Language switcher
+
+A **dropdown** (shadcn `DropdownMenu`). The button shows the current language's flag and code (`ME`, `EN`, ...). The list shows a flag and code for EN, RU, IT, TR, ME (`switcherLocales`), with a check close to the current one: the list is `w-auto min-w-(--anchor-width)`, so it fits its content instead of the default `min-w-48`. Both use Nunito bold. Inline pills do not fit on a phone next to the logo.
+- Flags: round SVGs from circle-flags (MIT, licence in `public/flags/LICENSE.md`), static imports in `language-switcher.tsx`, decorative (`alt=""`) because the code and name carry the meaning. **EN uses the UK flag.** Do not use emoji flags: Windows shows them as plain letters. Implementation (`components/layout/language-switcher.tsx`): `useLocale` from next-intl, `usePathname`/`useRouter` from `@/i18n/navigation`, a `DropdownMenuRadioGroup`, and `router.replace(pathname, { locale })` inside `startTransition`. Notes:
+- Base UI radio items do not close the menu by default: each item has `closeOnClick`.
+- Screen readers: the button contains a `sr-only` `localeSwitcher.label` before the visible code, so its name is "Izaberite jezik ME". Each item has the code plus a `sr-only` native name ("EN English") and `lang={hreflang[l]}`, so the name is pronounced correctly. Keep the visible code inside the accessible name: do not replace it with an `aria-label`.
+- Verified: choosing English on `/meni` goes to `/en/menu`.
+
+### Menu page (`app/[locale]/meni/page.tsx`)
+
+- Sticky horizontal category chips (pill-shaped, active one maroon, inactive peach), scrolling horizontally on small screens. Anchor links to each category section. The header is not sticky, so the chips stick at `top-0`. When they exist, set `scroll-padding-top` in `globals.css` to the chips' height (it is still `7rem`, sized for a sticky header + chips).
+- Narrow single column (`max-w-2xl`).
+- Item row: name, optional short description in `text-muted-foreground`, price in bold maroon on the right.
+- Optional photo per item. Small `Badge`s for vegan, new, allergens.
+- Allergen note at the bottom, translated.
+- Must load fast on mobile data.
+
+### Motion and accessibility
+
+**One motion style for the whole site**, defined at the top of `app/globals.css`. Use it everywhere and do not invent new timings:
+- **Timing:** 200ms with `ease-brand` (`cubic-bezier(0.22, 1, 0.36, 1)`, fast start, soft landing). It is set as Tailwind's default, so every `transition-colors`, `transition-opacity`, `transition` etc. gets it automatically. **Never add `duration-*` or `ease-*` classes.**
+- **Popups that open and close** (dropdowns, popovers, selects, dialogs): add `transition-popup`, a fade plus a slight zoom (96% to 100%) from the trigger. It relies on Base UI's `data-starting-style`/`data-ending-style`. The dropdown menu uses it.
+- **Sheets/drawers:** fade plus a short slide, with the same default timing (`components/ui/sheet.tsx`).
+- **Content that appears** (loaded or swapped in): `animate-fade-in` (opacity only).
+- **Hover/active states:** `transition-colors` (as on the header links).
+- The generated shadcn components were changed to use this: the `tw-animate-css` classes (`animate-in`, `fade-in-0`, `zoom-in-95`, `duration-100`...) were removed from `dropdown-menu.tsx`, and the fixed durations/easing from `sheet.tsx`. Do the same to every new shadcn component you add.
+- **Reduced motion:** `transition-popup` and the sheet fade only (no zoom/slide) when `prefers-reduced-motion: reduce` is set. Keep that for anything new (`motion-reduce:transition-opacity`).
+- Verified in Chrome: the dropdown fades in and out in about 200ms; the sheet and its overlay use 200ms + `ease-brand`; with reduced motion only opacity transitions.
+
+Still little motion overall: no fade-and-slide on every section, no hover animation on every card. One deliberate moment at most.
+- Visible keyboard focus (already set in `globals.css`), alt text on all images, `aria-label`s translated.
+
+---
+
+## 10. SEO (metadataBase, hreflang, sitemap)
+
+Status: `lib/seo.ts` currently contains only the `hreflang` map (typed `Record<Locale, string>`, used for `<html lang>` and the language switcher), and `data/site.ts` exists. Pages have no `<title>`/metadata yet. Because `global.d.ts` types `Locale` and the pathnames, the helpers below need `Locale` instead of `string`, and an `href` typed as a pathname key, for example `keyof typeof routing.pathnames`.
+
+**`lib/seo.ts`** (target)
+```ts
+import type { Metadata } from 'next';
+import { getPathname } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
+import { site } from '@/data/site';
+
+export const SITE_URL = site.url;
+export const SITE_NAME = site.name;
+
+export const hreflang: Record<string, string> = {
+  me: 'sr-Latn-ME', en: 'en', it: 'it', ru: 'ru', tr: 'tr',
+};
+
+export const ogLocale: Record<string, string> = {
+  me: 'sr_ME', en: 'en_US', it: 'it_IT', ru: 'ru_RU', tr: 'tr_TR',
+};
+
+// '/meni' + 'me' -> https://restoranharis.com/meni
+// '/meni' + 'en' -> https://restoranharis.com/en/menu
+export function localizedUrl(locale: string, href: string) {
+  return SITE_URL + getPathname({ locale, href });
+}
+
+export function languageAlternates(href: string) {
+  return Object.fromEntries(
+    routing.locales.map((l) => [hreflang[l], localizedUrl(l, href)]),
+  );
+}
+
+export function buildAlternates(locale: string, href: string): Metadata['alternates'] {
+  return {
+    canonical: localizedUrl(locale, href),
+    languages: {
+      ...languageAlternates(href),
+      'x-default': localizedUrl(routing.defaultLocale, href),
+    },
+  };
+}
+```
+
+**`data/site.ts`** (fill the TODOs with the client, never guess)
+```ts
+export const site = {
+  name: "Hari's",            // TODO confirm public name
+  url: 'https://restoranharis.com',
+  cuisine: 'Crêperie',
+  phone: '',                 // TODO
+  street: '',                // TODO
+  city: '',                  // TODO
+  geo: { lat: 0, lng: 0 },   // TODO
+  hours: [] as { days: string; open: string; close: string }[], // TODO
+  social: { instagram: '', facebook: '' }, // TODO
+};
+```
+
+**`app/[locale]/layout.tsx`** (metadata part)
+```tsx
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> },
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: { default: t('homeTitle'), template: `%s | ${SITE_NAME}` },
+    description: t('homeDescription'),
+    openGraph: {
+      siteName: SITE_NAME,
+      type: 'website',
+      locale: ogLocale[locale],
+      images: ['/og.jpg'],
+    },
+  };
+}
+```
+
+**Per page** (home uses `title: { absolute: t('homeTitle') }`):
+```tsx
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  return {
+    title: t('menuTitle'),
+    description: t('menuDescription'),
+    alternates: buildAlternates(locale, '/meni'),
+  };
+}
+```
+Add `menuTitle`, `menuDescription` etc. to the `meta` group in all five JSON files.
+
+**`app/sitemap.ts`**
+```ts
+import type { MetadataRoute } from 'next';
+import { routing } from '@/i18n/routing';
+import { languageAlternates, localizedUrl } from '@/lib/seo';
+
+const pages = ['/', '/meni', '/o-nama', '/kontakt'];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return pages.flatMap((href) =>
+    routing.locales.map((locale) => ({
+      url: localizedUrl(locale, href),
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: href === '/' ? 1 : 0.8,
+      alternates: { languages: languageAlternates(href) },
+    })),
+  );
+}
+```
+
+**`app/robots.ts`**
+```ts
+import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: { userAgent: '*', allow: '/' },
+    sitemap: `${SITE_URL}/sitemap.xml`,
+  };
+}
+```
+
+**Optional:** `Restaurant` JSON-LD on the home page, fed from `data/site.ts` (`@type: 'Restaurant'`, `servesCuisine`, `hasMenu: https://restoranharis.com/meni`). Only output it once real address and phone exist.
+
+After deploy: submit `https://restoranharis.com/sitemap.xml` in Google Search Console.
+
+---
+
+## 11. QR code
+
+Target: **`https://restoranharis.com/meni`**. Static QR, no third-party service, free forever as long as the domain is owned.
+
+**`scripts/generate-qr.ts`**
+```ts
+import QRCode from 'qrcode';
+import { mkdirSync } from 'fs';
+
+const URL = 'https://restoranharis.com/meni';
+mkdirSync('qr', { recursive: true });
+
+(async () => {
+  await QRCode.toFile('qr/menu-qr.svg', URL, { type: 'svg', errorCorrectionLevel: 'H', margin: 2 });
+  await QRCode.toFile('qr/menu-qr.png', URL, { type: 'png', errorCorrectionLevel: 'H', margin: 2, width: 2000 });
+  console.log('Done ->', URL);
+})();
+```
+
+- **SVG for print**, PNG for digital use.
+- Print at least 2 x 2 cm, dark on light, keep the white margin.
+- Test with an iPhone and an Android phone before printing in bulk.
+- Only print after `https://restoranharis.com/meni` is confirmed live over HTTPS.
+
+One-off QR for anything else: `npx qrcode -o code.svg -e H "https://example.com"`
+
+---
+
+## 12. Translation check script
+
+Implemented in `scripts/check-translations.ts` (run with `npm run i18n:check`). It loads every `messages/*.json`, flattens the keys (`nav.menu`, ...) and lists the keys missing from or extra in each language compared with `me.json`. It exits with code 1 if they differ. `flat` takes `o: object`, not `any`, so ESLint passes.
+
+---
+
+## 13. Commands
+
+```json
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "i18n:check": "tsx scripts/check-translations.ts",
+    "qr": "tsx scripts/generate-qr.ts"
+  }
+}
+```
+`qr` is not added yet (needs `scripts/generate-qr.ts`).
+
+Packages: `next-intl` and `tsx` (dev) are installed. For the QR step: `npm i -D qrcode @types/qrcode`.
+
+---
+
+## 14. Deployment (Vercel)
+
+1. Push to GitHub, import the repo in Vercel, deploy with default settings.
+2. Add `restoranharis.com` and `www.restoranharis.com` under Settings -> Domains. Use the DNS records Vercel shows. Pick one as primary and redirect the other.
+3. HTTPS is automatic.
+4. Vercel's free Hobby plan is for non-commercial use. A client business site belongs on Pro (check vercel.com/pricing) or another host.
+5. The domain should be registered to the client, so printed QR codes never die.
+
+---
+
+## 15. Working rules for the coding agent
+
+- Before changing routes, check section 2 (hard rules) and section 5.
+- After every change run `npm run build` and `npm run i18n:check`, and fix errors before reporting done.
+- Ask before adding new dependencies.
+- Add shadcn components with the CLI (`npx shadcn@latest add <name>`), do not hand-write them.
+- When pasting a shadcn space block, replace all its text with `t('...')` calls and its colors with semantic tokens.
+- Do not translate into IT/RU/TR on your own for production: copy `me.json` as a placeholder unless asked.
+- Never invent business data. Leave a `TODO` and list it in your summary.
+
+---
+
+## 16. Status and next steps
+
+Decided and done:
+- Architecture, i18n strategy, localized URLs, QR approach
+- shadcn/create choices (section 3), brand colors and `globals.css`
+- Project generated; `app/layout.tsx` and `app/page.tsx` moved into `app/[locale]/`
+- next-intl set up: `i18n/`, `proxy.ts`, `next.config.ts`, `global.d.ts`, `messages/*.json` (EN/IT/RU/TR are copies of `me.json`)
+- Fonts self-hosted in `app/fonts/` via `next/font/local`
+- `app/[locale]/layout.tsx` with the header (logo badge, Meni · O nama · Kontakt, language dropdown, mobile sheet)
+- Placeholder pages with only an `<h1>`: home, `/meni`, `/o-nama`, `/kontakt`
+- `data/site.ts` (all business facts still TODO), `npm run i18n:check`
+
+Next:
+1. Footer
+2. Menu page with category chips (the QR depends on it)
+3. Home, about and contact sections
+4. SEO: page titles/metadata, `lib/seo.ts` helpers, sitemap, robots, favicon, OG image; custom `not-found`
+5. Fill content (Montenegrin first), translations, proofreading
+6. Deploy, verify `/meni`, generate and test the QR, then print
+
+## 17. Pre-launch checklist
+
+- [ ] `/meni` loads Montenegrin; `/me/meni` redirects to `/meni`; `/en/menu`, `/it/menu`, `/ru/menyu`, `/tr/menu` load
+- [ ] Old-style paths like `/en/meni` do not show a broken page (in dev they redirect 307 to `/en/menu`; recheck on production)
+- [ ] hreflang links on `/meni` point to the translated URLs
+- [ ] Language switcher keeps the user on the same page
+- [ ] `npm run i18n:check` and `npm run build` pass
+- [ ] No hardcoded text in components (including `alt` and `aria-label`)
+- [ ] All five languages checked on a phone for overflow and missing characters (č ć š ž đ, ğ ı ş, Cyrillic)
+- [ ] Native speakers proofread IT, RU, TR
+- [ ] `/sitemap.xml` and `/robots.txt` load
+- [ ] Real logo, favicon and `og.jpg` in place; no leftover TODO placeholders
+- [ ] Domain live over HTTPS, `www` redirects
+- [ ] QR generated, scanned on iPhone and Android, then printed

@@ -2,7 +2,8 @@
   Hari's creperie: global theme (Tailwind v4 + shadcn/ui)
 
   Brand colors come from the logo:
-    maroon #8A2D32 | peach #FFD29F | cream #FFF9F2 | cocoa #2E1517
+    maroon #892E30 | peach #FFD29F | cream #FFF9F2 | cocoa #2E1517
+  Header bar: maroon (the logo's exact maroon, as on the printed menu)
 
   NOTE: Keep the "shadcn/tailwind.css" import: shadcn components rely on its
   data-open/data-closed variants and utilities. Fonts are loaded with
@@ -16,6 +17,44 @@
 /* Site is light-only. Keeping this stops dark: classes from reacting to the
    visitor's OS dark mode, which would break the brand look. */
 @custom-variant dark (&:is(.dark *));
+
+/*
+  Motion: one timing for the whole site. Do not add other durations/easings.
+  - Every transition-* utility (transition-colors, transition-opacity...) uses
+    200ms + ease-brand by default, so never add duration-* or ease-* classes.
+  - Popups that open/close (dropdowns, popovers, dialogs): `transition-popup`.
+  - Content that appears (loaded or swapped in): `animate-fade-in`.
+*/
+@theme {
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+  --default-transition-duration: 200ms;
+  --default-transition-timing-function: var(--ease-brand);
+  --animate-fade-in: fade-in 200ms var(--ease-brand) both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+}
+
+/* Fade + a slight zoom from the trigger. Base UI sets data-starting-style /
+   data-ending-style while a popup enters and leaves. */
+@utility transition-popup {
+  transition-property: opacity, scale;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--default-transition-timing-function);
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    opacity: 0;
+    scale: 0.96;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-property: opacity;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -44,7 +83,7 @@
   --color-chart-5: var(--chart-5);
 
   /* Direct brand colors: bg-brand-maroon, text-brand-peach, ... */
-  --color-brand-maroon: #8a2d32;
+  --color-brand-maroon: #892e30;
   --color-brand-peach: #ffd29f;
   --color-brand-cream: #fff9f2;
   --color-brand-cocoa: #2e1517;
@@ -69,13 +108,13 @@
   --background: #fff9f2;
   --foreground: #2e1517;
 
-  --card: #ffffff;
+  --card: #fff9f2;
   --card-foreground: #2e1517;
 
-  --popover: #ffffff;
+  --popover: #fff9f2;
   --popover-foreground: #2e1517;
 
-  --primary: #8a2d32;
+  --primary: #892e30;
   --primary-foreground: #fff9f2;
 
   --secondary: #ffd29f;
@@ -91,9 +130,9 @@
 
   --border: #ebd3be;
   --input: #ebd3be;
-  --ring: #8a2d32;
+  --ring: #892e30;
 
-  --chart-1: #8a2d32;
+  --chart-1: #892e30;
   --chart-2: #e8a25f;
   --chart-3: #ffd29f;
   --chart-4: #b8575b;

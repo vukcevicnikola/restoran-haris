@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "title": "Navigacija",
+    "menu": "Meni",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "open": "Otvorite navigaciju",
+    "close": "Zatvorite navigaciju"
+  },
+  "localeSwitcher": {
+    "label": "Izaberite jezik"
+  },
+  "menu": {
+    "title": "Meni"
+  },
+  "about": {
+    "title": "O nama"
+  },
+  "contact": {
+    "title": "Kontakt"
+  }
+}
