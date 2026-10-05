@@ -10,6 +10,12 @@
   "localeSwitcher": {
     "label": "Izaberite jezik"
   },
+  "home": {
+    "hero": {
+      "title": "Dobrodošli u svijet {name}",
+      "cta": "Pogledajte meni"
+    }
+  },
   "menu": {
     "title": "Meni"
   },

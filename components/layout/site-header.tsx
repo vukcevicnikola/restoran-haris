@@ -8,8 +8,10 @@ import { NavLinks } from "./nav-links"
 
 export function SiteHeader() {
   return (
+    // z-40 keeps the hanging logo above the page (the hero is `isolate`, so its
+    // layers stay below). Popups and the mobile sheet are z-50.
     <header className="relative z-40 border-b-2 border-brand-peach bg-brand-maroon text-brand-cream">
-      <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-end gap-1 px-4 sm:gap-6 md:h-20">
+      <div className="relative mx-auto flex h-(--header-bar) max-w-6xl items-center justify-end gap-1 px-4 sm:gap-6">
         {/* The round badge is centred on the peach line and hangs into the page */}
         <Link
           href="/"

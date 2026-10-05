@@ -2,7 +2,8 @@
   Hari's creperie: global theme (Tailwind v4 + shadcn/ui)
 
   Brand colors come from the logo:
-    maroon #892E30 | peach #FFD29F | cream #FFF9F2 | cocoa #2E1517
+    maroon #892E30 | peach #FFD29F | cream #FFF2DC | cocoa #2E1517
+  Cream is the logo's inner cream (#FFE4B8) mixed half with white.
   Header bar: maroon (the logo's exact maroon, as on the printed menu)
 
   NOTE: Keep the "shadcn/tailwind.css" import: shadcn components rely on its
@@ -85,7 +86,7 @@
   /* Direct brand colors: bg-brand-maroon, text-brand-peach, ... */
   --color-brand-maroon: #892e30;
   --color-brand-peach: #ffd29f;
-  --color-brand-cream: #fff9f2;
+  --color-brand-cream: #fff2dc;
   --color-brand-cocoa: #2e1517;
 
   /* Fonts: variables are set by next/font (lib/fonts.ts) */
@@ -105,31 +106,35 @@
 :root {
   --radius: 1rem;
 
-  --background: #fff9f2;
+  /* Header bar height, without its 2px peach line. Used by the header and by
+     the hero, which fills the rest of the first screen. */
+  --header-bar: 4rem;
+
+  --background: #fff2dc;
   --foreground: #2e1517;
 
-  --card: #fff9f2;
+  --card: #fff2dc;
   --card-foreground: #2e1517;
 
-  --popover: #fff9f2;
+  --popover: #fff2dc;
   --popover-foreground: #2e1517;
 
   --primary: #892e30;
-  --primary-foreground: #fff9f2;
+  --primary-foreground: #fff2dc;
 
   --secondary: #ffd29f;
   --secondary-foreground: #5a1a1e;
 
-  --muted: #f7e8d8;
+  --muted: #f5e2c8;
   --muted-foreground: #7a5a52;
 
-  --accent: #ffe6c7;
+  --accent: #ffe4b8;
   --accent-foreground: #5a1a1e;
 
   --destructive: #c62828;
 
-  --border: #ebd3be;
-  --input: #ebd3be;
+  --border: #e6cbad;
+  --input: #e6cbad;
   --ring: #892e30;
 
   --chart-1: #892e30;
@@ -137,6 +142,12 @@
   --chart-3: #ffd29f;
   --chart-4: #b8575b;
   --chart-5: #5a1a1e;
+}
+
+@media (width >= 48rem) {
+  :root {
+    --header-bar: 5rem;
+  }
 }
 
 @layer base {
