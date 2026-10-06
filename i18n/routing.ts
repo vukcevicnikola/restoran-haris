@@ -16,6 +16,22 @@ export const routing = defineRouting({
       ru: "/menyu",
       tr: "/menu",
     },
+    // One page per menu category. The slug is the same in every language
+    // (data/menu.ts): /meni/dorucak, /en/menu/dorucak
+    "/meni/[category]": {
+      me: "/meni/[category]",
+      en: "/menu/[category]",
+      it: "/menu/[category]",
+      ru: "/menyu/[category]",
+      tr: "/menu/[category]",
+    },
+    "/galerija": {
+      me: "/galerija",
+      en: "/gallery",
+      it: "/galleria",
+      ru: "/galereya",
+      tr: "/galeri",
+    },
     "/o-nama": {
       me: "/o-nama",
       en: "/about",

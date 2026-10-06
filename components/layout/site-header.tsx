@@ -5,6 +5,7 @@ import logo from "@/public/logoharis.png"
 import { LanguageSwitcher } from "./language-switcher"
 import { MobileNav } from "./mobile-nav"
 import { NavLinks } from "./nav-links"
+import { SocialLinks } from "./social-links"
 
 export function SiteHeader() {
   return (
@@ -15,7 +16,7 @@ export function SiteHeader() {
         {/* The round badge is centred on the peach line and hangs into the page */}
         <Link
           href="/"
-          className="absolute top-[calc(100%+1px)] left-4 -translate-y-1/2 rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-peach"
+          className="absolute top-[calc(100%+0px)] left-4 -translate-y-1/2 rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-peach"
         >
           <Image
             src={logo}
@@ -26,8 +27,14 @@ export function SiteHeader() {
           />
         </Link>
         <NavLinks className="hidden sm:block" />
-        <LanguageSwitcher />
-        <MobileNav className="sm:hidden" />
+        {/* Kept close together: at 640px, with the four links, a wider gap
+            would push "Meni" into the badge. Below 360px the logos would
+            reach the badge, so there they are only in the mobile panel. */}
+        <div className="flex items-center gap-1">
+          <SocialLinks className="hidden min-[360px]:flex" />
+          <LanguageSwitcher />
+          <MobileNav className="sm:hidden" />
+        </div>
       </div>
     </header>
   )

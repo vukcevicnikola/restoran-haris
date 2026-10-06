@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils"
 import { headerIconButton } from "./header-styles"
 import { NavLinks } from "./nav-links"
+import { SocialLinks } from "./social-links"
 
 export function MobileNav({ className }: { className?: string }) {
   const t = useTranslations("nav")
@@ -55,6 +56,8 @@ export function MobileNav({ className }: { className?: string }) {
           </SheetClose>
         </SheetHeader>
         <NavLinks orientation="vertical" onNavigate={() => setOpen(false)} />
+        {/* The only place for them on phones under 360px (site-header.tsx) */}
+        <SocialLinks className="mt-4 px-4" />
       </SheetContent>
     </Sheet>
   )

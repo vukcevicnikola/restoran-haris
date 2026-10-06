@@ -1,5 +1,6 @@
 import type { Locale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
+import { PageHeading } from "@/components/layout/page-heading"
 
 // TODO address, hours and map from data/site.ts
 export default async function ContactPage({
@@ -10,8 +11,8 @@ export default async function ContactPage({
   const t = await getTranslations("contact")
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-      <h1 className="text-4xl">{t("title")}</h1>
+    <main className="pb-16 md:pb-24">
+      <PageHeading>{t("title")}</PageHeading>
     </main>
   )
 }

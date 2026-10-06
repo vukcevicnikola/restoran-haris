@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 
 const links = [
   { href: "/meni", label: "menu" },
+  { href: "/galerija", label: "gallery" },
   { href: "/o-nama", label: "about" },
   { href: "/kontakt", label: "contact" },
 ] as const
@@ -37,9 +38,17 @@ export function NavLinks({
             <Link
               href={href}
               onClick={onNavigate}
-              aria-current={pathname === href ? "page" : undefined}
+              // "page" on the page itself, "true" on its sub-pages
+              // (Meni on /meni/dorucak); both are highlighted
+              aria-current={
+                pathname === href
+                  ? "page"
+                  : pathname.startsWith(`${href}/`)
+                    ? "true"
+                    : undefined
+              }
               className={cn(
-                "rounded-sm font-heading font-bold transition-colors hover:text-brand-peach focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-peach aria-[current=page]:text-brand-peach",
+                "rounded-sm font-heading font-bold transition-colors hover:text-brand-peach focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-peach aria-[current=page]:text-brand-peach aria-[current=true]:text-brand-peach",
                 orientation === "vertical"
                   ? "block py-3 text-2xl"
                   : "text-lg md:text-xl"

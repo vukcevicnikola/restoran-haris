@@ -2,6 +2,7 @@
   "nav": {
     "title": "Navigacija",
     "menu": "Meni",
+    "gallery": "Galerija",
     "about": "O nama",
     "contact": "Kontakt",
     "open": "Otvorite navigaciju",
@@ -10,6 +11,10 @@
   "localeSwitcher": {
     "label": "Izaberite jezik"
   },
+  "social": {
+    "facebook": "{name} na Facebooku",
+    "instagram": "{name} na Instagramu"
+  },
   "home": {
     "hero": {
       "title": "Dobrodošli u svijet {name}",
@@ -17,7 +22,17 @@
     }
   },
   "menu": {
-    "title": "Meni"
+    "title": "{name} Meni",
+    "categories": {
+      "cta": "Pogledajte meni"
+    },
+    "category": {
+      "back": "Nazad na meni",
+      "empty": "Ponudu iz ove kategorije uskoro dodajemo."
+    }
+  },
+  "gallery": {
+    "title": "Galerija"
   },
   "about": {
     "title": "O nama"
