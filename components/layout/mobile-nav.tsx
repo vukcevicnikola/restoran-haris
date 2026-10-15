@@ -56,7 +56,6 @@ export function MobileNav({ className }: { className?: string }) {
           </SheetClose>
         </SheetHeader>
         <NavLinks orientation="vertical" onNavigate={() => setOpen(false)} />
-        {/* The only place for them on phones under 360px (site-header.tsx) */}
         <SocialLinks className="mt-4 px-4" />
       </SheetContent>
     </Sheet>

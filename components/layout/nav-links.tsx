@@ -30,7 +30,7 @@ export function NavLinks({
           "flex",
           orientation === "vertical"
             ? "flex-col gap-1 px-6"
-            : "items-center gap-6 lg:gap-10"
+            : "items-center gap-6"
         )}
       >
         {links.map(({ href, label }) => (
@@ -48,10 +48,10 @@ export function NavLinks({
                     : undefined
               }
               className={cn(
-                "rounded-sm font-heading font-bold transition-colors hover:text-brand-peach focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-peach aria-[current=page]:text-brand-peach aria-[current=true]:text-brand-peach",
+                "rounded-sm font-heading font-semibold transition-colors hover:text-brand-peach focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-peach aria-[current=page]:text-brand-peach aria-[current=true]:text-brand-peach",
                 orientation === "vertical"
                   ? "block py-3 text-2xl"
-                  : "text-lg md:text-xl"
+                  : "text-base md:text-lg"
               )}
             >
               {t(label)}

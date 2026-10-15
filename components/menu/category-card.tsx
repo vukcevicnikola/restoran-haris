@@ -13,21 +13,21 @@ export function CategoryCard({ category }: { category: MenuCategory }) {
   const locale = useLocale()
 
   return (
-    // A bit smaller from md (2 columns, 3 from lg): a 1024px screen gives a
-    // card about 314px, so the photo, name and text shrink to leave room for
-    // "Pogledajte meni". h-full: cards in a row match when a line wraps.
-    <Card className="relative h-full flex-row items-center gap-5 rounded-3xl p-5 transition-colors hover:bg-accent has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-ring md:gap-4">
+    // One size everywhere: from 315px wide (3 per row on a 1024px screen)
+    // up to 548px (beside the welcome panel). h-full: cards in a row match
+    // when a line wraps.
+    <Card className="relative h-full flex-row items-center gap-5 rounded-3xl p-5 transition-colors hover:bg-accent has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-ring">
       {/* Wrapped so the card's first-child image styles do not apply */}
       <div className="shrink-0">
         <Image
           src={category.image}
           alt=""
-          sizes="(min-width: 768px) 96px, 112px"
-          className="size-28 rounded-full object-cover md:size-24"
+          sizes="96px"
+          className="size-24 rounded-full object-cover"
         />
       </div>
       <div className="min-w-0">
-        <h2 className="text-2xl md:text-xl">
+        <h2 className="text-2xl">
           <Link
             href={{
               pathname: "/meni/[category]",
@@ -38,7 +38,7 @@ export function CategoryCard({ category }: { category: MenuCategory }) {
             {category.title[locale]}
           </Link>
         </h2>
-        <p className="mt-1 text-base text-muted-foreground md:text-sm">
+        <p className="mt-1 text-base text-muted-foreground">
           {category.description[locale]}
         </p>
         {/* Repeats the link visually; the name already announces it */}
@@ -46,12 +46,12 @@ export function CategoryCard({ category }: { category: MenuCategory }) {
             the word joiner keeps the arrow next to the last word */}
         <p
           aria-hidden
-          className="mt-4 font-heading text-base leading-8 font-bold text-primary md:mt-3 md:text-sm md:leading-7"
+          className="mt-2 font-heading text-base leading-8 font-semibold text-primary"
         >
           <span className="border-b-2 border-primary pb-1">
             {t("cta")}
             &#8288;
-            <ArrowRightIcon className="ms-1.5 inline size-4 align-[-0.125em] md:size-3.5" />
+            <ArrowRightIcon className="ms-1.5 inline size-4 align-[-0.125em]" />
           </span>
         </p>
       </div>

@@ -3,7 +3,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { SiteHeader } from "@/components/layout/site-header"
 import { routing } from "@/i18n/routing"
-import { nunito, inter } from "@/lib/fonts"
+import { inter, lora } from "@/lib/fonts"
 import { hreflang } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 import "../globals.css"
@@ -25,7 +25,7 @@ export default async function LocaleLayout({
       lang={hreflang[locale]}
       className={cn(
         "antialiased",
-        nunito.variable,
+        lora.variable,
         inter.variable,
         "font-sans"
       )}

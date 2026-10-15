@@ -1,10 +1,9 @@
 import type { ReactNode } from "react"
 import { cn } from "@/lib/utils"
 
-// A page's h1, in the strip right under the header bar, next to the lower half
-// of the hanging logo badge (site-header.tsx). The left padding clears the
-// badge (left-4 + h-24/md:h-34 wide + a gap) and the strip is as tall as the
-// part of the badge below the bar, so the title is centred beside it.
+// A page's h1, at the top of the page under the header bar, aligned with the
+// header's content (max-w-7xl, px-4). The top padding clears the logo badge
+// hanging below the bar (48px, md 68px).
 export function PageHeading({
   children,
   className,
@@ -13,15 +12,8 @@ export function PageHeading({
   className?: string
 }) {
   return (
-    <div
-      className={cn(
-        "mx-auto flex min-h-[calc(3rem-2px)] max-w-6xl items-center pr-4 pl-32 md:min-h-[calc(4.25rem-2px)] md:pl-44",
-        className
-      )}
-    >
-      <h1 className="text-2xl text-balance sm:text-2xl md:text-4xl">
-        {children}
-      </h1>
+    <div className={cn("mx-auto max-w-7xl px-4 pt-16 md:pt-24", className)}>
+      <h1 className="text-3xl text-balance md:text-4xl">{children}</h1>
     </div>
   )
 }

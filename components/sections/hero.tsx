@@ -32,7 +32,7 @@ export async function Hero() {
   return (
     // Header + hero fill exactly one screen. `isolate` keeps the photo layers
     // below the header's hanging logo.
-    <section className="relative isolate flex min-h-[calc(100svh-var(--header-bar)-2px)] items-end overflow-hidden bg-brand-cocoa">
+    <section className="relative isolate flex min-h-[calc(100svh-var(--header-bar)-4px)] items-end overflow-hidden bg-brand-cocoa">
       <picture>
         <source media="(min-width: 64rem)" srcSet={desktop} sizes="100vw" />
         <source media="(min-width: 48rem)" srcSet={tablet} sizes="100vw" />
@@ -42,7 +42,7 @@ export async function Hero() {
       <div className="absolute inset-0 -z-10 bg-brand-cocoa/50" />
       <div className="absolute inset-0 -z-10 bg-linear-to-t from-brand-cocoa/80 via-brand-cocoa/20 to-transparent" />
 
-      <div className="mx-auto w-full max-w-6xl animate-fade-in px-4 pt-32 pb-16 md:pb-24">
+      <div className="mx-auto w-full max-w-7xl animate-fade-in px-4 pt-32 pb-16 md:pb-24">
         <h1 className="max-w-2xl text-4xl font-semibold text-brand-cream sm:text-5xl md:text-6xl">
           {t("title", { name: site.fullName })}
         </h1>
@@ -50,7 +50,7 @@ export async function Hero() {
           href="/meni"
           className={cn(
             buttonVariants({ variant: "secondary" }),
-            "mt-8 h-auto gap-2 px-4 py-2.5 font-heading text-base font-bold focus-visible:border-brand-cream focus-visible:ring-brand-cream/60 has-data-[icon=inline-end]:pr-4"
+            "mt-8 h-auto gap-2 px-4 py-2.5 font-heading text-base font-semibold focus-visible:border-brand-cream focus-visible:ring-brand-cream/60 has-data-[icon=inline-end]:pr-4"
           )}
         >
           {t("cta")}

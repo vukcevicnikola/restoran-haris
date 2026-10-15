@@ -25,16 +25,28 @@
     200ms + ease-brand by default, so never add duration-* or ease-* classes.
   - Popups that open/close (dropdowns, popovers, dialogs): `transition-popup`.
   - Content that appears (loaded or swapped in): `animate-fade-in`.
+  - Cards swapped in as a group (dish cards on a category chip):
+    `animate-rise-in`, a fade + 4px rise, staggered with animation-delay.
+    Pair it with `motion-reduce:animate-fade-in`. The one exception to the
+    200ms timing: 700ms, so the cards settle gently (the user's choice).
 */
 @theme {
   --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
   --default-transition-duration: 200ms;
   --default-transition-timing-function: var(--ease-brand);
   --animate-fade-in: fade-in 200ms var(--ease-brand) both;
+  --animate-rise-in: rise-in 700ms var(--ease-brand) both;
 
   @keyframes fade-in {
     from {
       opacity: 0;
+    }
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      translate: 0 0.25rem;
     }
   }
 }
@@ -91,8 +103,7 @@
 
   /* Fonts: variables are set by next/font (lib/fonts.ts) */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-nunito), var(--font-inter), ui-sans-serif,
-    system-ui, sans-serif;
+  --font-heading: var(--font-lora), Georgia, ui-serif, serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -106,7 +117,7 @@
 :root {
   --radius: 1rem;
 
-  /* Header bar height, without its 2px peach line. Used by the header and by
+  /* Header bar height, without its 4px peach line. Used by the header and by
      the hero, which fills the rest of the first screen. */
   --header-bar: 4rem;
 
@@ -144,6 +155,7 @@
   --chart-5: #5a1a1e;
 }
 
+/* Taller from md, so the upper half of the 136px logo badge fits in the bar */
 @media (width >= 48rem) {
   :root {
     --header-bar: 5rem;
@@ -157,8 +169,10 @@
 
   html {
     color-scheme: light;
-    /* Space for the sticky header + category chips when jumping to #anchors */
-    scroll-padding-top: 7rem;
+    /* Keeps what the browser scrolls to (#anchors, keyboard focus) clear of
+       the sticky section chips on the category pages (65px); the header is
+       not sticky */
+    scroll-padding-top: 5rem;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -175,12 +189,13 @@
   h2,
   h3,
   h4 {
-    @apply font-heading tracking-tight;
+    @apply font-heading tracking-[-0.01em];
   }
 
+  /* Lora's heaviest weight is 700 */
   h1,
   h2 {
-    @apply font-extrabold;
+    @apply font-bold;
   }
 
   ::selection {

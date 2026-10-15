@@ -45,10 +45,10 @@ const flagPosition: Partial<Record<Locale, string>> = {
   tr: "object-[17%_center]",
 }
 
-// Nunito's capitals sit about 0.6px above the middle of their line box, so the
-// code looked higher than the flag and the menu icon next to it. A translate
+// Lora's capitals sit about 0.6px below the middle of their line box, so the
+// code looked lower than the flag and the menu icon next to it. A translate
 // (unlike layout, it is not snapped to whole pixels) moves it onto the line.
-const codeClass = "translate-y-[0.5px]"
+const codeClass = "-translate-y-[0.5px]"
 
 export function LanguageSwitcher() {
   const t = useTranslations("localeSwitcher")
@@ -69,18 +69,12 @@ export function LanguageSwitcher() {
             variant="ghost"
             className={cn(
               headerIconButton,
-              "gap-2 px-2.5 font-heading text-base font-bold"
+              // A soft cream rounded square, a little stronger on hover and while open
+              "h-8 rounded-lg bg-brand-cream/15 px-2.5 font-heading text-sm font-medium tracking-wide hover:bg-brand-cream/25 aria-expanded:bg-brand-cream/25"
             )}
           />
         }
       >
-        <Image
-          src={flags[locale]}
-          alt=""
-          unoptimized
-          loading="eager"
-          className={cn(flagClass, flagPosition[locale])}
-        />
         <span className="sr-only">{t("label")}</span>
         <span className={codeClass}>{locale.toUpperCase()}</span>
       </DropdownMenuTrigger>
@@ -108,7 +102,7 @@ export function LanguageSwitcher() {
               value={l}
               lang={hreflang[l]}
               closeOnClick
-              className="gap-2 font-heading font-bold"
+              className="gap-2 font-heading font-semibold"
             >
               <Image
                 src={flags[l]}

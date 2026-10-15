@@ -23,12 +23,14 @@
   },
   "menu": {
     "title": "{name} Meni",
+    "welcome": "Dobrodošli u svijet {name}",
     "categories": {
       "cta": "Pogledajte meni"
     },
     "category": {
       "back": "Nazad na meni",
-      "empty": "Ponudu iz ove kategorije uskoro dodajemo."
+      "empty": "Ponudu iz ove kategorije uskoro dodajemo.",
+      "sections": "Odjeljci menija"
     }
   },
   "gallery": {
