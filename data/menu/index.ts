@@ -1,5 +1,8 @@
 import "server-only"
+import { dezertiSections } from "@/data/menu/dezerti"
+import { piceSections } from "@/data/menu/pice"
 import { posniMeniSections } from "@/data/menu/posni-meni"
+import { sladolediSections } from "@/data/menu/sladoledi"
 import type { MenuCategory } from "@/data/menu/types"
 import { site } from "@/data/site"
 import dezerti from "@/public/images/menu/dezerti.jpg"
@@ -86,6 +89,7 @@ export const categories: MenuCategory[] = [
       tr: "Za sve koji vole slatko",
     },
     image: dezerti,
+    sections: dezertiSections,
   },
   {
     slug: "posni-meni",
@@ -142,6 +146,7 @@ export const categories: MenuCategory[] = [
       tr: "Osvježenje za tople dane",
     },
     image: sladoledi,
+    sections: sladolediSections,
   },
   {
     slug: "vocne-torte",
@@ -172,6 +177,7 @@ export const categories: MenuCategory[] = [
       tr: "Nešto za svaki ukus",
     },
     image: pice,
+    sections: piceSections,
   },
 ]
 

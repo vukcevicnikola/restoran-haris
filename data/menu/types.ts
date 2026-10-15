@@ -9,21 +9,34 @@ export function untranslated(me: string): L {
   return { me, en: me, it: me, ru: me, tr: me }
 }
 
+// The Montenegrin and English texts the client sent; the other languages use
+// the Montenegrin one until they are translated
+export function meEn(me: string, en: string): L {
+  return { me, en, it: me, ru: me, tr: me }
+}
+
 export type Dish = {
   name: L
-  // The ingredients, as on the printed menu
-  description: L
+  // The ingredients, where the printed menu has them
+  description?: L
+  // The "choose a flavour" list, where the printed menu has one
+  flavors?: L[]
   // EUR
   price: number
-  // The plate as cut out of the printed menu: 900px wide, any height
-  image: StaticImageData
+  // Cut out of the printed menu, any size; some items have none
+  image?: StaticImageData
+  // The photo has a transparent background: shown without a frame
+  transparent?: boolean
 }
 
 // A group of dishes inside a category, like "Posni sendviči" in Posni meni
 export type MenuSection = {
-  // id of the section's heading, unique on the page
+  // id of the section's heading, unique on the page. For sections from the
+  // client's JSON menus, it is the category id there.
   id: string
   title: L
+  // A photo for the whole section, for one whose items have none
+  image?: StaticImageData
   dishes: Dish[]
 }
 

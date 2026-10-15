@@ -38,7 +38,9 @@ export function CategoryCard({ category }: { category: MenuCategory }) {
             {category.title[locale]}
           </Link>
         </h2>
-        <p className="mt-1 text-base text-muted-foreground">
+        {/* Lora like the rest of the card, and like the dish descriptions:
+            a size up from sm, as Lora reads smaller than Inter */}
+        <p className="mt-1 font-heading text-base text-muted-foreground sm:text-lg">
           {category.description[locale]}
         </p>
         {/* Repeats the link visually; the name already announces it */}

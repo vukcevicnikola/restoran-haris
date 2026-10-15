@@ -1,5 +1,6 @@
 "use client"
 
+import Image, { type StaticImageData } from "next/image"
 import { useTranslations } from "next-intl"
 import { type ReactNode, useRef, useState } from "react"
 import { CategoryPanel } from "@/components/menu/category-panel"
@@ -9,6 +10,7 @@ import { cn } from "@/lib/utils"
 export type DishBrowserSection = {
   id: string
   title: string
+  image?: StaticImageData
   dishes: DishCardData[]
 }
 
@@ -65,7 +67,11 @@ export function DishBrowser({
         <nav
           ref={chipsRef}
           aria-label={t("sections")}
-          className="sticky top-0 z-30 border-b bg-background"
+          // A single chip (Sladoledi) would pick nothing
+          className={cn(
+            "sticky top-0 z-30 border-b bg-background",
+            sections.length === 1 && "hidden"
+          )}
         >
           <ul className="mx-auto flex max-w-7xl [scrollbar-width:none] gap-2 overflow-x-auto px-4 py-3">
             {sections.map((section) => (
@@ -93,23 +99,34 @@ export function DishBrowser({
         </nav>
 
         {/* Keyed by section, so a new one mounts and runs its animations: the
-            heading fades in, the cards rise in one after another (80ms apart,
+            heading fades in, the dishes rise in one after another (80ms apart,
             capped at 320ms so a long section does not drag) */}
         <section
           key={selected.id}
           aria-labelledby={selected.id}
           className="mx-auto mt-10 max-w-7xl px-4 md:mt-14"
         >
-          <h2
-            id={selected.id}
+          <div
             className={cn(
-              "text-2xl md:text-3xl",
+              "flex items-center justify-between gap-4",
               switched && "animate-fade-in"
             )}
           >
-            {selected.title}
-          </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+            <h2 id={selected.id} className="text-2xl md:text-3xl">
+              {selected.title}
+            </h2>
+            {/* A section whose items have no photos of their own (the ice
+                cream flavours) shows one for all of them. Decorative. */}
+            {selected.image && (
+              <Image
+                src={selected.image}
+                alt=""
+                sizes="7rem"
+                className="h-28 w-auto md:h-36"
+              />
+            )}
+          </div>
+          <ul className="mt-4 grid gap-x-12 sm:grid-cols-2">
             {selected.dishes.map((dish, i) => (
               <li
                 key={dish.name}

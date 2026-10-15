@@ -10,7 +10,8 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
-    "i18n:check": "tsx scripts/check-translations.ts"
+    "i18n:check": "tsx scripts/check-translations.ts",
+    "menu:import": "tsx scripts/import-menu.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

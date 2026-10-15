@@ -30,14 +30,20 @@
     "category": {
       "back": "Nazad na meni",
       "empty": "Ponudu iz ove kategorije uskoro dodajemo.",
-      "sections": "Odjeljci menija"
+      "sections": "Odjeljci menija",
+      "flavors": "Ukusi"
     }
   },
   "gallery": {
     "title": "Galerija"
   },
   "about": {
-    "title": "O nama"
+    "title": "O nama",
+    "welcome": "Dobrodošli u {name}!",
+    "origin": "Naša priča počinje 1997. godine u srcu grada Retimna na Kritu, gdje je otvoren prvi restoran {name}. Od 2014. godine, {name} s ponosom donosi autentične ukuse Krita u Beograd.",
+    "recipe": "Ono što nas izdvaja jeste jedinstveni recept – krepe, vafli i palačinke pripremljeni od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Trudimo se da sve što poslužimo bude savršeno – od čokoladnih preliva koje pravimo u Solunu, do sladoleda koji pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku.",
+    "team": "Za one koji žele da kreiraju svoj savršeni obrok, naš tim je tu da pomogne. Birajte sastojke, eksperimentišite i uživajte u svom idealnom ukusu, jer je u {name} svaka kombinacija moguća.",
+    "since": "od 1997."
   },
   "contact": {
     "title": "Kontakt"
