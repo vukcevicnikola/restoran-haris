@@ -17,7 +17,8 @@ export function meEn(me: string, en: string): L {
 
 export type Dish = {
   // The number printed next to the dish (pizzas, salads, crepes, pancakes,
-  // waffles): guests order the sweet crepes by it, as they have no name
+  // waffles). Not shown on the site (user, 2026-10-19); the import sorts
+  // numbered dishes by it.
   number?: number
   name: L
   // The ingredients, where the printed menu has them
@@ -49,7 +50,8 @@ export type MenuCategory = {
   // URL segment, the same in every language: /meni/dorucak, /en/menu/dorucak
   slug: string
   title: L
-  // One line under the name on the /meni card
+  // A line about the category. Not shown since 2026-10-19 (the cards show
+  // only the name); the owner's proposals are kept for now.
   description: L
   // A dish from the category, cut out of the printed menu
   image: StaticImageData

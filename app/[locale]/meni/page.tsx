@@ -24,10 +24,13 @@ export default async function MenuPage({
 
   return (
     <main className="mx-auto max-w-7xl px-4 pt-16 pb-16 md:pt-24 md:pb-24">
-      {/* Two columns from md; the panel stretches to the height of the
-          heading and the two cards. On phones it sits above them. */}
+      {/* Two columns from md: the panel is at least 384px tall (or as tall as
+          the column beside it), and in that column the heading and intro
+          stay at the top, the two cards go to the bottom. On phones the panel
+          sits above them, kept low so the first card is on the first screen
+          of this QR page. */}
       <div className="grid gap-8 md:grid-cols-2">
-        <div className="relative isolate flex min-h-56 flex-col justify-end overflow-hidden rounded-3xl bg-brand-cocoa p-6 md:p-8">
+        <div className="relative isolate flex min-h-56 flex-col justify-end overflow-hidden rounded-3xl bg-brand-cocoa p-6 md:min-h-96 md:p-8">
           {/* Decorative: the text carries the meaning. Eager: on phones the
               panel is the first thing on the screen. */}
           <Image
@@ -45,28 +48,37 @@ export default async function MenuPage({
             {t("welcome", { name: site.fullName })}
           </p>
         </div>
-        <div>
-          <h1 className="text-3xl text-balance md:text-4xl">
-            {t("title", { name: site.fullName })}
-          </h1>
-          <ul className="mt-6 flex flex-col gap-4 md:gap-6">
+        <div className="flex flex-col justify-between">
+          <div>
+            <h1 className="text-3xl text-balance md:text-4xl">
+              {t("title", { name: site.fullName })}
+            </h1>
+            <p className="mt-4 font-heading text-lg leading-normal text-foreground md:text-xl">
+              {t("intro")}
+            </p>
+          </div>
+          {/* Side by side where two fit: at full width from sm, beside the
+              panel only from xl (in its half of a narrower screen, name and
+              cue would wrap) */}
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-1 md:gap-6 xl:grid-cols-2">
             {besidePanel.map((category) => (
               <li key={category.slug}>
-                <CategoryCard category={category} />
+                <CategoryCard category={category} cue />
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {/* Two per row from md, three from lg. Wrapping flex instead of a grid,
-          so a last row that is not full (7 cards = 3 + 3 + 1) is centred */}
+      {/* Two per row from sm (like the two at the top), three from lg.
+          Wrapping flex instead of a grid, so a last row that is not full
+          (11 cards = 3 + 3 + 3 + 2) is centred */}
       <ul className="mt-4 flex flex-wrap justify-center gap-4 md:mt-10 md:gap-6">
         {inGrid.map((category) => (
           <li
             key={category.slug}
-            className="w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
+            className="w-full sm:w-[calc((100%-1rem)/2)] md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
           >
-            <CategoryCard category={category} />
+            <CategoryCard category={category} cue />
           </li>
         ))}
       </ul>

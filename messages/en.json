@@ -19,11 +19,22 @@
     "hero": {
       "title": "Dobrodošli u svijet {name}",
       "cta": "Pogledajte meni"
+    },
+    "about": {
+      "title": "Naša priča",
+      "text": "Sve je počelo 1997. godine na Kritu. Naše krepe, vafle i palačinke pripremamo od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Čokoladne prelive pravimo u Solunu, a sladoled pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku. Kod nas je svaka kombinacija moguća.",
+      "cta": "Saznajte više o nama"
+    },
+    "menu": {
+      "title": "Pogledajte naš meni",
+      "text": "Naš meni počinje doručkom: sendvičima, omletima i tortiljama. Tu su i potaži, burgeri, pice i salate, a slatke i slane krepe, vafle i penkejke pripremamo na desetine načina. Sa slatke karte birajte kafu, šejkove, kupove i sladoled. Za dane posta tu je posni meni, a ako želite da birate sastojke, budite sami svoj šef.",
+      "cta": "Pogledajte kompletan meni"
     }
   },
   "menu": {
     "title": "{name} Meni",
     "welcome": "Dobrodošli u svijet {name}",
+    "intro": "Od doručka do slatke karte, sve na jednom mjestu. Izaberite kategoriju i pogledajte jela i cijene.",
     "categories": {
       "cta": "Pogledajte meni"
     },

@@ -52,7 +52,6 @@ export default async function MenuCategoryPage({
             title: section.title[locale],
             image: section.image,
             dishes: section.dishes.map((dish) => ({
-              number: dish.number,
               name: dish.name[locale],
               description: dish.description?.[locale],
               flavors: dish.flavors?.map((flavor) => flavor[locale]),

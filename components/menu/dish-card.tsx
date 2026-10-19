@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils"
 
 // A dish with its texts already in the page's language
 export type DishCardData = {
-  number?: number
   name: string
   description?: string
   flavors?: string[]
@@ -20,8 +19,7 @@ export type DishCardData = {
 }
 
 // One dish in the category grid, like a line of a printed menu: a small
-// photo, then the name (after its printed number, if it has one) with a
-// dotted leader out to the price, and the ingredients, flavours and the "no
+// photo, then the name with a dotted leader out to the price, and the ingredients, flavours and the "no
 // pork" badge under them, all in Lora. A thin rule separates the dishes.
 // Items without a photo are the text alone.
 export function DishCard({
@@ -37,13 +35,18 @@ export function DishCard({
   const price = `${dish.price.toFixed(2)} €`
 
   return (
-    <article className="flex h-full items-center gap-4 border-b border-primary/15 py-5 sm:gap-5">
+    // On phones the photo is above the text: beside it, the text had too
+    // little room. From sm, photo and text side by side.
+    <article className="flex h-full flex-col gap-4 border-b border-primary/15 py-5 sm:flex-row sm:items-center sm:gap-5">
       {dish.image && (
-        // The same box for every photo, which keeps its own shape inside it:
-        // a tall glass at the box's width would be several times as tall as
-        // a crepe. Plates cut out with their background get a frame; cut-outs
+        // On phones the photo is 3/5 of the column wide and as tall as its
+        // shape makes it, so there is no empty space around it; a tall glass
+        // stops at max-h-36, at the left like the text. From sm, the same
+        // box for every photo, which keeps its own shape inside it: a tall
+        // glass at the box's width would be several times as tall as a
+        // crepe. Plates cut out with their background get a frame; cut-outs
         // with a transparent one stand on the page.
-        <div className="relative flex h-24 w-28 shrink-0 items-center justify-center sm:h-28 sm:w-36 lg:h-32 lg:w-44">
+        <div className="relative flex w-3/5 shrink-0 sm:h-28 sm:w-36 sm:items-center sm:justify-center lg:h-32 lg:w-44">
           {/* Under the photo, which covers it as soon as it has loaded (even
               before the page's JS runs); removed then to stop the pulse */}
           {!loaded && (
@@ -54,13 +57,14 @@ export function DishCard({
           <Image
             src={dish.image}
             alt=""
-            sizes="(min-width: 64rem) 11rem, (min-width: 40rem) 9rem, 7rem"
+            sizes="(min-width: 64rem) 11rem, (min-width: 40rem) 9rem, 60vw"
             loading={eager ? "eager" : undefined}
             onLoad={() => setLoaded(true)}
             className={cn(
-              "relative h-auto max-h-full w-auto max-w-full",
-              !dish.transparent &&
-                "rounded-2xl shadow-sm ring-1 ring-primary/10"
+              "relative h-auto max-h-36 w-full sm:max-h-full sm:w-auto sm:max-w-full",
+              dish.transparent
+                ? "object-contain object-left"
+                : "rounded-2xl object-cover shadow-sm ring-1 ring-primary/10"
             )}
           />
         </div>
@@ -71,12 +75,6 @@ export function DishCard({
             leader: the price goes under the ingredients instead. */}
         <div className="flex items-end gap-2">
           <h3 className="text-lg leading-snug font-semibold sm:text-xl">
-            {/* Guests order by it: the sweet crepes have no other name */}
-            {dish.number !== undefined && (
-              <span className="me-2 inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-primary px-1.5 align-[0.1em] text-sm font-bold text-primary-foreground">
-                {dish.number}
-              </span>
-            )}
             {dish.name}
           </h3>
           <span
