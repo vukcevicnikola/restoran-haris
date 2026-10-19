@@ -3,23 +3,27 @@
 import Image, { type StaticImageData } from "next/image"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
+import { Badge } from "@/components/ui/badge"
 import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils"
 
 // A dish with its texts already in the page's language
 export type DishCardData = {
+  number?: number
   name: string
   description?: string
   flavors?: string[]
   price: number
+  noPork?: boolean
   image?: StaticImageData
   transparent?: boolean
 }
 
 // One dish in the category grid, like a line of a printed menu: a small
-// photo, then the name with a dotted leader out to the price, and the
-// ingredients and flavours under them, all in Lora. A thin rule separates
-// the dishes. Items without a photo are the text alone.
+// photo, then the name (after its printed number, if it has one) with a
+// dotted leader out to the price, and the ingredients, flavours and the "no
+// pork" badge under them, all in Lora. A thin rule separates the dishes.
+// Items without a photo are the text alone.
 export function DishCard({
   dish,
   eager = false,
@@ -67,6 +71,12 @@ export function DishCard({
             leader: the price goes under the ingredients instead. */}
         <div className="flex items-end gap-2">
           <h3 className="text-lg leading-snug font-semibold sm:text-xl">
+            {/* Guests order by it: the sweet crepes have no other name */}
+            {dish.number !== undefined && (
+              <span className="me-2 inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-primary px-1.5 align-[0.1em] text-sm font-bold text-primary-foreground">
+                {dish.number}
+              </span>
+            )}
             {dish.name}
           </h3>
           <span
@@ -89,6 +99,14 @@ export function DishCard({
             </span>{" "}
             {dish.flavors.join(" · ")}
           </p>
+        )}
+        {dish.noPork && (
+          <Badge
+            variant="outline"
+            className="mt-2 h-6 border-primary/30 bg-transparent px-2.5 font-heading text-sm font-semibold text-primary"
+          >
+            {t("noPork")}
+          </Badge>
         )}
         <p className="mt-2 font-heading text-lg font-bold text-primary sm:hidden">
           {price}

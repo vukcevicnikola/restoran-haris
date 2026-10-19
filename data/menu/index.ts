@@ -1,28 +1,44 @@
 import "server-only"
+import { budiSamSvojSefSections } from "@/data/menu/budi-sam-svoj-sef"
+import { burgeriSections } from "@/data/menu/burgeri"
 import { dezertiSections } from "@/data/menu/dezerti"
+import { dorucakSections } from "@/data/menu/dorucak"
+import { nasiProizvodiSections } from "@/data/menu/nasi-proizvodi"
+import { penkejkSections } from "@/data/menu/penkejk"
 import { piceSections } from "@/data/menu/pice"
+import { picaSections } from "@/data/menu/pica"
 import { posniMeniSections } from "@/data/menu/posni-meni"
+import { potaziSections } from "@/data/menu/potazi"
+import { salateSections } from "@/data/menu/salate"
+import { slaneKrepeSections } from "@/data/menu/slane-krepe"
 import { sladolediSections } from "@/data/menu/sladoledi"
+import { slatkeKrepeSections } from "@/data/menu/slatke-krepe"
+import { slatkeVafleSections } from "@/data/menu/slatke-vafle"
 import type { MenuCategory } from "@/data/menu/types"
-import { site } from "@/data/site"
-import dezerti from "@/public/images/menu/dezerti.jpg"
-import dorucak from "@/public/images/menu/dorucak.jpg"
-import harisKolaci from "@/public/images/menu/haris-kolaci.jpg"
-import pice from "@/public/images/menu/pice.jpg"
-import posniMeni from "@/public/images/menu/posni-meni.jpg"
-import rucak from "@/public/images/menu/rucak.jpg"
-import sladoledi from "@/public/images/menu/sladoledi.jpg"
-import vecera from "@/public/images/menu/vecera.jpg"
-import vocneTorte from "@/public/images/menu/vocne-torte.jpg"
+import burgeri from "@/public/images/menu/burgeri/burgeri-burger-1.webp"
+import vocniKup from "@/public/images/menu/dezerti/vocni-kup.webp"
+import dorucak from "@/public/images/menu/dorucak/dorucak-crnogorski-dorucak.webp"
+import nasiProizvodi from "@/public/images/menu/nasi-proizvodi/nasi-proizvodi-hari-s-krem.webp"
+import penkejk from "@/public/images/menu/penkejk/penkejk-64.webp"
+import pica from "@/public/images/menu/pica/pica-8.webp"
+import sojaSalata from "@/public/images/menu/posni-meni/soja-salata.webp"
+import potazi from "@/public/images/menu/potazi/potazi-potaz-sargarepa.webp"
+import salate from "@/public/images/menu/salate/salate-1.webp"
+import slaneKrepe from "@/public/images/menu/slane-krepe/slane-krepe-82.webp"
+import slatkeKrepe22 from "@/public/images/menu/slatke-krepe/slatke-krepe-22.webp"
+import slatkeKrepe27 from "@/public/images/menu/slatke-krepe/slatke-krepe-27.webp"
+import slatkeVafle from "@/public/images/menu/slatke-vafle/slatke-vafle-32.webp"
 
 export type { Dish, MenuCategory, MenuSection } from "@/data/menu/types"
 
+// The categories as on the client's printed menus, in their order: the main
+// menu (main-menu-small.pdf), then the sweets menu (Slatka karta) and the
+// Posni meni, which are menus of their own (client, 2026-10-19).
 // TODO EN/IT/RU/TR are copies of the Montenegrin texts until the
 // translations are done (CLAUDE.me, "Content workflow").
 // TODO the descriptions are proposals: the owner confirms or rewrites them.
-// They name no dishes, because they were written before the menu was known.
-// TODO the photos are Unsplash placeholders (CLAUDE.me, "Menu page"):
-// replace them with photos of the client's dishes before launch.
+// The photos are the client's, cut out of the printed menus; Budi sam svoj
+// šef has none of its own and borrows a sweet crepe.
 export const categories: MenuCategory[] = [
   {
     slug: "dorucak",
@@ -41,45 +57,211 @@ export const categories: MenuCategory[] = [
       tr: "Za dobar početak dana",
     },
     image: dorucak,
+    transparent: true,
+    sections: dorucakSections,
   },
   {
-    slug: "rucak",
-    title: { me: "Ručak", en: "Ručak", it: "Ručak", ru: "Ručak", tr: "Ručak" },
-    description: {
-      me: "Pravi predah usred dana",
-      en: "Pravi predah usred dana",
-      it: "Pravi predah usred dana",
-      ru: "Pravi predah usred dana",
-      tr: "Pravi predah usred dana",
-    },
-    image: rucak,
-  },
-  {
-    slug: "vecera",
+    slug: "potazi",
     title: {
-      me: "Večera",
-      en: "Večera",
-      it: "Večera",
-      ru: "Večera",
-      tr: "Večera",
+      me: "Potaži",
+      en: "Potaži",
+      it: "Potaži",
+      ru: "Potaži",
+      tr: "Potaži",
     },
     description: {
-      me: "Za opuštene večeri",
-      en: "Za opuštene večeri",
-      it: "Za opuštene večeri",
-      ru: "Za opuštene večeri",
-      tr: "Za opuštene večeri",
+      me: "Toplo i kremasto",
+      en: "Toplo i kremasto",
+      it: "Toplo i kremasto",
+      ru: "Toplo i kremasto",
+      tr: "Toplo i kremasto",
     },
-    image: vecera,
+    image: potazi,
+    transparent: true,
+    sections: potaziSections,
   },
   {
-    slug: "dezerti",
+    slug: "burgeri",
     title: {
-      me: "Dezerti",
-      en: "Dezerti",
-      it: "Dezerti",
-      ru: "Dezerti",
-      tr: "Dezerti",
+      me: "Burgeri",
+      en: "Burgeri",
+      it: "Burgeri",
+      ru: "Burgeri",
+      tr: "Burgeri",
+    },
+    description: {
+      me: "Za pravu glad",
+      en: "Za pravu glad",
+      it: "Za pravu glad",
+      ru: "Za pravu glad",
+      tr: "Za pravu glad",
+    },
+    image: burgeri,
+    transparent: true,
+    sections: burgeriSections,
+  },
+  {
+    slug: "pica",
+    title: { me: "Pica", en: "Pica", it: "Pica", ru: "Pica", tr: "Pica" },
+    description: {
+      me: "Za ljubitelje pice",
+      en: "Za ljubitelje pice",
+      it: "Za ljubitelje pice",
+      ru: "Za ljubitelje pice",
+      tr: "Za ljubitelje pice",
+    },
+    image: pica,
+    transparent: true,
+    sections: picaSections,
+  },
+  {
+    slug: "salate",
+    title: {
+      me: "Salate",
+      en: "Salate",
+      it: "Salate",
+      ru: "Salate",
+      tr: "Salate",
+    },
+    description: {
+      me: "Lagano i osvježavajuće",
+      en: "Lagano i osvježavajuće",
+      it: "Lagano i osvježavajuće",
+      ru: "Lagano i osvježavajuće",
+      tr: "Lagano i osvježavajuće",
+    },
+    image: salate,
+    transparent: true,
+    sections: salateSections,
+  },
+  {
+    slug: "slatke-krepe",
+    title: {
+      me: "Slatke krepe",
+      en: "Slatke krepe",
+      it: "Slatke krepe",
+      ru: "Slatke krepe",
+      tr: "Slatke krepe",
+    },
+    description: {
+      me: "Naš slatki specijalitet",
+      en: "Naš slatki specijalitet",
+      it: "Naš slatki specijalitet",
+      ru: "Naš slatki specijalitet",
+      tr: "Naš slatki specijalitet",
+    },
+    image: slatkeKrepe27,
+    transparent: true,
+    sections: slatkeKrepeSections,
+  },
+  {
+    slug: "penkejk",
+    title: {
+      me: "Penkejk",
+      en: "Penkejk",
+      it: "Penkejk",
+      ru: "Penkejk",
+      tr: "Penkejk",
+    },
+    description: {
+      me: "Mekano, slatko, neodoljivo",
+      en: "Mekano, slatko, neodoljivo",
+      it: "Mekano, slatko, neodoljivo",
+      ru: "Mekano, slatko, neodoljivo",
+      tr: "Mekano, slatko, neodoljivo",
+    },
+    image: penkejk,
+    transparent: true,
+    sections: penkejkSections,
+  },
+  {
+    slug: "slatke-vafle",
+    title: {
+      me: "Slatke vafle",
+      en: "Slatke vafle",
+      it: "Slatke vafle",
+      ru: "Slatke vafle",
+      tr: "Slatke vafle",
+    },
+    description: {
+      me: "Hrskave i slatke",
+      en: "Hrskave i slatke",
+      it: "Hrskave i slatke",
+      ru: "Hrskave i slatke",
+      tr: "Hrskave i slatke",
+    },
+    image: slatkeVafle,
+    transparent: true,
+    sections: slatkeVafleSections,
+  },
+  {
+    slug: "slane-krepe",
+    title: {
+      me: "Slane krepe",
+      en: "Slane krepe",
+      it: "Slane krepe",
+      ru: "Slane krepe",
+      tr: "Slane krepe",
+    },
+    description: {
+      me: "Za pravi slani zalogaj",
+      en: "Za pravi slani zalogaj",
+      it: "Za pravi slani zalogaj",
+      ru: "Za pravi slani zalogaj",
+      tr: "Za pravi slani zalogaj",
+    },
+    image: slaneKrepe,
+    transparent: true,
+    sections: slaneKrepeSections,
+  },
+  {
+    slug: "budi-sam-svoj-sef",
+    title: {
+      me: "Budi sam svoj šef",
+      en: "Budi sam svoj šef",
+      it: "Budi sam svoj šef",
+      ru: "Budi sam svoj šef",
+      tr: "Budi sam svoj šef",
+    },
+    description: {
+      me: "Izaberite sastojke po svom ukusu",
+      en: "Izaberite sastojke po svom ukusu",
+      it: "Izaberite sastojke po svom ukusu",
+      ru: "Izaberite sastojke po svom ukusu",
+      tr: "Izaberite sastojke po svom ukusu",
+    },
+    image: slatkeKrepe22,
+    transparent: true,
+    sections: budiSamSvojSefSections,
+  },
+  {
+    slug: "nasi-proizvodi",
+    title: {
+      me: "Naši proizvodi",
+      en: "Naši proizvodi",
+      it: "Naši proizvodi",
+      ru: "Naši proizvodi",
+      tr: "Naši proizvodi",
+    },
+    description: {
+      me: "Naši kremovi i voćni sokovi",
+      en: "Naši kremovi i voćni sokovi",
+      it: "Naši kremovi i voćni sokovi",
+      ru: "Naši kremovi i voćni sokovi",
+      tr: "Naši kremovi i voćni sokovi",
+    },
+    image: nasiProizvodi,
+    transparent: true,
+    sections: nasiProizvodiSections,
+  },
+  {
+    slug: "slatka-karta",
+    title: {
+      me: "Slatka karta",
+      en: "Slatka karta",
+      it: "Slatka karta",
+      ru: "Slatka karta",
+      tr: "Slatka karta",
     },
     description: {
       me: "Za sve koji vole slatko",
@@ -88,8 +270,10 @@ export const categories: MenuCategory[] = [
       ru: "Za sve koji vole slatko",
       tr: "Za sve koji vole slatko",
     },
-    image: dezerti,
-    sections: dezertiSections,
+    image: vocniKup,
+    transparent: true,
+    // One menu, imported into three files when these were three cards
+    sections: [...piceSections, ...dezertiSections, ...sladolediSections],
   },
   {
     slug: "posni-meni",
@@ -107,77 +291,9 @@ export const categories: MenuCategory[] = [
       ru: "Ukusna jela za dane posta",
       tr: "Ukusna jela za dane posta",
     },
-    image: posniMeni,
+    // Cut out with its background, so cropped round
+    image: sojaSalata,
     sections: posniMeniSections,
-  },
-  {
-    slug: "haris-kolaci",
-    // The brand name comes from data/site.ts, like everywhere else
-    title: {
-      me: `${site.name} Kolači`,
-      en: `${site.name} Kolači`,
-      it: `${site.name} Kolači`,
-      ru: `${site.name} Kolači`,
-      tr: `${site.name} Kolači`,
-    },
-    description: {
-      me: "Savršeni uz kafu",
-      en: "Savršeni uz kafu",
-      it: "Savršeni uz kafu",
-      ru: "Savršeni uz kafu",
-      tr: "Savršeni uz kafu",
-    },
-    image: harisKolaci,
-  },
-  {
-    slug: "sladoledi",
-    title: {
-      me: "Sladoledi",
-      en: "Sladoledi",
-      it: "Sladoledi",
-      ru: "Sladoledi",
-      tr: "Sladoledi",
-    },
-    description: {
-      me: "Osvježenje za tople dane",
-      en: "Osvježenje za tople dane",
-      it: "Osvježenje za tople dane",
-      ru: "Osvježenje za tople dane",
-      tr: "Osvježenje za tople dane",
-    },
-    image: sladoledi,
-    sections: sladolediSections,
-  },
-  {
-    slug: "vocne-torte",
-    title: {
-      me: "Voćne torte",
-      en: "Voćne torte",
-      it: "Voćne torte",
-      ru: "Voćne torte",
-      tr: "Voćne torte",
-    },
-    description: {
-      me: "Voćna slast u svakom zalogaju",
-      en: "Voćna slast u svakom zalogaju",
-      it: "Voćna slast u svakom zalogaju",
-      ru: "Voćna slast u svakom zalogaju",
-      tr: "Voćna slast u svakom zalogaju",
-    },
-    image: vocneTorte,
-  },
-  {
-    slug: "pice",
-    title: { me: "Piće", en: "Piće", it: "Piće", ru: "Piće", tr: "Piće" },
-    description: {
-      me: "Nešto za svaki ukus",
-      en: "Nešto za svaki ukus",
-      it: "Nešto za svaki ukus",
-      ru: "Nešto za svaki ukus",
-      tr: "Nešto za svaki ukus",
-    },
-    image: pice,
-    sections: piceSections,
   },
 ]
 

@@ -16,6 +16,9 @@ export function meEn(me: string, en: string): L {
 }
 
 export type Dish = {
+  // The number printed next to the dish (pizzas, salads, crepes, pancakes,
+  // waffles): guests order the sweet crepes by it, as they have no name
+  number?: number
   name: L
   // The ingredients, where the printed menu has them
   description?: L
@@ -23,6 +26,8 @@ export type Dish = {
   flavors?: L[]
   // EUR
   price: number
+  // The printed menu has the "NO PORK" badge on it
+  noPork?: boolean
   // Cut out of the printed menu, any size; some items have none
   image?: StaticImageData
   // The photo has a transparent background: shown without a frame
@@ -46,8 +51,11 @@ export type MenuCategory = {
   title: L
   // One line under the name on the /meni card
   description: L
-  // Round crop of a dish on a plate, seen from above
+  // A dish from the category, cut out of the printed menu
   image: StaticImageData
+  // The photo has a transparent background: shown whole, without the round
+  // crop
+  transparent?: boolean
   // Missing until the client sends the category's dishes
   sections?: MenuSection[]
 }

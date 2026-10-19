@@ -4,8 +4,9 @@ import { useLocale, useTranslations } from "next-intl"
 import { Card } from "@/components/ui/card"
 import type { MenuCategory } from "@/data/menu"
 import { Link } from "@/i18n/navigation"
+import { cn } from "@/lib/utils"
 
-// A menu category on /meni: round photo, name, its own line of text and a
+// A menu category on /meni: a dish photo, name, its own line of text and a
 // "Pogledajte meni" cue. The whole card is clickable: the link sits on the
 // name (that is what screen readers announce) and stretches over the card.
 export function CategoryCard({ category }: { category: MenuCategory }) {
@@ -17,13 +18,20 @@ export function CategoryCard({ category }: { category: MenuCategory }) {
     // up to 548px (beside the welcome panel). h-full: cards in a row match
     // when a line wraps.
     <Card className="relative h-full flex-row items-center gap-5 rounded-3xl p-5 transition-colors hover:bg-accent has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-ring">
-      {/* Wrapped so the card's first-child image styles do not apply */}
+      {/* Wrapped so the card's first-child image styles do not apply. A
+          cut-out (a dish on its round plate) is shown whole; a photo with
+          its background is cropped round. */}
       <div className="shrink-0">
         <Image
           src={category.image}
           alt=""
           sizes="96px"
-          className="size-24 rounded-full object-cover"
+          className={cn(
+            "size-24",
+            category.transparent
+              ? "object-contain"
+              : "rounded-full object-cover"
+          )}
         />
       </div>
       <div className="min-w-0">

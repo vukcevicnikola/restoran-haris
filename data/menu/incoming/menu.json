@@ -1,0 +1,4329 @@
+{
+  "restaurant": "Hari's Creperie",
+  "menu": {
+    "id": "jelovnik",
+    "name": {
+      "me": "Jelovnik",
+      "en": "Main menu"
+    },
+    "languages": [
+      "me",
+      "en"
+    ],
+    "currency": "EUR",
+    "source": "main-menu-small.pdf"
+  },
+  "categories": [
+    {
+      "id": "dorucak",
+      "name": {
+        "me": "Doručak",
+        "en": "Breakfast"
+      },
+      "order": 1,
+      "items": [
+        {
+          "id": "dorucak-avokado-losos",
+          "number": null,
+          "name": {
+            "me": "Avokado & losos",
+            "en": "Avocado & salmon"
+          },
+          "description": {
+            "me": "Integlani hljeb sa sjemenkama, avokado sos, dimljeni losos, krastavac, grčki jogurt, limun, čeri paradajz, crni susam",
+            "en": "Integral bread with seeds, avocado sauce, smoked salmon, cucumber, greek yoghurt, lemon, cherry tomato, black sesame"
+          },
+          "price": 9.0,
+          "priceDisplay": "9.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-avokado-losos.webp",
+            "jpg": "images/jpg/dorucak-avokado-losos.jpg",
+            "width": 616,
+            "height": 418,
+            "transparent": true
+          },
+          "sourcePage": 1
+        },
+        {
+          "id": "dorucak-avokado-jaja",
+          "number": null,
+          "name": {
+            "me": "Avokado & jaja",
+            "en": "Avocado & Eggs"
+          },
+          "description": {
+            "me": "Integralni hljeb sa sjemenkama, avokado sos, kajgana, grčki jogurt, čeri paradajz, crni susam, limun",
+            "en": "Integral bread with seeds, avocado sauce, scrambled eggs, greek yoghurt, cherry tomato, black sesame, lemon"
+          },
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-avokado-jaja.webp",
+            "jpg": "images/jpg/dorucak-avokado-jaja.jpg",
+            "width": 658,
+            "height": 472,
+            "transparent": true
+          },
+          "sourcePage": 1
+        },
+        {
+          "id": "dorucak-avokado-govedja-prsuta",
+          "number": null,
+          "name": {
+            "me": "Avokado & goveđa pršuta",
+            "en": "Avocado & Beef prosciutto"
+          },
+          "description": {
+            "me": "Integralni hljeb sa sjemenkama, avokado sos, kajgana, pavlaka, grčki jogurt, čeri paradajz, goveđa pršuta, limun",
+            "en": "Integral bread with seeds, avocado sauce, scrambled eggs, sour cream, greek yogurt, cherry tomatoes, beef prosciutto, lemon"
+          },
+          "price": 9.0,
+          "priceDisplay": "9.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-avokado-govedja-prsuta.webp",
+            "jpg": "images/jpg/dorucak-avokado-govedja-prsuta.jpg",
+            "width": 616,
+            "height": 427,
+            "transparent": true
+          },
+          "sourcePage": 1
+        },
+        {
+          "id": "dorucak-prosciutto-pesto",
+          "number": null,
+          "name": {
+            "me": "Prosciutto & Pesto",
+            "en": "Prosciutto & Pesto"
+          },
+          "description": {
+            "me": "Integralni hljeb sa sjemenkama, mocarela, njeguška pršuta, paradajz, rukola, pesto sos",
+            "en": "Integral bread with seeds, mozzarella, parma prosciutto, tomato, rocket, pesto sauce"
+          },
+          "price": 8.6,
+          "priceDisplay": "8.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-prosciutto-pesto.webp",
+            "jpg": "images/jpg/dorucak-prosciutto-pesto.jpg",
+            "width": 628,
+            "height": 428,
+            "transparent": true
+          },
+          "sourcePage": 2
+        },
+        {
+          "id": "dorucak-sendvic-omlet",
+          "number": null,
+          "name": {
+            "me": "Sendvič omlet",
+            "en": "Sandwich omelette"
+          },
+          "description": {
+            "me": "Integralni hljeb sa sjemenkama, omlet, gauda, pančeta, kulen, pečurke, paradajz, paprika, miks salata, BBQ sos",
+            "en": "Integral bread with seeds, omelette, gouda cheese, bacon, kulen, mushrooms, tomato, pepper, mix salad, BBQ sauce"
+          },
+          "price": 7.8,
+          "priceDisplay": "7.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-sendvic-omlet.webp",
+            "jpg": "images/jpg/dorucak-sendvic-omlet.jpg",
+            "width": 649,
+            "height": 445,
+            "transparent": true
+          },
+          "sourcePage": 2
+        },
+        {
+          "id": "dorucak-dorucak",
+          "number": null,
+          "name": {
+            "me": "Doručak",
+            "en": "Breakfast"
+          },
+          "description": {
+            "me": "Miks salata, krastavac, domaći sir, goveđa pršuta, čeri paradajz, kajgana, pavlaka, hljebčići",
+            "en": "Mixed salad, cucumber, farmer's cheese, beef prosciutto, cherry tomatoes, scrambled eggs, sour cream, bread"
+          },
+          "price": 8.2,
+          "priceDisplay": "8.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-dorucak.webp",
+            "jpg": "images/jpg/dorucak-dorucak.jpg",
+            "width": 669,
+            "height": 468,
+            "transparent": true
+          },
+          "sourcePage": 2
+        },
+        {
+          "id": "dorucak-crnogorski-dorucak",
+          "number": null,
+          "name": {
+            "me": "Crnogorski doručak",
+            "en": "Montenegro breakfast"
+          },
+          "description": {
+            "me": "Tri jaja, kobasica, domaći sir, paradajz, tost hljeb, kupus, ajvar",
+            "en": "Three eggs, sausage, farmer's cheese, tomato, toast bread, cabbage, ajvar"
+          },
+          "price": 8.2,
+          "priceDisplay": "8.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-crnogorski-dorucak.webp",
+            "jpg": "images/jpg/dorucak-crnogorski-dorucak.jpg",
+            "width": 664,
+            "height": 450,
+            "transparent": true
+          },
+          "sourcePage": 3
+        },
+        {
+          "id": "dorucak-turski-dorucak",
+          "number": null,
+          "name": {
+            "me": "Turski doručak",
+            "en": "Turkish breakfast"
+          },
+          "description": {
+            "me": "Kajgana, goveđa pršuta, krastavac, hljebčići, ajvar, čeri paradajz, kajmak, domaći sir, masline, med",
+            "en": "Scrambled eggs, beef prosciutto, cucumber, bread, ajvar, cherry tomato, cream, farmer's cheese, olives, honey"
+          },
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-turski-dorucak.webp",
+            "jpg": "images/jpg/dorucak-turski-dorucak.jpg",
+            "width": 635,
+            "height": 470,
+            "transparent": true
+          },
+          "sourcePage": 3
+        },
+        {
+          "id": "dorucak-engleski-dorucak",
+          "number": null,
+          "name": {
+            "me": "Engleski doručak",
+            "en": "English breakfast"
+          },
+          "description": {
+            "me": "Dva jaja, pančeta, kobasica, seoski sir, paradajz, pečurke, tost hljeb, pasulj",
+            "en": "Two eggs, bacon, sausage, farmer's cheese, tomato, mushrooms, toast bread, beans"
+          },
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-engleski-dorucak.webp",
+            "jpg": "images/jpg/dorucak-engleski-dorucak.jpg",
+            "width": 701,
+            "height": 527,
+            "transparent": true
+          },
+          "sourcePage": 3
+        },
+        {
+          "id": "dorucak-cezar-sendvic",
+          "number": null,
+          "name": {
+            "me": "Cezar sendvič",
+            "en": "Caesar sandwich"
+          },
+          "description": {
+            "me": "Pizza tijesto, pileći file, cezar sos, paradajz, iceberg, krastavac, parmezan, pančeta",
+            "en": "Pizza dough, chicken fillet, caesar sauce, tomato, iceberg, cucumber, parmesan, bacon"
+          },
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-cezar-sendvic.webp",
+            "jpg": "images/jpg/dorucak-cezar-sendvic.jpg",
+            "width": 645,
+            "height": 432,
+            "transparent": true
+          },
+          "sourcePage": 4
+        },
+        {
+          "id": "dorucak-mediteranski-sendvic",
+          "number": null,
+          "name": {
+            "me": "Mediteranski sendvič",
+            "en": "Mediteranian sandwich"
+          },
+          "description": {
+            "me": "Pizza tijesto, pesto sos, sušeni paradajz, mocarela, svinjska pršuta, rukola",
+            "en": "Pizza dough, pesto sauce, dried tomato, mozzarella, pork prosciutto, rocket"
+          },
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-mediteranski-sendvic.webp",
+            "jpg": "images/jpg/dorucak-mediteranski-sendvic.jpg",
+            "width": 676,
+            "height": 454,
+            "transparent": true
+          },
+          "sourcePage": 4
+        },
+        {
+          "id": "dorucak-porchetta-sendvic",
+          "number": null,
+          "name": {
+            "me": "Porchetta sendvič",
+            "en": "Porchetta sandwich"
+          },
+          "description": {
+            "me": "Pizza tijesto, kajmak, cjepkana svinjetina i paradajz, pomfrit",
+            "en": "Pizza dough, cream, chopped pork and tomatoes, french fries"
+          },
+          "price": 8.2,
+          "priceDisplay": "8.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-porchetta-sendvic.webp",
+            "jpg": "images/jpg/dorucak-porchetta-sendvic.jpg",
+            "width": 647,
+            "height": 422,
+            "transparent": true
+          },
+          "sourcePage": 4
+        },
+        {
+          "id": "dorucak-mortadela-sendvic",
+          "number": null,
+          "name": {
+            "me": "Mortadela sendvič",
+            "en": "Mortadella sandwich"
+          },
+          "description": {
+            "me": "Pizza tijesto, burata, mortadela, rukola, čeri paradajz, pistać sos",
+            "en": "Pizza dough, burrata, mortadella, rocket, cherry tomatoes, pistachio sauce"
+          },
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-mortadela-sendvic.webp",
+            "jpg": "images/jpg/dorucak-mortadela-sendvic.jpg",
+            "width": 663,
+            "height": 450,
+            "transparent": true
+          },
+          "sourcePage": 5
+        },
+        {
+          "id": "dorucak-tuna-sendvic",
+          "number": null,
+          "name": {
+            "me": "Tuna sendvič",
+            "en": "Tuna sandwich"
+          },
+          "description": {
+            "me": "Pizza tijesto, posni majonez, tunjevina, crveni luk, kisjeli krastavac",
+            "en": "Pizza dough, egg-free mayonaisse, tuna, red onion, pickles"
+          },
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-tuna-sendvic.webp",
+            "jpg": "images/jpg/dorucak-tuna-sendvic.jpg",
+            "width": 640,
+            "height": 417,
+            "transparent": true
+          },
+          "sourcePage": 5
+        },
+        {
+          "id": "dorucak-klub-sendvic",
+          "number": null,
+          "name": {
+            "me": "Klub sendvič",
+            "en": "Club sandwich"
+          },
+          "description": {
+            "me": "Tost hljeb, pančeta, jaje, pileći file, gauda, iceberg, pomfrit, miks zelenih salata sa sosom od nara, paradajz, majonez",
+            "en": "Toast bread, bacon, egg, chicken fillet, gouda cheese, iceberg, mix of green salads with pomogranate sauce, french fries, tomato, mayonaisse"
+          },
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-klub-sendvic.webp",
+            "jpg": "images/jpg/dorucak-klub-sendvic.jpg",
+            "width": 623,
+            "height": 438,
+            "transparent": true
+          },
+          "sourcePage": 5
+        },
+        {
+          "id": "dorucak-proteinski-omlet",
+          "number": null,
+          "name": {
+            "me": "Proteinski omlet",
+            "en": "Protein omelette"
+          },
+          "description": {
+            "me": "Pileći file, bjelance, krem sir, sir ella, tost hljeb, miks zelenih salata",
+            "en": "Chicken fillet, eggwhite, cream cheese, ella cheese, toast bread, mix of green salads"
+          },
+          "price": 7.4,
+          "priceDisplay": "7.40 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-proteinski-omlet.webp",
+            "jpg": "images/jpg/dorucak-proteinski-omlet.jpg",
+            "width": 626,
+            "height": 412,
+            "transparent": true
+          },
+          "sourcePage": 6
+        },
+        {
+          "id": "dorucak-vegetarijanski-omlet",
+          "number": null,
+          "name": {
+            "me": "Vegetarijanski omlet",
+            "en": "Vegeterian omlette"
+          },
+          "description": {
+            "me": "Paradajz, pečurke, paprika, miks zelenih salata sa sosom od nara, tost hljeb, kukuruz",
+            "en": "Tomato, mushrooms, pepper, mix of green salads with pomogranate sauce, toast bread, corn"
+          },
+          "price": 7.2,
+          "priceDisplay": "7.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-vegetarijanski-omlet.webp",
+            "jpg": "images/jpg/dorucak-vegetarijanski-omlet.jpg",
+            "width": 634,
+            "height": 402,
+            "transparent": true
+          },
+          "sourcePage": 6
+        },
+        {
+          "id": "dorucak-patlidzan-sa-saksukom",
+          "number": null,
+          "name": {
+            "me": "Patlidžan sa šakšukom",
+            "en": "Eggplant with shakshuka"
+          },
+          "description": {
+            "me": "Patlidžan, feta sir, crvena paprika, crveni luk, crni luk, kumin, paradajz, dimljena paprika, hljebčići, grčki jogurt, maslinovo ulje",
+            "en": "Eggplant, feta cheese, red pepper, red onion, onion, cumin, tomato, smoked pepper, bread, greek yoghurt, olive oil"
+          },
+          "price": 7.2,
+          "priceDisplay": "7.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-patlidzan-sa-saksukom.webp",
+            "jpg": "images/jpg/dorucak-patlidzan-sa-saksukom.jpg",
+            "width": 606,
+            "height": 442,
+            "transparent": true
+          },
+          "sourcePage": 6
+        },
+        {
+          "id": "dorucak-saksuka",
+          "number": null,
+          "name": {
+            "me": "Šakšuka",
+            "en": "Shakshuka"
+          },
+          "description": {
+            "me": "Crvena paprika, crni luk, crveni luk, paradajz, kumin, dimljena paprika, dva jaja, feta sir, hljebčići",
+            "en": "Red pepper, onion, red onion, tomato, cumin, smoked pepper, two egg, feta cheese, bread"
+          },
+          "price": 7.2,
+          "priceDisplay": "7.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-saksuka.webp",
+            "jpg": "images/jpg/dorucak-saksuka.jpg",
+            "width": 589,
+            "height": 511,
+            "transparent": true
+          },
+          "sourcePage": 7
+        },
+        {
+          "id": "dorucak-punjene-przenice-curetina",
+          "number": null,
+          "name": {
+            "me": "Punjene prženice ćuretina",
+            "en": "Stuffed fried bread turkey"
+          },
+          "description": {
+            "me": "Bijeli tost, jaje, gauda, ćureći file, ajvar, krem sir, čeri paradajz, parmezan, pomfrit",
+            "en": "White toast, egg, gouda cheese, turkey fillet, ajvar, cream cheese, cherry tomato, parmesan, french fries"
+          },
+          "price": 6.2,
+          "priceDisplay": "6.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-punjene-przenice-curetina.webp",
+            "jpg": "images/jpg/dorucak-punjene-przenice-curetina.jpg",
+            "width": 578,
+            "height": 366,
+            "transparent": true
+          },
+          "sourcePage": 7
+        },
+        {
+          "id": "dorucak-punjene-przenice-panceta",
+          "number": null,
+          "name": {
+            "me": "Punjene prženice pančeta",
+            "en": "Stuffed fried bread pancetta"
+          },
+          "description": {
+            "me": "Bijeli tost, jaje, pančeta, feta sir, rukola, ajvar, pomfrit, čeri paradajz",
+            "en": "White toast, egg, bacon, feta cheese, rocket, ajvar, french fries, cherry tomato"
+          },
+          "price": 6.2,
+          "priceDisplay": "6.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-punjene-przenice-panceta.webp",
+            "jpg": "images/jpg/dorucak-punjene-przenice-panceta.jpg",
+            "width": 624,
+            "height": 394,
+            "transparent": true
+          },
+          "sourcePage": 7
+        },
+        {
+          "id": "dorucak-tost-piletina",
+          "number": null,
+          "name": {
+            "me": "Tost piletina",
+            "en": "Chicken toast"
+          },
+          "description": {
+            "me": "Tost hljeb, pesto sos, pileći file, gauda, koktel sos, pomfrit",
+            "en": "Toast bread, pesto sauce, chicken fillet, gouda cheese, cocktail sauce, french fries"
+          },
+          "price": 5.2,
+          "priceDisplay": "5.20 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-tost-piletina.webp",
+            "jpg": "images/jpg/dorucak-tost-piletina.jpg",
+            "width": 624,
+            "height": 404,
+            "transparent": true
+          },
+          "sourcePage": 8
+        },
+        {
+          "id": "dorucak-tost-svinjetina",
+          "number": null,
+          "name": {
+            "me": "Tost svinjetina",
+            "en": "Pork toast"
+          },
+          "description": {
+            "me": "Tost hljeb, čedar sos, gauda, koktel sos, cjepkana svinjetina, pomfrit",
+            "en": "Toast bread, cheddar sauce, gouda cheese, cocktail sauce, chopped pork, french fries"
+          },
+          "price": 5.2,
+          "priceDisplay": "5.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-tost-svinjetina.webp",
+            "jpg": "images/jpg/dorucak-tost-svinjetina.jpg",
+            "width": 589,
+            "height": 378,
+            "transparent": true
+          },
+          "sourcePage": 8
+        },
+        {
+          "id": "dorucak-klasicni-brunch",
+          "number": null,
+          "name": {
+            "me": "Klasični brunch",
+            "en": "Classic brunch"
+          },
+          "description": {
+            "me": "Dva jaja, kobasica, paradajz, krastavac, pančeta, tost hljeb, dvije palačinke mliječna čokolada/med i orasi, cijedena pomorandža/limunada",
+            "en": "Two eggs, sausage, tomato, cucumber, bacon, toast bread, two pancakes milk chocolate/honey and walnuts, fresh orange juice/lemonade"
+          },
+          "price": 10.8,
+          "priceDisplay": "10.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-klasicni-brunch.webp",
+            "jpg": "images/jpg/dorucak-klasicni-brunch.jpg",
+            "width": 624,
+            "height": 433,
+            "transparent": true
+          },
+          "sourcePage": 8
+        },
+        {
+          "id": "dorucak-tortilja-svinjetina",
+          "number": null,
+          "name": {
+            "me": "Tortilja svinjetina",
+            "en": "Pork tortilla"
+          },
+          "description": {
+            "me": "Tortilja, krem sir, cjepkana svinjetina, paradajz, iceberg, čedar sos, čeri paradajz, pomfrit",
+            "en": "Tortilla, cream cheese, chopped pork, tomato, iceberg, cheddar sauce, cherry tomato, french fries"
+          },
+          "price": 7.0,
+          "priceDisplay": "7.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-tortilja-svinjetina.webp",
+            "jpg": "images/jpg/dorucak-tortilja-svinjetina.jpg",
+            "width": 585,
+            "height": 375,
+            "transparent": true
+          },
+          "sourcePage": 9
+        },
+        {
+          "id": "dorucak-tortilja-piletina",
+          "number": null,
+          "name": {
+            "me": "Tortilja piletina",
+            "en": "Chicken tortilla"
+          },
+          "description": {
+            "me": "Tortilja, krem sir, pileći file, iceberg, paradajz, parmezan, koktel sos, pomfrit, čeri paradajz",
+            "en": "Tortilla, cream cheese, chicken fillet, tomato, parmesan, cocktail sauce, french fries, cherry tomato, iceberg"
+          },
+          "price": 7.0,
+          "priceDisplay": "7.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-tortilja-piletina.webp",
+            "jpg": "images/jpg/dorucak-tortilja-piletina.jpg",
+            "width": 583,
+            "height": 438,
+            "transparent": true
+          },
+          "sourcePage": 9
+        },
+        {
+          "id": "dorucak-montenegro-tortilja",
+          "number": null,
+          "name": {
+            "me": "Montenegro tortilja",
+            "en": "Montenegro tortilla"
+          },
+          "description": {
+            "me": "Tortilja, jaja, pančeta, gauda, ajvar, kajmak, masline, rukola",
+            "en": "Tortilla, eggs, bacon, gouda cheese, ajvar, cream, olives, rocket"
+          },
+          "price": 7.0,
+          "priceDisplay": "7.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-montenegro-tortilja.webp",
+            "jpg": "images/jpg/dorucak-montenegro-tortilja.jpg",
+            "width": 539,
+            "height": 337,
+            "transparent": true
+          },
+          "sourcePage": 9
+        },
+        {
+          "id": "dorucak-breakfast-burito",
+          "number": null,
+          "name": {
+            "me": "Breakfast burito",
+            "en": "Breakfast burrito"
+          },
+          "description": {
+            "me": "Tortilja, pavlaka, kajgana, iceberg, miks salata",
+            "en": "Tortilla, sour cream, scrambled eggs, iceberg, mixed salad"
+          },
+          "price": 7.0,
+          "priceDisplay": "7.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-breakfast-burito.webp",
+            "jpg": "images/jpg/dorucak-breakfast-burito.jpg",
+            "width": 541,
+            "height": 326,
+            "transparent": true
+          },
+          "sourcePage": 9
+        },
+        {
+          "id": "dorucak-slani-plato",
+          "number": null,
+          "name": {
+            "me": "Slani plato",
+            "en": "Salty platter"
+          },
+          "description": {
+            "me": "Hljebčići, njeguška pršuta, svinjska pršuta, kulen, pančeta, mocarela, domaći sir, ajvar, kajmak, masline, čeri paradajz",
+            "en": "Bread, njeguška prosciutto, pork prosciutto, kulen, pancetta, mozzarella, country cheese, ajvar, kajmak, olives, cherry tomatoes"
+          },
+          "price": 16.0,
+          "priceDisplay": "16.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/dorucak-slani-plato.webp",
+            "jpg": "images/jpg/dorucak-slani-plato.jpg",
+            "width": 1004,
+            "height": 583,
+            "transparent": true
+          },
+          "sourcePage": 10
+        },
+        {
+          "id": "dorucak-plato-sireva",
+          "number": null,
+          "name": {
+            "me": "Plato sireva",
+            "en": "Cheese platter"
+          },
+          "description": {
+            "me": "Mocarela, domaći sir, burata, rukola, med, slatko od borovnice, kajmak, masline, čeri paradajz, hljebčići, ajvar",
+            "en": "Mozzarella, farmer's cheese, burrata, rocket, honey, blueberry jam, cream, olives, cherry tomato, bread, ajvar"
+          },
+          "price": 14.0,
+          "priceDisplay": "14.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-plato-sireva.webp",
+            "jpg": "images/jpg/dorucak-plato-sireva.jpg",
+            "width": 1068,
+            "height": 641,
+            "transparent": true
+          },
+          "sourcePage": 10
+        },
+        {
+          "id": "dorucak-penkejk-dorucak",
+          "number": null,
+          "name": {
+            "me": "Penkejk doručak",
+            "en": "Pancake breakfast"
+          },
+          "description": {
+            "me": "Penkejk, mliječna čokolada, bijela čokolada, jagode, plazma",
+            "en": "Pancake, milk chocolate, white chocolate, strawberries, plazma"
+          },
+          "price": 6.6,
+          "priceDisplay": "6.60 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-penkejk-dorucak.webp",
+            "jpg": "images/jpg/dorucak-penkejk-dorucak.jpg",
+            "width": 722,
+            "height": 485,
+            "transparent": true
+          },
+          "sourcePage": 11
+        },
+        {
+          "id": "dorucak-crunch",
+          "number": null,
+          "name": {
+            "me": "Crunch",
+            "en": "Crunch"
+          },
+          "description": {
+            "me": "Granola, grčki jogurt, banana, jagode, bademi, slatko od borovnice",
+            "en": "Granola, greek yoghurt, banana, strawberries, almonds, blueberries jam"
+          },
+          "price": 6.6,
+          "priceDisplay": "6.60 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-crunch.webp",
+            "jpg": "images/jpg/dorucak-crunch.jpg",
+            "width": 654,
+            "height": 404,
+            "transparent": true
+          },
+          "sourcePage": 11
+        },
+        {
+          "id": "dorucak-cija",
+          "number": null,
+          "name": {
+            "me": "Čija",
+            "en": "Chia"
+          },
+          "description": {
+            "me": "Grčki jogurt, med, breskva, jagode, pistaći, čija u mlijeku",
+            "en": "Greek yoghurt, honey, peach, strawberries, pistachio, chia in milk"
+          },
+          "price": 6.8,
+          "priceDisplay": "6.80 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/dorucak-cija.webp",
+            "jpg": "images/jpg/dorucak-cija.jpg",
+            "width": 671,
+            "height": 413,
+            "transparent": true
+          },
+          "sourcePage": 11
+        }
+      ]
+    },
+    {
+      "id": "potazi",
+      "name": {
+        "me": "Potaži",
+        "en": "Cream soups"
+      },
+      "order": 2,
+      "items": [
+        {
+          "id": "potazi-potaz-sargarepa",
+          "number": null,
+          "name": {
+            "me": "Potaž šargarepa",
+            "en": "Carrot cream soup"
+          },
+          "description": {
+            "me": "Šargarepa, krompir, luk, začini, grčki jogurt, krutoni, susam",
+            "en": "Carrot, potato, onion, spices, greek yoghurt, croutons, sesame"
+          },
+          "price": 5.0,
+          "priceDisplay": "5.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/potazi-potaz-sargarepa.webp",
+            "jpg": "images/jpg/potazi-potaz-sargarepa.jpg",
+            "width": 755,
+            "height": 589,
+            "transparent": true
+          },
+          "sourcePage": 12
+        },
+        {
+          "id": "potazi-potaz-karfiol",
+          "number": null,
+          "name": {
+            "me": "Potaž karfiol",
+            "en": "Cauliflower cream soup"
+          },
+          "description": {
+            "me": "Karfiol, krompir, luk, začini, ulje od tartufa, grčki jogurt, lješnik",
+            "en": "Cauliflower, potato, onion, spices, truffle oil, greek yoghurt, hazelnut"
+          },
+          "price": 5.8,
+          "priceDisplay": "5.80 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/potazi-potaz-karfiol.webp",
+            "jpg": "images/jpg/potazi-potaz-karfiol.jpg",
+            "width": 790,
+            "height": 629,
+            "transparent": true
+          },
+          "sourcePage": 12
+        }
+      ]
+    },
+    {
+      "id": "burgeri",
+      "name": {
+        "me": "Burgeri",
+        "en": "Burgers"
+      },
+      "order": 3,
+      "items": [
+        {
+          "id": "burgeri-burger-1",
+          "number": null,
+          "name": {
+            "me": "Burger 1",
+            "en": "Burger"
+          },
+          "description": {
+            "me": "Penkejk, juneće meso, iceberg, burger sos, paradajz, pomfrit, čedar sir",
+            "en": "Pancake, beef, iceberg, burger sauce, tomato, french fries, cheddar cheese"
+          },
+          "price": 9.0,
+          "priceDisplay": "9.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/burgeri-burger-1.webp",
+            "jpg": "images/jpg/burgeri-burger-1.jpg",
+            "width": 858,
+            "height": 580,
+            "transparent": true
+          },
+          "sourcePage": 13
+        },
+        {
+          "id": "burgeri-burger-2",
+          "number": null,
+          "name": {
+            "me": "Burger 2",
+            "en": "Burger"
+          },
+          "description": {
+            "me": "Penkejk, juneće meso, iceberg, crveni luk, majonez, BBQ, pomfrit, čedar sir",
+            "en": "Pancake, beef, iceberg, red onion, mayonnaise, BBQ, french fries, cheddar cheese"
+          },
+          "price": 9.0,
+          "priceDisplay": "9.00 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/burgeri-burger-2.webp",
+            "jpg": "images/jpg/burgeri-burger-2.jpg",
+            "width": 925,
+            "height": 635,
+            "transparent": true
+          },
+          "sourcePage": 13
+        }
+      ]
+    },
+    {
+      "id": "pica",
+      "name": {
+        "me": "Pica",
+        "en": "Pizza"
+      },
+      "order": 4,
+      "items": [
+        {
+          "id": "pica-6",
+          "number": 6,
+          "name": {
+            "me": "Mortadela",
+            "en": "Mortadella"
+          },
+          "description": {
+            "me": "Mortadela, pavlaka, pizza sir, čeri paradajz, sos od pistaća, burata",
+            "en": "Mortadella, sour cream, pizza cheese, cherry tomatoes, pistachio sauce, burrata"
+          },
+          "price": 16.8,
+          "priceDisplay": "16.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/pica-6.webp",
+            "jpg": "images/jpg/pica-6.jpg",
+            "width": 904,
+            "height": 671,
+            "transparent": true
+          },
+          "sourcePage": 14
+        },
+        {
+          "id": "pica-8",
+          "number": 8,
+          "name": {
+            "me": "Montenegro pica",
+            "en": "Montenegro pizza"
+          },
+          "description": {
+            "me": "Pelat, čeri paradajz, pizza sir, kulen, svinjska pršuta, feta sir",
+            "en": "Pomodori pelati, cherry tomato, pizza cheese, kulen, pork prosciutto, feta cheese"
+          },
+          "price": 11.8,
+          "priceDisplay": "11.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/pica-8.webp",
+            "jpg": "images/jpg/pica-8.jpg",
+            "width": 946,
+            "height": 642,
+            "transparent": true
+          },
+          "sourcePage": 14
+        },
+        {
+          "id": "pica-1",
+          "number": 1,
+          "name": {
+            "me": "Giardino",
+            "en": "Giardino"
+          },
+          "description": {
+            "me": "Pelat, pančeta, feta sir, pečurke, čeri paradajz, pizza sir",
+            "en": "Pomodori pelati, bacon, feta cheese, mushrooms, cherry tomato, pizza cheese"
+          },
+          "price": 10.4,
+          "priceDisplay": "10.40 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "pica-2",
+          "number": 2,
+          "name": {
+            "me": "Fileti di polo",
+            "en": "Fileti di polo"
+          },
+          "description": {
+            "me": "Pelat, pileći file, pančeta, pečurke, mocarela, čeri paradajz, pizza sir",
+            "en": "Pomodori pelati, chicken fillet, bacon, mushrooms, mozzarella, cherry tomato, pizza cheese"
+          },
+          "price": 10.6,
+          "priceDisplay": "10.60 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "pica-3",
+          "number": 3,
+          "name": {
+            "me": "Specijal",
+            "en": "Special"
+          },
+          "description": {
+            "me": "Pelat, šunka, pančeta, kobasica, pečurke, rukola, pizza sir",
+            "en": "Pomodori pelati, ham, bacon, sausage, mushrooms, rocket, pizza cheese"
+          },
+          "price": 12.0,
+          "priceDisplay": "12.00 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "pica-4",
+          "number": 4,
+          "name": {
+            "me": "Margarita",
+            "en": "Margharita"
+          },
+          "description": {
+            "me": "Pelat, čeri paradajz, maslinovo ulje, pizza sir",
+            "en": "Pomodori pelati, cherry tomato, olive oil, pizza cheese"
+          },
+          "price": 9.6,
+          "priceDisplay": "9.60 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 15
+        },
+        {
+          "id": "pica-7",
+          "number": 7,
+          "name": {
+            "me": "Prosciutto & Burrata",
+            "en": "Prosciutto & Burrata"
+          },
+          "description": {
+            "me": "Pelat, čeri paradajz, pizza sir, njeguška pršuta, burata",
+            "en": "Pomodori pelati, cherry tomato, pizza cheese, parma prosciutto, burrata"
+          },
+          "price": 15.8,
+          "priceDisplay": "15.80 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 15
+        }
+      ]
+    },
+    {
+      "id": "salate",
+      "name": {
+        "me": "Salate",
+        "en": "Salads"
+      },
+      "order": 5,
+      "items": [
+        {
+          "id": "salate-1",
+          "number": 1,
+          "name": {
+            "me": "\"Hari's\" specijal",
+            "en": "\"Hari's\" special"
+          },
+          "description": {
+            "me": "Njeguška pršuta, mocarela, iceberg, rukola, jagode, zelena jabuka, lješnik, suvo grožđe, vinegret sos",
+            "en": "Parma prosciutto, mozzarella, iceberg, rocket, strawberries, green apple, hazelnut, raisins, vinaigrette sauce"
+          },
+          "price": 10.8,
+          "priceDisplay": "10.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/salate-1.webp",
+            "jpg": "images/jpg/salate-1.jpg",
+            "width": 817,
+            "height": 567,
+            "transparent": true
+          },
+          "sourcePage": 16
+        },
+        {
+          "id": "salate-6",
+          "number": 6,
+          "name": {
+            "me": "Burrata i paradajz",
+            "en": "Burrata and tomato"
+          },
+          "description": {
+            "me": "Burata, aceto balzamiko, njeguška pršuta, paradajz, hljebčići",
+            "en": "Burrata, aceto balsamic, parma prosciutto, tomato, bread"
+          },
+          "price": 10.8,
+          "priceDisplay": "10.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/salate-6.webp",
+            "jpg": "images/jpg/salate-6.jpg",
+            "width": 909,
+            "height": 628,
+            "transparent": true
+          },
+          "sourcePage": 16
+        },
+        {
+          "id": "salate-2",
+          "number": 2,
+          "name": {
+            "me": "Grčka salata",
+            "en": "Greek salad"
+          },
+          "description": {
+            "me": "Paradajz, krastavac, paprika, crveni luk, feta sir, masline, origano, maslinovo ulje",
+            "en": "Tomato, cucumber, pepper, red onion, feta cheese, olives, oregano, olive oil"
+          },
+          "price": 8.4,
+          "priceDisplay": "8.40 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 17
+        },
+        {
+          "id": "salate-3",
+          "number": 3,
+          "name": {
+            "me": "Cezar salata",
+            "en": "Caesar salad"
+          },
+          "description": {
+            "me": "Miks salata, krastavac, krutoni, pileći file, pančeta, parmezan, cezar sos, paradajz",
+            "en": "Mix salads, cucumber, croutons, chicken fillet, bacon, parmesan, caesar sauce, tomato"
+          },
+          "price": 9.8,
+          "priceDisplay": "9.80 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 17
+        },
+        {
+          "id": "salate-4",
+          "number": 4,
+          "name": {
+            "me": "Tuna salata",
+            "en": "Tuna salad"
+          },
+          "description": {
+            "me": "Miks salata, posni majonez, kukuruz, kisjeli krastavac, paradajz, crveni luk, tunjevina",
+            "en": "Mix salad, egg-free mayoNaisse, corn, pickles, tomato, red onion, tuna"
+          },
+          "price": 9.8,
+          "priceDisplay": "9.80 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 17
+        },
+        {
+          "id": "salate-5",
+          "number": 5,
+          "name": {
+            "me": "Salata",
+            "en": "Salad"
+          },
+          "description": {
+            "me": "Rukola, iceberg, čeri, pesto sos, mocarela",
+            "en": "Rocket, iceberg, cherries, pesto sauce, mozzarella"
+          },
+          "price": 8.6,
+          "priceDisplay": "8.60 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 17
+        }
+      ]
+    },
+    {
+      "id": "slatke-krepe",
+      "name": {
+        "me": "Slatke krepe",
+        "en": "Sweet crepes"
+      },
+      "order": 6,
+      "items": [
+        {
+          "id": "slatke-krepe-1",
+          "number": 1,
+          "name": {
+            "me": "Mliječna čokolada",
+            "en": "Milk chocolate"
+          },
+          "description": null,
+          "price": 5.0,
+          "priceDisplay": "5.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-1.webp",
+            "jpg": "images/jpg/slatke-krepe-1.jpg",
+            "width": 611,
+            "height": 408,
+            "transparent": true
+          },
+          "sourcePage": 18
+        },
+        {
+          "id": "slatke-krepe-2",
+          "number": 2,
+          "name": {
+            "me": "Mliječna čokolada, višnje, plazma",
+            "en": "Milk chocolate, cherries, plazma"
+          },
+          "description": null,
+          "price": 7.8,
+          "priceDisplay": "7.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-2.webp",
+            "jpg": "images/jpg/slatke-krepe-2.jpg",
+            "width": 612,
+            "height": 402,
+            "transparent": true
+          },
+          "sourcePage": 18
+        },
+        {
+          "id": "slatke-krepe-3",
+          "number": 3,
+          "name": {
+            "me": "Bueno čokolada, krem vanila, maline",
+            "en": "Bueno chocolate, vanilla cream, raspberries"
+          },
+          "description": null,
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-3.webp",
+            "jpg": "images/jpg/slatke-krepe-3.jpg",
+            "width": 618,
+            "height": 410,
+            "transparent": true
+          },
+          "sourcePage": 18
+        },
+        {
+          "id": "slatke-krepe-4",
+          "number": 4,
+          "name": {
+            "me": "Bueno čokolada, jagode, keks",
+            "en": "Bueno chocolate, strawberries, buiscuits"
+          },
+          "description": null,
+          "price": 8.0,
+          "priceDisplay": "8.00 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-4.webp",
+            "jpg": "images/jpg/slatke-krepe-4.jpg",
+            "width": 576,
+            "height": 367,
+            "transparent": true
+          },
+          "sourcePage": 18
+        },
+        {
+          "id": "slatke-krepe-5",
+          "number": 5,
+          "name": {
+            "me": "Bijela čokolada, mliječna čokolada, oreo, banana, jagode",
+            "en": "White chocolate, milk chocolate, oreo, banana, strawberries"
+          },
+          "description": null,
+          "price": 9.4,
+          "priceDisplay": "9.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-5.webp",
+            "jpg": "images/jpg/slatke-krepe-5.jpg",
+            "width": 543,
+            "height": 347,
+            "transparent": true
+          },
+          "sourcePage": 19
+        },
+        {
+          "id": "slatke-krepe-6",
+          "number": 6,
+          "name": {
+            "me": "Pistaći čokolada, krem limeta, sladoled pistaći",
+            "en": "Pistachio chocolate, lime cream, pistachio ice cream"
+          },
+          "description": null,
+          "price": 9.4,
+          "priceDisplay": "9.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-6.webp",
+            "jpg": "images/jpg/slatke-krepe-6.jpg",
+            "width": 539,
+            "height": 346,
+            "transparent": true
+          },
+          "sourcePage": 19
+        },
+        {
+          "id": "slatke-krepe-7",
+          "number": 7,
+          "name": {
+            "me": "Bueno namaz, bueno čokolada, bueno sladoled, karamelizovani kikiriki, jagode",
+            "en": "Bueno cream, bueno chocolate, bueno ice cream, caramelized peanuts, strawberries"
+          },
+          "description": null,
+          "price": 10.6,
+          "priceDisplay": "10.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-7.webp",
+            "jpg": "images/jpg/slatke-krepe-7.jpg",
+            "width": 560,
+            "height": 388,
+            "transparent": true
+          },
+          "sourcePage": 19
+        },
+        {
+          "id": "slatke-krepe-8",
+          "number": 8,
+          "name": {
+            "me": "Speculoos namaz, banana, speculoos keks, crna čokolada, mliječna čokolada",
+            "en": "Speculoos spread, banana, speculoos cookie, black chocolate, milk chocolate"
+          },
+          "description": null,
+          "price": 9.8,
+          "priceDisplay": "9.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-8.webp",
+            "jpg": "images/jpg/slatke-krepe-8.jpg",
+            "width": 542,
+            "height": 341,
+            "transparent": true
+          },
+          "sourcePage": 19
+        },
+        {
+          "id": "slatke-krepe-9",
+          "number": 9,
+          "name": {
+            "me": "Fil od jabuke, krem sir, šećer u prahu, cimet, med, posni keks",
+            "en": "Apple purree, cream cheese, powdered sugar, cinamon, honey, digestive biscuit"
+          },
+          "description": null,
+          "price": 8.2,
+          "priceDisplay": "8.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-9.webp",
+            "jpg": "images/jpg/slatke-krepe-9.jpg",
+            "width": 542,
+            "height": 342,
+            "transparent": true
+          },
+          "sourcePage": 20
+        },
+        {
+          "id": "slatke-krepe-10",
+          "number": 10,
+          "name": {
+            "me": "Mliječna čokolada, maline, plazma u mlijeku",
+            "en": "Milk chocolate, raspberries, Plazma with milk"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-10.webp",
+            "jpg": "images/jpg/slatke-krepe-10.jpg",
+            "width": 577,
+            "height": 365,
+            "transparent": true
+          },
+          "sourcePage": 20
+        },
+        {
+          "id": "slatke-krepe-11",
+          "number": 11,
+          "name": {
+            "me": "Mille - Feuille",
+            "en": "Mille Feuille"
+          },
+          "description": {
+            "me": "Mille namaz, vanila krem, lisnato tijesto, malina, šećer u prahu",
+            "en": "Mille cream, vanilla cream, puff pastery, raspberries, powdered sugar"
+          },
+          "price": 11.2,
+          "priceDisplay": "11.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-11.webp",
+            "jpg": "images/jpg/slatke-krepe-11.jpg",
+            "width": 572,
+            "height": 373,
+            "transparent": true
+          },
+          "sourcePage": 20
+        },
+        {
+          "id": "slatke-krepe-12",
+          "number": 12,
+          "name": {
+            "me": "Kokos, bijela čokolada, maline",
+            "en": "Coconut, white chocolate, raspberries"
+          },
+          "description": null,
+          "price": 8.2,
+          "priceDisplay": "8.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-12.webp",
+            "jpg": "images/jpg/slatke-krepe-12.jpg",
+            "width": 582,
+            "height": 358,
+            "transparent": true
+          },
+          "sourcePage": 20
+        },
+        {
+          "id": "slatke-krepe-13",
+          "number": 13,
+          "name": {
+            "me": "Pistaći čokolada, maline",
+            "en": "Pistachio chocolate, raspberries"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-13.webp",
+            "jpg": "images/jpg/slatke-krepe-13.jpg",
+            "width": 543,
+            "height": 342,
+            "transparent": true
+          },
+          "sourcePage": 21
+        },
+        {
+          "id": "slatke-krepe-14",
+          "number": 14,
+          "name": {
+            "me": "Dubai krepa",
+            "en": "Dupai crepe"
+          },
+          "description": {
+            "me": "Pistaći čokolada, mliječna čokolada, kadaif, pistaći",
+            "en": "Pistachio chocolate, milk chocolate, kadaif, pistachios"
+          },
+          "price": 11.8,
+          "priceDisplay": "11.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-14.webp",
+            "jpg": "images/jpg/slatke-krepe-14.jpg",
+            "width": 570,
+            "height": 357,
+            "transparent": true
+          },
+          "sourcePage": 21
+        },
+        {
+          "id": "slatke-krepe-15",
+          "number": 15,
+          "name": {
+            "me": "Pistaći čokolada, bijela čokolada, plazma, višnje",
+            "en": "Pistachio chocolate, white chocolate, Plazma, cherries"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-15.webp",
+            "jpg": "images/jpg/slatke-krepe-15.jpg",
+            "width": 578,
+            "height": 367,
+            "transparent": true
+          },
+          "sourcePage": 21
+        },
+        {
+          "id": "slatke-krepe-16",
+          "number": 16,
+          "name": {
+            "me": "Malina namaz, banana, mliječna čokolada",
+            "en": "Raspberry cream, banana, milk chocolate"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-16.webp",
+            "jpg": "images/jpg/slatke-krepe-16.jpg",
+            "width": 565,
+            "height": 364,
+            "transparent": true
+          },
+          "sourcePage": 21
+        },
+        {
+          "id": "slatke-krepe-17",
+          "number": 17,
+          "name": {
+            "me": "Oreo u mlijeku, jagode, bueno čokolada",
+            "en": "Oreo in milk, strawberries, bueno chocolate"
+          },
+          "description": null,
+          "price": 8.2,
+          "priceDisplay": "8.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-17.webp",
+            "jpg": "images/jpg/slatke-krepe-17.jpg",
+            "width": 578,
+            "height": 366,
+            "transparent": true
+          },
+          "sourcePage": 22
+        },
+        {
+          "id": "slatke-krepe-18",
+          "number": 18,
+          "name": {
+            "me": "Čoko pasta",
+            "en": "Choco pasta"
+          },
+          "description": {
+            "me": "Mliječna čokolada, banana, čoko kuglice, višnje",
+            "en": "Milk chocolate, banana, choco balls, cherries"
+          },
+          "price": 9.4,
+          "priceDisplay": "9.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-18.webp",
+            "jpg": "images/jpg/slatke-krepe-18.jpg",
+            "width": 549,
+            "height": 389,
+            "transparent": true
+          },
+          "sourcePage": 22
+        },
+        {
+          "id": "slatke-krepe-19",
+          "number": 19,
+          "name": {
+            "me": "Crna čokolada, maline",
+            "en": "Dark chocolate, raspberries"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-19.webp",
+            "jpg": "images/jpg/slatke-krepe-19.jpg",
+            "width": 565,
+            "height": 339,
+            "transparent": true
+          },
+          "sourcePage": 22
+        },
+        {
+          "id": "slatke-krepe-20",
+          "number": 20,
+          "name": {
+            "me": "Krepa vrećica",
+            "en": "Pouch crepe"
+          },
+          "description": {
+            "me": "Bijela čokolada, mliječna čokolada, krem od vanile, krem od čokolade, čoko smoki, višnje",
+            "en": "White chocolate, milk chocolate, vanilla cream, chocolate cream, choco smoki, cherries"
+          },
+          "price": 10.2,
+          "priceDisplay": "10.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-20.webp",
+            "jpg": "images/jpg/slatke-krepe-20.jpg",
+            "width": 576,
+            "height": 370,
+            "transparent": true
+          },
+          "sourcePage": 22
+        },
+        {
+          "id": "slatke-krepe-21",
+          "number": 21,
+          "name": {
+            "me": "Dubai malina",
+            "en": "Dubai raspberry"
+          },
+          "description": {
+            "me": "Bijela čokolada, pistaći čokolada, kadaif, maline",
+            "en": "White chocolate, pistachio chocolate, kadaif, raspberries"
+          },
+          "price": 10.2,
+          "priceDisplay": "10.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-21.webp",
+            "jpg": "images/jpg/slatke-krepe-21.jpg",
+            "width": 536,
+            "height": 341,
+            "transparent": true
+          },
+          "sourcePage": 23
+        },
+        {
+          "id": "slatke-krepe-22",
+          "number": 22,
+          "name": {
+            "me": "Specijal \"Hari's\"",
+            "en": "Special \"Hari's\""
+          },
+          "description": {
+            "me": "Bueno namaz, krem vanila, banana, jagode,cookie keks, mliječna čokolada, bijela čokolada, čoko kuglice,karamelizovani kikiriki, štangla mliječne čokolade, vafel rolnice sa čokoladom",
+            "en": "Bueno chocolate, vanilla cream, banana, strawberries, cookie, milk chocolate, white chocolate, choco balls, caramelized peanut, piece of milk chocolate, chocolate stuffed cigarilo"
+          },
+          "price": 13.6,
+          "priceDisplay": "13.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-22.webp",
+            "jpg": "images/jpg/slatke-krepe-22.jpg",
+            "width": 566,
+            "height": 340,
+            "transparent": true
+          },
+          "sourcePage": 23
+        },
+        {
+          "id": "slatke-krepe-23",
+          "number": 23,
+          "name": {
+            "me": "Krem od kokosa, maline, pistaći čokolada, bijela čokolada",
+            "en": "Coconut cream, raspberries, pistachio chocolate, white chocolate"
+          },
+          "description": null,
+          "price": 9.6,
+          "priceDisplay": "9.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-23.webp",
+            "jpg": "images/jpg/slatke-krepe-23.jpg",
+            "width": 505,
+            "height": 335,
+            "transparent": true
+          },
+          "sourcePage": 23
+        },
+        {
+          "id": "slatke-krepe-24",
+          "number": 24,
+          "name": {
+            "me": "Crna čokolada, višnje, sladoled vanila",
+            "en": "Dark chocolate, cherries, vanilla ice cream"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-24.webp",
+            "jpg": "images/jpg/slatke-krepe-24.jpg",
+            "width": 566,
+            "height": 372,
+            "transparent": true
+          },
+          "sourcePage": 23
+        },
+        {
+          "id": "slatke-krepe-25",
+          "number": 25,
+          "name": {
+            "me": "Coffee krepa",
+            "en": "Coffee crepe"
+          },
+          "description": {
+            "me": "Crna čokolada, Coffee krem, kakao, espresso, maline",
+            "en": "Black chocolate, Coffee cream, cocoa, espresso, raspberries"
+          },
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-25.webp",
+            "jpg": "images/jpg/slatke-krepe-25.jpg",
+            "width": 515,
+            "height": 345,
+            "transparent": true
+          },
+          "sourcePage": 24
+        },
+        {
+          "id": "slatke-krepe-26",
+          "number": 26,
+          "name": {
+            "me": "Pistaći namaz, bijela čokolada, pistaći, pistaći sladoled",
+            "en": "Pistachio cream, white chocolate, pistachio, pistachio ice cream"
+          },
+          "description": null,
+          "price": 10.2,
+          "priceDisplay": "10.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-26.webp",
+            "jpg": "images/jpg/slatke-krepe-26.jpg",
+            "width": 523,
+            "height": 346,
+            "transparent": true
+          },
+          "sourcePage": 24
+        },
+        {
+          "id": "slatke-krepe-27",
+          "number": 27,
+          "name": {
+            "me": "Bueno namaz, bueno čokolada, bijela čokolada, jagode",
+            "en": "Bueno cream, bueno chocolate, white chocolate, strawberries"
+          },
+          "description": null,
+          "price": 10.2,
+          "priceDisplay": "10.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-27.webp",
+            "jpg": "images/jpg/slatke-krepe-27.jpg",
+            "width": 513,
+            "height": 332,
+            "transparent": true
+          },
+          "sourcePage": 24
+        },
+        {
+          "id": "slatke-krepe-28",
+          "number": 28,
+          "name": {
+            "me": "Malina namaz, jagode, pistaći, bijela čokolada, pistaći čokolada, kitkat",
+            "en": "Raspberry cream, strawberries, pistachios, white chocolate, pistachio chocolate, kitkat"
+          },
+          "description": null,
+          "price": 13.6,
+          "priceDisplay": "13.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-krepe-28.webp",
+            "jpg": "images/jpg/slatke-krepe-28.jpg",
+            "width": 537,
+            "height": 322,
+            "transparent": true
+          },
+          "sourcePage": 24
+        }
+      ]
+    },
+    {
+      "id": "penkejk",
+      "name": {
+        "me": "Penkejk",
+        "en": "Pancakes"
+      },
+      "order": 7,
+      "items": [
+        {
+          "id": "penkejk-60",
+          "number": 60,
+          "name": {
+            "me": "Mliječna čokolada",
+            "en": "Milk chocolate"
+          },
+          "description": null,
+          "price": 5.6,
+          "priceDisplay": "5.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-60.webp",
+            "jpg": "images/jpg/penkejk-60.jpg",
+            "width": 627,
+            "height": 377,
+            "transparent": true
+          },
+          "sourcePage": 25
+        },
+        {
+          "id": "penkejk-61",
+          "number": 61,
+          "name": {
+            "me": "Vanilla krem, jagode, mliječna čokolada",
+            "en": "Vanilla cream, strawberries, milk chocolate"
+          },
+          "description": null,
+          "price": 10.4,
+          "priceDisplay": "10.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-61.webp",
+            "jpg": "images/jpg/penkejk-61.jpg",
+            "width": 608,
+            "height": 389,
+            "transparent": true
+          },
+          "sourcePage": 25
+        },
+        {
+          "id": "penkejk-62",
+          "number": 62,
+          "name": {
+            "me": "Bueno namaz, krem vanila, krem čokolada, cookies keks, bueno čokolada, mliječna čokolada, kinder jaje",
+            "en": "Bueno cream, vanilla cream, chocolate cream, cookies, bueno chocolate, milk chocolate, kinder egg"
+          },
+          "description": null,
+          "price": 13.2,
+          "priceDisplay": "13.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-62.webp",
+            "jpg": "images/jpg/penkejk-62.jpg",
+            "width": 603,
+            "height": 431,
+            "transparent": true
+          },
+          "sourcePage": 25
+        },
+        {
+          "id": "penkejk-63",
+          "number": 63,
+          "name": {
+            "me": "Javorov sirup, orašasti plodovi",
+            "en": "Maple syrup, nuts"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-63.webp",
+            "jpg": "images/jpg/penkejk-63.jpg",
+            "width": 602,
+            "height": 348,
+            "transparent": true
+          },
+          "sourcePage": 25
+        },
+        {
+          "id": "penkejk-64",
+          "number": 64,
+          "name": {
+            "me": "Pistaći čokolada, bijela čokolada, maline",
+            "en": "Pistachio chocolate, white chocolate, raspberries"
+          },
+          "description": null,
+          "price": 9.8,
+          "priceDisplay": "9.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-64.webp",
+            "jpg": "images/jpg/penkejk-64.jpg",
+            "width": 539,
+            "height": 355,
+            "transparent": true
+          },
+          "sourcePage": 26
+        },
+        {
+          "id": "penkejk-65",
+          "number": 65,
+          "name": {
+            "me": "Crna čokolada, kikiriki puter, banana",
+            "en": "Dark chocolate, peanut butter, banana"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-65.webp",
+            "jpg": "images/jpg/penkejk-65.jpg",
+            "width": 555,
+            "height": 332,
+            "transparent": true
+          },
+          "sourcePage": 26
+        },
+        {
+          "id": "penkejk-66",
+          "number": 66,
+          "name": {
+            "me": "Malina namaz, jagode, sladoled jagoda, bijela čokolada, crna čokolada, kornet",
+            "en": "Raspberry cream, strawberries, strawberry ice cream, white chocolate, dark chocolate, cone"
+          },
+          "description": null,
+          "price": 12.8,
+          "priceDisplay": "12.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-66.webp",
+            "jpg": "images/jpg/penkejk-66.jpg",
+            "width": 576,
+            "height": 565,
+            "transparent": true
+          },
+          "sourcePage": 26
+        },
+        {
+          "id": "penkejk-67",
+          "number": 67,
+          "name": {
+            "me": "\"Hari's\" Specijal penkejk",
+            "en": "\"Hari's\" Special pancake"
+          },
+          "description": {
+            "me": "Pistaći čokolada, bijela čokolada, maline, nar, pistaći sladoled, pistaći, kornet, šećer u prahu",
+            "en": "Pistachio chocolate, white chocolate, raspberries, pomogranate, pistachio ice cream, pistachios, cone, powdered sugar"
+          },
+          "price": 13.4,
+          "priceDisplay": "13.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/penkejk-67.webp",
+            "jpg": "images/jpg/penkejk-67.jpg",
+            "width": 556,
+            "height": 545,
+            "transparent": true
+          },
+          "sourcePage": 26
+        }
+      ]
+    },
+    {
+      "id": "slatke-vafle",
+      "name": {
+        "me": "Slatke vafle",
+        "en": "Sweet waffles"
+      },
+      "order": 8,
+      "items": [
+        {
+          "id": "slatke-vafle-30",
+          "number": 30,
+          "name": {
+            "me": "Mliječna čokolada",
+            "en": "Milk chocolate"
+          },
+          "description": null,
+          "price": 5.4,
+          "priceDisplay": "5.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-30.webp",
+            "jpg": "images/jpg/slatke-vafle-30.jpg",
+            "width": 578,
+            "height": 347,
+            "transparent": true
+          },
+          "sourcePage": 27
+        },
+        {
+          "id": "slatke-vafle-31",
+          "number": 31,
+          "name": {
+            "me": "Višnja, bueno čokolada, bueno sladoled",
+            "en": "Cherries, bueno chocolate bueno ice cream"
+          },
+          "description": null,
+          "price": 8.8,
+          "priceDisplay": "8.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-31.webp",
+            "jpg": "images/jpg/slatke-vafle-31.jpg",
+            "width": 571,
+            "height": 358,
+            "transparent": true
+          },
+          "sourcePage": 27
+        },
+        {
+          "id": "slatke-vafle-32",
+          "number": 32,
+          "name": {
+            "me": "Bijela čokolada, maline, cookies keks",
+            "en": "White chocolate, raspberries, cookies"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-32.webp",
+            "jpg": "images/jpg/slatke-vafle-32.jpg",
+            "width": 556,
+            "height": 347,
+            "transparent": true
+          },
+          "sourcePage": 27
+        },
+        {
+          "id": "slatke-vafle-33",
+          "number": 33,
+          "name": {
+            "me": "Krem vanila, mliječna čokolada, jagode, orašasti plodovi",
+            "en": "Vanila cream, milk chocolate, strawberries, nuts"
+          },
+          "description": null,
+          "price": 9.8,
+          "priceDisplay": "9.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-33.webp",
+            "jpg": "images/jpg/slatke-vafle-33.jpg",
+            "width": 559,
+            "height": 357,
+            "transparent": true
+          },
+          "sourcePage": 27
+        },
+        {
+          "id": "slatke-vafle-34",
+          "number": 34,
+          "name": {
+            "me": "Mliječna čokolada, jagode, ferrero sladoled, oreo, smarties, čoko rolnice",
+            "en": "Milk chocolate, strawberries, ferrero ice cream, oreo smarties, choco rolls"
+          },
+          "description": null,
+          "price": 11.6,
+          "priceDisplay": "11.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-34.webp",
+            "jpg": "images/jpg/slatke-vafle-34.jpg",
+            "width": 546,
+            "height": 394,
+            "transparent": true
+          },
+          "sourcePage": 28
+        },
+        {
+          "id": "slatke-vafle-35",
+          "number": 35,
+          "name": {
+            "me": "Mliječna čokolada, jagode, vanila sladoled",
+            "en": "Milk chocolate, strawberries, vanilla ice cream"
+          },
+          "description": null,
+          "price": 9.4,
+          "priceDisplay": "9.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-35.webp",
+            "jpg": "images/jpg/slatke-vafle-35.jpg",
+            "width": 532,
+            "height": 336,
+            "transparent": true
+          },
+          "sourcePage": 28
+        },
+        {
+          "id": "slatke-vafle-36",
+          "number": 36,
+          "name": {
+            "me": "Svježe voće, vanila sladoled, mliječna čokolada",
+            "en": "Fresh fruits, vanilla ice cream, milk chocolate"
+          },
+          "description": null,
+          "price": 9.8,
+          "priceDisplay": "9.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-36.webp",
+            "jpg": "images/jpg/slatke-vafle-36.jpg",
+            "width": 560,
+            "height": 364,
+            "transparent": true
+          },
+          "sourcePage": 28
+        },
+        {
+          "id": "slatke-vafle-37",
+          "number": 37,
+          "name": {
+            "me": "Bijela čokolada, pistaći, maline, pistaći sladoled",
+            "en": "White chocolate, pistachios, raspberries, pistachio ice cream"
+          },
+          "description": null,
+          "price": 10.4,
+          "priceDisplay": "10.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-37.webp",
+            "jpg": "images/jpg/slatke-vafle-37.jpg",
+            "width": 530,
+            "height": 345,
+            "transparent": true
+          },
+          "sourcePage": 28
+        },
+        {
+          "id": "slatke-vafle-38",
+          "number": 38,
+          "name": {
+            "me": "Mliječna čokolada, malina namaz, maline, sladoled banana",
+            "en": "Milk chocolate, raspberry cream, raspberries, banana ice cream"
+          },
+          "description": null,
+          "price": 10.4,
+          "priceDisplay": "10.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-38.webp",
+            "jpg": "images/jpg/slatke-vafle-38.jpg",
+            "width": 562,
+            "height": 360,
+            "transparent": true
+          },
+          "sourcePage": 29
+        },
+        {
+          "id": "slatke-vafle-39",
+          "number": 39,
+          "name": {
+            "me": "Pistaći čokolada, bijela čokolada, oreo, jagode",
+            "en": "Pistachio chocolate, white chocolate, oreo, strawberries"
+          },
+          "description": null,
+          "price": 10.4,
+          "priceDisplay": "10.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-39.webp",
+            "jpg": "images/jpg/slatke-vafle-39.jpg",
+            "width": 560,
+            "height": 364,
+            "transparent": true
+          },
+          "sourcePage": 29
+        },
+        {
+          "id": "slatke-vafle-40",
+          "number": 40,
+          "name": {
+            "me": "Tolos vafla",
+            "en": "Tolos waffle"
+          },
+          "description": {
+            "me": "Dva vafla, vanila sladoled, plazma, vanilla krem, banana, jagode, mliječna čokolada, bijela čokolada",
+            "en": "Two waffles, vanilla ice cream, Plazma, vanilla cream, banana, strawberries, milk chocolate, white chocolate"
+          },
+          "price": 17.4,
+          "priceDisplay": "17.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-40.webp",
+            "jpg": "images/jpg/slatke-vafle-40.jpg",
+            "width": 517,
+            "height": 424,
+            "transparent": true
+          },
+          "sourcePage": 29
+        },
+        {
+          "id": "slatke-vafle-41",
+          "number": 41,
+          "name": {
+            "me": "Bueno namaz, bueno čokolada, kinder jajc, jagode",
+            "en": "Bueno cream, bueno chocolate, kinder egg, strawberries"
+          },
+          "description": null,
+          "price": 12.8,
+          "priceDisplay": "12.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-41.webp",
+            "jpg": "images/jpg/slatke-vafle-41.jpg",
+            "width": 546,
+            "height": 358,
+            "transparent": true
+          },
+          "sourcePage": 29
+        },
+        {
+          "id": "slatke-vafle-42",
+          "number": 42,
+          "name": {
+            "me": "Bueno čokolada, plazma u mlijeku, banane",
+            "en": "Bueno chocolate, plazma in milk, bananas"
+          },
+          "description": null,
+          "price": 11.8,
+          "priceDisplay": "11.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-42.webp",
+            "jpg": "images/jpg/slatke-vafle-42.jpg",
+            "width": 602,
+            "height": 397,
+            "transparent": true
+          },
+          "sourcePage": 30
+        },
+        {
+          "id": "slatke-vafle-43",
+          "number": 43,
+          "name": {
+            "me": "Pistaći namaz, pistaći čokolada, maline",
+            "en": "Pistachio cream, pistachio chocolate, raspberries"
+          },
+          "description": null,
+          "price": 11.8,
+          "priceDisplay": "11.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-43.webp",
+            "jpg": "images/jpg/slatke-vafle-43.jpg",
+            "width": 619,
+            "height": 400,
+            "transparent": true
+          },
+          "sourcePage": 30
+        },
+        {
+          "id": "slatke-vafle-46",
+          "number": 46,
+          "name": {
+            "me": "Fil od jabuke, cimet, vanila sladoled",
+            "en": "Apple purre, cinnamon, vanilla ice cream"
+          },
+          "description": null,
+          "price": 9.2,
+          "priceDisplay": "9.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-46.webp",
+            "jpg": "images/jpg/slatke-vafle-46.jpg",
+            "width": 610,
+            "height": 399,
+            "transparent": true
+          },
+          "sourcePage": 30
+        },
+        {
+          "id": "slatke-vafle-47",
+          "number": 47,
+          "name": {
+            "me": "Dubai vafla",
+            "en": "Dubai waffle"
+          },
+          "description": {
+            "me": "Pistaći čokolada, bijela čokolada, kadaif, pistaći, pistaći špageti sladoled",
+            "en": "Pistachio chocolate, white chocolate, kadaif, pistachios, pistachio spaghetti ice cream"
+          },
+          "price": 10.6,
+          "priceDisplay": "10.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-47.webp",
+            "jpg": "images/jpg/slatke-vafle-47.jpg",
+            "width": 855,
+            "height": 540,
+            "transparent": true
+          },
+          "sourcePage": 31
+        },
+        {
+          "id": "slatke-vafle-48",
+          "number": 48,
+          "name": {
+            "me": "Mliječna čokolada, plazma, plazma sladoled, maline",
+            "en": "Milk chocolate, Plazma, Plazma ice cream, raspberries"
+          },
+          "description": null,
+          "price": 10.8,
+          "priceDisplay": "10.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slatke-vafle-48.webp",
+            "jpg": "images/jpg/slatke-vafle-48.jpg",
+            "width": 834,
+            "height": 533,
+            "transparent": true
+          },
+          "sourcePage": 31
+        }
+      ]
+    },
+    {
+      "id": "slane-krepe",
+      "name": {
+        "me": "Slane krepe",
+        "en": "Salty crepes"
+      },
+      "order": 9,
+      "items": [
+        {
+          "id": "slane-krepe-77",
+          "number": 77,
+          "name": {
+            "me": "Specijal \"Hari's\"",
+            "en": "Special \"Hari's\""
+          },
+          "description": {
+            "me": "Cjepkana svinjetina, gauda, pečurke, pančeta, paprika, paradajz, sos od senfa, miks zelenih salata, pomfrit",
+            "en": "Chopped pork, gouda cheese, mushrooms, bacon, pepper, tomato, mustard sauce, mix of green salads, french fries"
+          },
+          "price": 14.2,
+          "priceDisplay": "14.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slane-krepe-77.webp",
+            "jpg": "images/jpg/slane-krepe-77.jpg",
+            "width": 897,
+            "height": 563,
+            "transparent": true
+          },
+          "sourcePage": 32
+        },
+        {
+          "id": "slane-krepe-72",
+          "number": 72,
+          "name": {
+            "me": "Pavlaka, mortadela, iceberg, pistaći sos, gauda",
+            "en": "Sour cream, mortadella, iceberg, pistachio sauce, gouda cheese"
+          },
+          "description": null,
+          "price": 13.4,
+          "priceDisplay": "13.40 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slane-krepe-72.webp",
+            "jpg": "images/jpg/slane-krepe-72.jpg",
+            "width": 915,
+            "height": 632,
+            "transparent": true
+          },
+          "sourcePage": 32
+        },
+        {
+          "id": "slane-krepe-70",
+          "number": 70,
+          "name": {
+            "me": "Šunka, gauda",
+            "en": "Ham, gouda cheese"
+          },
+          "description": null,
+          "price": 7.4,
+          "priceDisplay": "7.40 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 33
+        },
+        {
+          "id": "slane-krepe-71",
+          "number": 71,
+          "name": {
+            "me": "Pančeta, šunka, gauda, pečurke, paradajz, sos od senfa",
+            "en": "Bacon, ham, gouda cheese, mushrooms, tomato, mustard sauce"
+          },
+          "description": null,
+          "price": 10.0,
+          "priceDisplay": "10.00 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 33
+        },
+        {
+          "id": "slane-krepe-73",
+          "number": 73,
+          "name": {
+            "me": "Pileći file, gauda, kukuruz, pileća salata, susam",
+            "en": "Chicken fillet, goude cheese, corn, chicken salad, sesame"
+          },
+          "description": null,
+          "price": 10.8,
+          "priceDisplay": "10.80 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 33
+        },
+        {
+          "id": "slane-krepe-74",
+          "number": 74,
+          "name": {
+            "me": "Mocarela, pileći file, sušeni paradajz, miks salata",
+            "en": "Mozzarella, chicken fillet, dried tomato, mix salad"
+          },
+          "description": null,
+          "price": 10.2,
+          "priceDisplay": "10.20 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 33
+        },
+        {
+          "id": "slane-krepe-75",
+          "number": 75,
+          "name": {
+            "me": "Pileći file, pečurke, gauda, rukola, tartar sos",
+            "en": "Chicken fillet, mushrooms, gouda cheese, rocket, tartar sauce"
+          },
+          "description": null,
+          "price": 10.8,
+          "priceDisplay": "10.80 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 33
+        },
+        {
+          "id": "slane-krepe-78",
+          "number": 78,
+          "name": {
+            "me": "Grčka salata krepa",
+            "en": "Greek salad crepe"
+          },
+          "description": {
+            "me": "Feta sir, paradajz, krastavac, masline, paprika, crveni luk, origano, maslinovo ulje",
+            "en": "Feta cheese, tomato, cucumber, olives, pepper, red onion, oregano, olive oil"
+          },
+          "price": 9.6,
+          "priceDisplay": "9.60 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 33
+        },
+        {
+          "id": "slane-krepe-79",
+          "number": 79,
+          "name": {
+            "me": "Zapečena krepa",
+            "en": "Oven crepe"
+          },
+          "description": {
+            "me": "Pileći file, gauda, kukuruz, paradajz, kajmak",
+            "en": "Chicken fillet, gouda cheese, corn, tomato, kaymak"
+          },
+          "price": 10.6,
+          "priceDisplay": "10.60 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/slane-krepe-79.webp",
+            "jpg": "images/jpg/slane-krepe-79.jpg",
+            "width": 1003,
+            "height": 580,
+            "transparent": true
+          },
+          "sourcePage": 34
+        },
+        {
+          "id": "slane-krepe-81",
+          "number": 81,
+          "name": {
+            "me": "Zapečena krepa",
+            "en": "Oven crepe"
+          },
+          "description": {
+            "me": "Gauda, pavlaka, juneće meso, kečap, koktel sos, čedar, čeri paradajz i crveni luk",
+            "en": "Gouda, sour cream, beef, ketchup, cocktail sauce, cedar, cherry tomatoes and red onion"
+          },
+          "price": 13.6,
+          "priceDisplay": "13.60 eur",
+          "noPork": true,
+          "image": {
+            "webp": "images/webp/slane-krepe-81.webp",
+            "jpg": "images/jpg/slane-krepe-81.jpg",
+            "width": 824,
+            "height": 619,
+            "transparent": true
+          },
+          "sourcePage": 34
+        },
+        {
+          "id": "slane-krepe-80",
+          "number": 80,
+          "name": {
+            "me": "Zapečena krepa",
+            "en": "Oven crepe"
+          },
+          "description": {
+            "me": "Gauda, pileći file, kajmak, pavlaka, parmezan, susam, kisjeli krastavac",
+            "en": "Gouda cheese, chicken fillet, cream, sour cream, parmesan, sesame, pickles"
+          },
+          "price": 11.2,
+          "priceDisplay": "11.20 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 35
+        },
+        {
+          "id": "slane-krepe-85",
+          "number": 85,
+          "name": {
+            "me": "Italijanska krepa",
+            "en": "Italian crepe"
+          },
+          "description": {
+            "me": "Njeguška pršuta, gauda, čeri paradajz, rukola, vinegret sos",
+            "en": "Parma prosciutto, gouda, cherry tomato, rocket, vinaigrette sauce"
+          },
+          "price": 10.4,
+          "priceDisplay": "10.40 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 35
+        },
+        {
+          "id": "slane-krepe-86",
+          "number": 86,
+          "name": {
+            "me": "Mediteranska krepa",
+            "en": "Mediteranian crepe"
+          },
+          "description": {
+            "me": "Pileći file, gauda, rukola, feta sir, ajvar",
+            "en": "Chicken fillet, gouda cheese, rocket, feta cheese, ajvar"
+          },
+          "price": 10.6,
+          "priceDisplay": "10.60 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 35
+        },
+        {
+          "id": "slane-krepe-87",
+          "number": 87,
+          "name": {
+            "me": "Američka krepa",
+            "en": "American crepe"
+          },
+          "description": {
+            "me": "Cjepkana svinjetina, pančeta, paradajz, crni luk, BBQ sos, čedar sos",
+            "en": "Chopped pork, bacon, tomato, onion, BBQ sauce, cheddar sauce"
+          },
+          "price": 11.2,
+          "priceDisplay": "11.20 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 35
+        },
+        {
+          "id": "slane-krepe-88",
+          "number": 88,
+          "name": {
+            "me": "Chicken cheese zapečena",
+            "en": "Chicken cheese oven crepe"
+          },
+          "description": {
+            "me": "Pileći file, krem sir, gauda, karamelizovani luk, čeri paradajz",
+            "en": "Chicken fillet, cream cheese, gouda cheese, caramelized onion, cherry tomato"
+          },
+          "price": 13.4,
+          "priceDisplay": "13.40 eur",
+          "noPork": true,
+          "image": null,
+          "sourcePage": 35
+        },
+        {
+          "id": "slane-krepe-89",
+          "number": 89,
+          "name": {
+            "me": "Cheese pork zapečena",
+            "en": "Cheese pork oven crepe"
+          },
+          "description": {
+            "me": "Cjepkana svinjetina, gauda, čedar sir, karamelizovani luk, čeri paradajz",
+            "en": "Chopped pork, gouda cheese, cheddar cheese, caramelized onion, cherry tomato"
+          },
+          "price": 13.4,
+          "priceDisplay": "13.40 eur",
+          "noPork": false,
+          "image": null,
+          "sourcePage": 35
+        },
+        {
+          "id": "slane-krepe-82",
+          "number": 82,
+          "name": {
+            "me": "Grande Italiano",
+            "en": "Grande Italiano"
+          },
+          "description": {
+            "me": "Šunka, svinjska pršuta, kulen, sušeni paradajz, mocarela, pečena crvena paprika, rukola, vinegret sos, parmezan, pesto sos, med, zelena jabuka, pomorandža",
+            "en": "Ham, pork prosciutto, kulen, dried tomato, mozzarella, roasted red pepper, rocket, vinaigrette sauce, parmesan, pesto sauce, honey, green apple, orange"
+          },
+          "price": 13.8,
+          "priceDisplay": "13.80 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slane-krepe-82.webp",
+            "jpg": "images/jpg/slane-krepe-82.jpg",
+            "width": 799,
+            "height": 556,
+            "transparent": true
+          },
+          "sourcePage": 36
+        },
+        {
+          "id": "slane-krepe-83",
+          "number": 83,
+          "name": {
+            "me": "Zapečena krepa",
+            "en": "Oven crepe"
+          },
+          "description": {
+            "me": "Cjepkana svinjetina, gauda, feta sir, tartar sos, pančeta, čeri",
+            "en": "Chopped pork, gouda cheese, feta cheese, tartar sauce, bacon, cherry tomatoes"
+          },
+          "price": 13.2,
+          "priceDisplay": "13.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/slane-krepe-83.webp",
+            "jpg": "images/jpg/slane-krepe-83.jpg",
+            "width": 823,
+            "height": 616,
+            "transparent": true
+          },
+          "sourcePage": 36
+        }
+      ]
+    },
+    {
+      "id": "budi-sam-svoj-sef",
+      "name": {
+        "me": "Budi sam svoj šef",
+        "en": "Make it by yourself"
+      },
+      "order": 10,
+      "items": [],
+      "sections": [
+        {
+          "id": "osnova",
+          "name": {
+            "me": "Osnova",
+            "en": "Base"
+          },
+          "items": [
+            {
+              "id": "osnova-krepa",
+              "name": {
+                "me": "Krepa",
+                "en": "Crepe"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "osnova-vafla",
+              "name": {
+                "me": "Vafla",
+                "en": "Waffle"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "osnova-penkejk",
+              "name": {
+                "me": "Penkejk",
+                "en": "Pancake"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "osnova-mini-vafla",
+              "name": {
+                "me": "Mini vafla",
+                "en": "Mini waffle"
+              },
+              "price": 1.8,
+              "priceDisplay": "1.80 eur"
+            },
+            {
+              "id": "osnova-krepa-vegan",
+              "name": {
+                "me": "Krepa (vegan)",
+                "en": "Crepe (vegan)"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            },
+            {
+              "id": "osnova-penkejk-vegan",
+              "name": {
+                "me": "Penkejk (vegan)",
+                "en": "Pancake (vegan)"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            }
+          ]
+        },
+        {
+          "id": "suhomesnati-proizvodi",
+          "name": {
+            "me": "Suhomesnati proizvodi",
+            "en": "Meat products"
+          },
+          "items": [
+            {
+              "id": "suhomesnati-proizvodi-sveze-pecena-svinjetina",
+              "name": {
+                "me": "Sveže pečena svinjetina",
+                "en": "Fresh roasted pork"
+              },
+              "price": 3.6,
+              "priceDisplay": "3.60 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-pileci-file",
+              "name": {
+                "me": "Pileći file",
+                "en": "Chicken fillete"
+              },
+              "price": 3.4,
+              "priceDisplay": "3.40 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-junece-meso",
+              "name": {
+                "me": "Juneće meso",
+                "en": "Beef meat"
+              },
+              "price": 4.4,
+              "priceDisplay": "4.40 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-panceta",
+              "name": {
+                "me": "Pančeta",
+                "en": "Bacon"
+              },
+              "price": 2.7,
+              "priceDisplay": "2.70 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-dimljeni-cureci-file",
+              "name": {
+                "me": "Dimljeni ćureći file",
+                "en": "Smoked turkey fillet"
+              },
+              "price": 2.7,
+              "priceDisplay": "2.70 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-dimljena-kobasica",
+              "name": {
+                "me": "Dimljena kobasica",
+                "en": "Smoked sausage"
+              },
+              "price": 3.1,
+              "priceDisplay": "3.10 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-sunka",
+              "name": {
+                "me": "Šunka",
+                "en": "Ham"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-svinjska-prsuta",
+              "name": {
+                "me": "Svinjska pršuta",
+                "en": "Pork prosciutto"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-goveda-prsuta",
+              "name": {
+                "me": "Goveda pršuta",
+                "en": "Beef prosciutto"
+              },
+              "price": 3.2,
+              "priceDisplay": "3.20 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-njeguska-prsuta",
+              "name": {
+                "me": "Njeguška pršuta",
+                "en": "Parma prosciutto"
+              },
+              "price": 3.1,
+              "priceDisplay": "3.10 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-kulen",
+              "name": {
+                "me": "Kulen",
+                "en": "Kulen"
+              },
+              "price": 2.6,
+              "priceDisplay": "2.60 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-mortadela",
+              "name": {
+                "me": "Mortadela",
+                "en": "Mortadella"
+              },
+              "price": 4.4,
+              "priceDisplay": "4.40 eur"
+            },
+            {
+              "id": "suhomesnati-proizvodi-dimljeni-losos",
+              "name": {
+                "me": "Dimljeni losos",
+                "en": "Smoked salmon"
+              },
+              "price": 4.6,
+              "priceDisplay": "4.60 eur"
+            }
+          ]
+        },
+        {
+          "id": "povrce",
+          "name": {
+            "me": "Povrće",
+            "en": "Vegetables"
+          },
+          "items": [
+            {
+              "id": "povrce-paradajz",
+              "name": {
+                "me": "Paradajz",
+                "en": "Tomato"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "povrce-ceri-paradajz",
+              "name": {
+                "me": "Čeri paradajz",
+                "en": "Cherry tomatos"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "povrce-zelena-paprika",
+              "name": {
+                "me": "Zelena paprika",
+                "en": "Green pepper"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "povrce-crvena-paprika",
+              "name": {
+                "me": "Crvena paprika",
+                "en": "Red pepper"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "povrce-krastavac",
+              "name": {
+                "me": "Krastavac",
+                "en": "Cucumber"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "povrce-kisjeli-krastavac",
+              "name": {
+                "me": "Kisjeli krastavac",
+                "en": "Pickles"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "povrce-iceberg",
+              "name": {
+                "me": "Iceberg",
+                "en": "Iceberg"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "povrce-masline",
+              "name": {
+                "me": "Masline",
+                "en": "Olives"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "povrce-kukuruz",
+              "name": {
+                "me": "Kukuruz",
+                "en": "Corn"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "povrce-svjezi-spanac",
+              "name": {
+                "me": "Svježi spanać",
+                "en": "Fresh spinach"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "povrce-rukola",
+              "name": {
+                "me": "Rukola",
+                "en": "Rocket"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "povrce-suseni-paradajz",
+              "name": {
+                "me": "Sušeni paradajz",
+                "en": "Dried tomato"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "povrce-pecurke",
+              "name": {
+                "me": "Pečurke",
+                "en": "Mushrooms"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "povrce-pecurke-a-la-crem",
+              "name": {
+                "me": "Pečurke a la crem",
+                "en": "Mushrooms a la creme"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "povrce-pecena-crvena-paprika",
+              "name": {
+                "me": "Pečena crvena paprika",
+                "en": "Roasted red pepper"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "povrce-crni-luk",
+              "name": {
+                "me": "Crni luk",
+                "en": "Onion"
+              },
+              "price": 0.7,
+              "priceDisplay": "0.70 eur"
+            },
+            {
+              "id": "povrce-pasulj",
+              "name": {
+                "me": "Pasulj",
+                "en": "Beans"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "povrce-kupus",
+              "name": {
+                "me": "Kupus",
+                "en": "Cabbage"
+              },
+              "price": 1.7,
+              "priceDisplay": "1.70 eur"
+            },
+            {
+              "id": "povrce-patlidzan",
+              "name": {
+                "me": "Patlidžan",
+                "en": "Eggplant"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "povrce-miks-salata",
+              "name": {
+                "me": "Miks salata",
+                "en": "Salad mix"
+              },
+              "price": 1.7,
+              "priceDisplay": "1.70 eur"
+            }
+          ]
+        },
+        {
+          "id": "sir",
+          "name": {
+            "me": "Sir",
+            "en": "Cheese"
+          },
+          "items": [
+            {
+              "id": "sir-domaci-sir",
+              "name": {
+                "me": "Domaći sir",
+                "en": "Farmer´s cheese"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "sir-gauda",
+              "name": {
+                "me": "Gauda",
+                "en": "Gouda cheese"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "sir-feta-sir",
+              "name": {
+                "me": "Feta sir",
+                "en": "Feta cheese"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "sir-krem-sir",
+              "name": {
+                "me": "Krem sir",
+                "en": "Cream cheese"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "sir-parmezan",
+              "name": {
+                "me": "Parmezan",
+                "en": "Parmesan"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "sir-mocarela",
+              "name": {
+                "me": "Mocarela",
+                "en": "Mozzarella"
+              },
+              "price": 2.8,
+              "priceDisplay": "2.80 eur"
+            },
+            {
+              "id": "sir-cedar-sos",
+              "name": {
+                "me": "Čedar sos",
+                "en": "Cheddar sauce"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "sir-sir-ella",
+              "name": {
+                "me": "Sir Ella",
+                "en": "Ella cheese"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "sir-veganski-biljni-sir",
+              "name": {
+                "me": "Veganski-biljni sir",
+                "en": "Vegan cheese"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "sir-kajmak",
+              "name": {
+                "me": "Kajmak",
+                "en": "Cream"
+              },
+              "price": 2.1,
+              "priceDisplay": "2.10 eur"
+            },
+            {
+              "id": "sir-burrata",
+              "name": {
+                "me": "Burrata",
+                "en": "Burrata"
+              },
+              "price": 4.6,
+              "priceDisplay": "4.60 eur"
+            },
+            {
+              "id": "sir-pavlaka",
+              "name": {
+                "me": "Pavlaka",
+                "en": "Sour cream"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "sir-cedar-sir",
+              "name": {
+                "me": "Čedar sir",
+                "en": "Cheddar cheese"
+              },
+              "price": 4.4,
+              "priceDisplay": "4.40 eur"
+            }
+          ]
+        },
+        {
+          "id": "razno",
+          "name": {
+            "me": "Razno",
+            "en": "Various"
+          },
+          "items": [
+            {
+              "id": "razno-kikiriki-puter",
+              "name": {
+                "me": "Kikiriki puter",
+                "en": "Peanut butter"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "razno-jaje",
+              "name": {
+                "me": "Jaje",
+                "en": "Egg"
+              },
+              "price": 0.8,
+              "priceDisplay": "0.80 eur"
+            },
+            {
+              "id": "razno-tunjevina",
+              "name": {
+                "me": "Tunjevina",
+                "en": "Tuna"
+              },
+              "price": 4.4,
+              "priceDisplay": "4.40 eur"
+            },
+            {
+              "id": "razno-pomfrit",
+              "name": {
+                "me": "Pomfrit",
+                "en": "French fries"
+              },
+              "price": 3.4,
+              "priceDisplay": "3.40 eur"
+            },
+            {
+              "id": "razno-pomfrit-sa-feta-sirom",
+              "name": {
+                "me": "Pomfrit sa feta sirom",
+                "en": "French fries with feta cheese"
+              },
+              "price": 4.4,
+              "priceDisplay": "4.40 eur"
+            },
+            {
+              "id": "razno-pomfrit-sa-pancetom",
+              "name": {
+                "me": "Pomfrit sa pančetom",
+                "en": "French fries with Bacon"
+              },
+              "price": 4.4,
+              "priceDisplay": "4.40 eur"
+            },
+            {
+              "id": "razno-tost",
+              "name": {
+                "me": "Tost",
+                "en": "Toast"
+              },
+              "price": 0.8,
+              "priceDisplay": "0.80 eur"
+            },
+            {
+              "id": "razno-hljebcici",
+              "name": {
+                "me": "Hljebčići",
+                "en": "Bread"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            }
+          ]
+        },
+        {
+          "id": "salate-i-sosevi",
+          "name": {
+            "me": "Salate i sosevi",
+            "en": "Salads & sauces"
+          },
+          "items": [
+            {
+              "id": "salate-i-sosevi-balsamico-krema",
+              "name": {
+                "me": "Balsamico krema",
+                "en": "Balsamic cream"
+              },
+              "price": 2.1,
+              "priceDisplay": "2.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-tartar-sos",
+              "name": {
+                "me": "Tartar sos",
+                "en": "Tartar sauce"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "salate-i-sosevi-senf-sos",
+              "name": {
+                "me": "Senf sos",
+                "en": "Mustard sauce"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "salate-i-sosevi-pileca-salata",
+              "name": {
+                "me": "Pileća salata",
+                "en": "Chicken salad"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "salate-i-sosevi-bbq-sos",
+              "name": {
+                "me": "BBQ sos",
+                "en": "BBQ sauce"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-slatko-ljuti-sos",
+              "name": {
+                "me": "Slatko ljuti sos",
+                "en": "Sweet chilli sauce"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "salate-i-sosevi-vinegret-sos",
+              "name": {
+                "me": "Vinegret sos",
+                "en": "Vinaigrette sauce"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-cezar-sos",
+              "name": {
+                "me": "Cezar sos",
+                "en": "Caesar sauce"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-majonez",
+              "name": {
+                "me": "Majonez",
+                "en": "Mayonaisse"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "salate-i-sosevi-senf",
+              "name": {
+                "me": "Senf",
+                "en": "Mustard"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-kecap",
+              "name": {
+                "me": "Kečap",
+                "en": "Ketchup"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-tabasko-sos",
+              "name": {
+                "me": "Tabasko sos",
+                "en": "Tabasco sauce"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "salate-i-sosevi-pesto-sos",
+              "name": {
+                "me": "Pesto sos",
+                "en": "Pesto sauce"
+              },
+              "price": 2.8,
+              "priceDisplay": "2.80 eur"
+            },
+            {
+              "id": "salate-i-sosevi-ajvar",
+              "name": {
+                "me": "Ajvar",
+                "en": "Ajvar"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            },
+            {
+              "id": "salate-i-sosevi-sos-od-nara",
+              "name": {
+                "me": "Sos od nara",
+                "en": "Pomogranate sauce"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "salate-i-sosevi-grcki-jogurt",
+              "name": {
+                "me": "Grčki jogurt",
+                "en": "Greek yoghurt"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "salate-i-sosevi-pelat",
+              "name": {
+                "me": "Pelat",
+                "en": "Pomodori pelati"
+              },
+              "price": 2.1,
+              "priceDisplay": "2.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-koktel-sos",
+              "name": {
+                "me": "Koktel sos",
+                "en": "Cocktail sauce"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-burger-sos",
+              "name": {
+                "me": "Burger sos",
+                "en": "Burgrer sauce"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "salate-i-sosevi-pistac-sos",
+              "name": {
+                "me": "Pistać sos",
+                "en": "Pistachio sauce"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "salate-i-sosevi-avokado-sos",
+              "name": {
+                "me": "Avokado sos",
+                "en": "Avocado sauce"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            }
+          ]
+        },
+        {
+          "id": "cokolade",
+          "name": {
+            "me": "Čokolade",
+            "en": "Chocolates"
+          },
+          "items": [
+            {
+              "id": "cokolade-mlijecna-cokolada",
+              "name": {
+                "me": "Mliječna čokolada",
+                "en": "Milk chocolate"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "cokolade-bijela-cokolada",
+              "name": {
+                "me": "Bijela čokolada",
+                "en": "White chocolate"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "cokolade-crna-cokolada",
+              "name": {
+                "me": "Crna čokolada",
+                "en": "Dark chocolate"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "cokolade-bueno-cokolada",
+              "name": {
+                "me": "Bueno čokolada",
+                "en": "Bueno chocolate"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "cokolade-miks-cokolada",
+              "name": {
+                "me": "Miks čokolada",
+                "en": "Mix chocolate"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "cokolade-pistaci-cokolada",
+              "name": {
+                "me": "Pistaći čokolada",
+                "en": "Pistachio chocolate"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            }
+          ]
+        },
+        {
+          "id": "voce",
+          "name": {
+            "me": "Voće",
+            "en": "Fruits"
+          },
+          "items": [
+            {
+              "id": "voce-banana",
+              "name": {
+                "me": "Banana",
+                "en": "Banana"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "voce-jagode",
+              "name": {
+                "me": "Jagode",
+                "en": "Strawberry"
+              },
+              "price": 2.5,
+              "priceDisplay": "2.50 eur"
+            },
+            {
+              "id": "voce-jabuka",
+              "name": {
+                "me": "Jabuka",
+                "en": "Apple"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "voce-pomorandza",
+              "name": {
+                "me": "Pomorandža",
+                "en": "Orange"
+              },
+              "price": 1.4,
+              "priceDisplay": "1.40 eur"
+            },
+            {
+              "id": "voce-sezonsko-voce",
+              "name": {
+                "me": "Sezonsko voće",
+                "en": "Season fruits"
+              },
+              "price": 3.0,
+              "priceDisplay": "3.00 eur"
+            },
+            {
+              "id": "voce-maline",
+              "name": {
+                "me": "Maline",
+                "en": "Raspberry"
+              },
+              "price": 2.8,
+              "priceDisplay": "2.80 eur"
+            },
+            {
+              "id": "voce-visnje",
+              "name": {
+                "me": "Višnje",
+                "en": "Cherry"
+              },
+              "price": 1.8,
+              "priceDisplay": "1.80 eur"
+            },
+            {
+              "id": "voce-avokado",
+              "name": {
+                "me": "Avokado",
+                "en": "Avocado"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "voce-nar",
+              "name": {
+                "me": "Nar",
+                "en": "Pomegranate"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "voce-kompot-breskva",
+              "name": {
+                "me": "Kompot breskva",
+                "en": "Copmote peach"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            }
+          ]
+        },
+        {
+          "id": "sirupi-i-slatko",
+          "name": {
+            "me": "Sirupi i slatko",
+            "en": "Syrups & sweets"
+          },
+          "items": [
+            {
+              "id": "sirupi-i-slatko-sirup-od-visnje",
+              "name": {
+                "me": "Sirup od višnje",
+                "en": "Cherry syrup"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-sirup-od-karamele",
+              "name": {
+                "me": "Sirup od karamele",
+                "en": "Caramel syrup"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-sirup-od-cokolade",
+              "name": {
+                "me": "Sirup od čokolade",
+                "en": "Chocolate syrup"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-sirup-od-jagode",
+              "name": {
+                "me": "Sirup od jagode",
+                "en": "Strawberry syrup"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-sirup-od-javora",
+              "name": {
+                "me": "Sirup od javora",
+                "en": "Maple syrup"
+              },
+              "price": 2.9,
+              "priceDisplay": "2.90 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-slatko-od-visnji",
+              "name": {
+                "me": "Slatko od višnji",
+                "en": "Cherry sweet"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-slatko-od-sumskih-jagoda",
+              "name": {
+                "me": "Slatko od šumskih jagoda",
+                "en": "Wild strawberry sweet"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-slatko-od-borovnica",
+              "name": {
+                "me": "Slatko od borovnica",
+                "en": "Blueberry sweet"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "sirupi-i-slatko-med",
+              "name": {
+                "me": "Med",
+                "en": "Honey"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            }
+          ]
+        },
+        {
+          "id": "keks",
+          "name": {
+            "me": "Keks",
+            "en": "Biscuits"
+          },
+          "items": [
+            {
+              "id": "keks-oreo-u-mlijeku",
+              "name": {
+                "me": "Oreo u mlijeku",
+                "en": "Oreo in milk"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "keks-keks",
+              "name": {
+                "me": "Keks",
+                "en": "Biscuit"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "keks-plazma-keks",
+              "name": {
+                "me": "Plazma keks",
+                "en": "Plazma"
+              },
+              "price": 1.5,
+              "priceDisplay": "1.50 eur"
+            },
+            {
+              "id": "keks-plazma-u-mlijeku",
+              "name": {
+                "me": "Plazma u mlijeku",
+                "en": "Plazma in milk"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "keks-cookie-keks",
+              "name": {
+                "me": "Cookie keks",
+                "en": "Cookies"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "keks-posni-keks",
+              "name": {
+                "me": "Posni keks",
+                "en": "Digestive biscuit"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "keks-oreo",
+              "name": {
+                "me": "Oreo",
+                "en": "Oreo"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "keks-vafel-rolnice-sa-cokoladom",
+              "name": {
+                "me": "Vafel rolnice sa čokoladom",
+                "en": "Chocolate stuffed cigarillo"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "keks-speculoos",
+              "name": {
+                "me": "Speculoos",
+                "en": "Speculoos"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "keks-kadaif",
+              "name": {
+                "me": "Kadaif",
+                "en": "Kadaif"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            }
+          ]
+        },
+        {
+          "id": "orasasti-plodovi",
+          "name": {
+            "me": "Orašasti plodovi",
+            "en": "Nuts"
+          },
+          "items": [
+            {
+              "id": "orasasti-plodovi-badem",
+              "name": {
+                "me": "Badem",
+                "en": "Almond"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "orasasti-plodovi-orasi",
+              "name": {
+                "me": "Orasi",
+                "en": "Walnut"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "orasasti-plodovi-ljesnik",
+              "name": {
+                "me": "Lješnik",
+                "en": "Hazelnut"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "orasasti-plodovi-karamelizovani-kikiriki",
+              "name": {
+                "me": "Karamelizovani kikiriki",
+                "en": "Caramelized peanut"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            },
+            {
+              "id": "orasasti-plodovi-kokos",
+              "name": {
+                "me": "Kokos",
+                "en": "Coconut"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "orasasti-plodovi-miks-orasastih-plodova",
+              "name": {
+                "me": "Miks orašastih plodova",
+                "en": "Mixed nuts"
+              },
+              "price": 1.9,
+              "priceDisplay": "1.90 eur"
+            },
+            {
+              "id": "orasasti-plodovi-pistaci",
+              "name": {
+                "me": "Pistaći",
+                "en": "Pistachios"
+              },
+              "price": 2.6,
+              "priceDisplay": "2.60 eur"
+            }
+          ]
+        },
+        {
+          "id": "kremovi-i-namazi",
+          "name": {
+            "me": "Kremovi i namazi",
+            "en": "Creams & spreads"
+          },
+          "items": [
+            {
+              "id": "kremovi-i-namazi-vanila-krem",
+              "name": {
+                "me": "Vanila krem",
+                "en": "Vanilla cream"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-kikiriki-puter",
+              "name": {
+                "me": "Kikiriki puter",
+                "en": "Peanut butter"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-slag",
+              "name": {
+                "me": "Šlag",
+                "en": "Whipped cream"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-speculoos-krem",
+              "name": {
+                "me": "Speculoos krem",
+                "en": "Speculoos cream"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-puter",
+              "name": {
+                "me": "Puter",
+                "en": "Butter"
+              },
+              "price": 1.1,
+              "priceDisplay": "1.10 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-krem-od-cokolade",
+              "name": {
+                "me": "Krem od čokolade",
+                "en": "Chocolate cream"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-jabuka-fil",
+              "name": {
+                "me": "Jabuka fil",
+                "en": "Apple puree"
+              },
+              "price": 2.2,
+              "priceDisplay": "2.20 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-krem-od-kokosa",
+              "name": {
+                "me": "Krem od kokosa",
+                "en": "Coconut cream"
+              },
+              "price": 1.4,
+              "priceDisplay": "1.40 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-coffee-krem",
+              "name": {
+                "me": "Coffee krem",
+                "en": "Coffee cream"
+              },
+              "price": 1.8,
+              "priceDisplay": "1.80 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-krem-od-limete",
+              "name": {
+                "me": "Krem od limete",
+                "en": "Lime cream"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-pistaci-namaz",
+              "name": {
+                "me": "Pistaći namaz",
+                "en": "Pistachio cream"
+              },
+              "price": 3.0,
+              "priceDisplay": "3.00 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-bueno-namaz",
+              "name": {
+                "me": "Bueno namaz",
+                "en": "Bueno cream"
+              },
+              "price": 3.0,
+              "priceDisplay": "3.00 eur"
+            },
+            {
+              "id": "kremovi-i-namazi-maline-namaz",
+              "name": {
+                "me": "Maline namaz",
+                "en": "Raspberry cream"
+              },
+              "price": 3.0,
+              "priceDisplay": "3.00 eur"
+            }
+          ]
+        },
+        {
+          "id": "alkohol",
+          "name": {
+            "me": "Alkohol",
+            "en": "Alcohol"
+          },
+          "items": [
+            {
+              "id": "alkohol-cointreau",
+              "name": {
+                "me": "Cointreau",
+                "en": "Cointreau"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "alkohol-baileys",
+              "name": {
+                "me": "Baileys",
+                "en": "Baileys"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "alkohol-metaxa",
+              "name": {
+                "me": "Metaxa",
+                "en": "Metaxa"
+              },
+              "price": 2.3,
+              "priceDisplay": "2.30 eur"
+            },
+            {
+              "id": "alkohol-rum",
+              "name": {
+                "me": "Rum",
+                "en": "Rum"
+              },
+              "price": 2.1,
+              "priceDisplay": "2.10 eur"
+            }
+          ]
+        },
+        {
+          "id": "razno-slatko",
+          "name": {
+            "me": "Razno",
+            "en": "Various"
+          },
+          "items": [
+            {
+              "id": "razno-slatko-coko-kuglice",
+              "name": {
+                "me": "Čoko kuglice",
+                "en": "Choco balls"
+              },
+              "price": 1.8,
+              "priceDisplay": "1.80 eur"
+            },
+            {
+              "id": "razno-slatko-smarties",
+              "name": {
+                "me": "Smarties",
+                "en": "Smarties"
+              },
+              "price": 1.7,
+              "priceDisplay": "1.70 eur"
+            },
+            {
+              "id": "razno-slatko-coko-smoki",
+              "name": {
+                "me": "Čoko smoki",
+                "en": "Choco Smoki"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "razno-slatko-pjenaste-bombone",
+              "name": {
+                "me": "Pjenaste bombone",
+                "en": "Marshmallows"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "razno-slatko-stanglica-mlijecne-cokolade",
+              "name": {
+                "me": "Štanglica mliječne čokolade",
+                "en": "Piece of milk chocolate"
+              },
+              "price": 1.2,
+              "priceDisplay": "1.20 eur"
+            },
+            {
+              "id": "razno-slatko-coko-bananice",
+              "name": {
+                "me": "Čoko bananice",
+                "en": "Small choco banana"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "razno-slatko-sarene-mrvice",
+              "name": {
+                "me": "Šarene mrvice",
+                "en": "Sprinkles"
+              },
+              "price": 1.0,
+              "priceDisplay": "1.00 eur"
+            },
+            {
+              "id": "razno-slatko-kitkat",
+              "name": {
+                "me": "KitKat",
+                "en": "KitKat"
+              },
+              "price": 1.4,
+              "priceDisplay": "1.40 eur"
+            },
+            {
+              "id": "razno-slatko-munchmallow",
+              "name": {
+                "me": "Munchmallow",
+                "en": "Munchmallow"
+              },
+              "price": 1.3,
+              "priceDisplay": "1.30 eur"
+            },
+            {
+              "id": "razno-slatko-kinder-jaje",
+              "name": {
+                "me": "Kinder jaje",
+                "en": "Kinder egg"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "razno-slatko-granola",
+              "name": {
+                "me": "Granola",
+                "en": "Granola"
+              },
+              "price": 2.8,
+              "priceDisplay": "2.80 eur"
+            },
+            {
+              "id": "razno-slatko-cija-u-mlijeku",
+              "name": {
+                "me": "Čija u mlijeku",
+                "en": "Chia in milk"
+              },
+              "price": 2.8,
+              "priceDisplay": "2.80 eur"
+            }
+          ]
+        },
+        {
+          "id": "sladoledi",
+          "name": {
+            "me": "Sladoledi",
+            "en": "Ice creams"
+          },
+          "items": [
+            {
+              "id": "sladoledi-karamela",
+              "name": {
+                "me": "Karamela",
+                "en": "Caramela"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-bueno",
+              "name": {
+                "me": "Bueno",
+                "en": "Bueno"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-ferero",
+              "name": {
+                "me": "Ferero",
+                "en": "Ferrero"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-cookies",
+              "name": {
+                "me": "Cookies",
+                "en": "Cookies"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-jagoda",
+              "name": {
+                "me": "Jagoda",
+                "en": "Strawberry"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-banana",
+              "name": {
+                "me": "Banana",
+                "en": "Banana"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-vanila",
+              "name": {
+                "me": "Vanila",
+                "en": "Vanilla"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            },
+            {
+              "id": "sladoledi-pistaci",
+              "name": {
+                "me": "Pistaći",
+                "en": "Pistachio"
+              },
+              "price": 2.4,
+              "priceDisplay": "2.40 eur"
+            },
+            {
+              "id": "sladoledi-plazma",
+              "name": {
+                "me": "Plazma",
+                "en": "Plazma"
+              },
+              "price": 2.0,
+              "priceDisplay": "2.00 eur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nasi-proizvodi",
+      "name": {
+        "me": "Naši proizvodi",
+        "en": "Our products"
+      },
+      "order": 11,
+      "items": [
+        {
+          "id": "nasi-proizvodi-vocni-sok-0-2l",
+          "number": null,
+          "name": {
+            "me": "Voćni sok 0.2l",
+            "en": "Fruit juice 0.2l"
+          },
+          "description": {
+            "me": "Jabuka, kruška, kajsija, jagoda, malina, višnja, kupina",
+            "en": "Apple, pear, apricot, strawberry, raspberry, cherry, blackberry"
+          },
+          "price": 3.2,
+          "priceDisplay": "3.20 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/nasi-proizvodi-vocni-sok-0-2l.webp",
+            "jpg": "images/jpg/nasi-proizvodi-vocni-sok-0-2l.jpg",
+            "width": 642,
+            "height": 918,
+            "transparent": true
+          },
+          "sourcePage": 42
+        },
+        {
+          "id": "nasi-proizvodi-vocni-sok-borovnica-0-2l",
+          "number": null,
+          "name": {
+            "me": "Voćni sok borovnica 0.2l",
+            "en": "Blueberry fruit juice 0.2l"
+          },
+          "description": {
+            "me": "Borovnica",
+            "en": "Blueberry"
+          },
+          "price": 3.3,
+          "priceDisplay": "3.30 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/nasi-proizvodi-vocni-sok-borovnica-0-2l.webp",
+            "jpg": "images/jpg/nasi-proizvodi-vocni-sok-borovnica-0-2l.jpg",
+            "width": 127,
+            "height": 336,
+            "transparent": true
+          },
+          "sourcePage": 42
+        },
+        {
+          "id": "nasi-proizvodi-buenita-krem",
+          "number": null,
+          "name": {
+            "me": "Buenita krem",
+            "en": "Buenita cream"
+          },
+          "description": null,
+          "price": 4.7,
+          "priceDisplay": "4.70 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/nasi-proizvodi-buenita-krem.webp",
+            "jpg": "images/jpg/nasi-proizvodi-buenita-krem.jpg",
+            "width": 213,
+            "height": 286,
+            "transparent": true
+          },
+          "sourcePage": 42
+        },
+        {
+          "id": "nasi-proizvodi-hari-s-krem",
+          "number": null,
+          "name": {
+            "me": "Hari's krem",
+            "en": "Hari's cream"
+          },
+          "description": null,
+          "price": 4.6,
+          "priceDisplay": "4.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/nasi-proizvodi-hari-s-krem.webp",
+            "jpg": "images/jpg/nasi-proizvodi-hari-s-krem.jpg",
+            "width": 234,
+            "height": 316,
+            "transparent": true
+          },
+          "sourcePage": 42
+        },
+        {
+          "id": "nasi-proizvodi-pistachio-krem",
+          "number": null,
+          "name": {
+            "me": "Pistachio krem",
+            "en": "Pistachio cream"
+          },
+          "description": null,
+          "price": 7.6,
+          "priceDisplay": "7.60 eur",
+          "noPork": false,
+          "image": {
+            "webp": "images/webp/nasi-proizvodi-pistachio-krem.webp",
+            "jpg": "images/jpg/nasi-proizvodi-pistachio-krem.jpg",
+            "width": 254,
+            "height": 343,
+            "transparent": true
+          },
+          "sourcePage": 42
+        }
+      ]
+    }
+  ]
+}
