@@ -29,7 +29,9 @@ export async function SiteFooter() {
         {/* One under the other on phones; one row from lg, the logo at the
             left and the rest at the right */}
         <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
-          <div className="flex items-center gap-4 lg:me-auto">
+          {/* The logo and "od 1997." keep their size; the page links wrap
+              instead */}
+          <div className="flex shrink-0 items-center gap-4 lg:me-auto">
             <Link
               href="/"
               className="rounded-full focus-visible:outline-2 focus-visible:outline-offset-2"
@@ -41,7 +43,7 @@ export async function SiteFooter() {
                 className="size-24"
               />
             </Link>
-            <p className="font-heading text-xl font-semibold text-brand-peach">
+            <p className="font-heading text-xl font-semibold whitespace-nowrap text-brand-peach">
               {tAbout("since")}
             </p>
           </div>

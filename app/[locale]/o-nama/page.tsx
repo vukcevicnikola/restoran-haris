@@ -1,9 +1,27 @@
+import type { Metadata } from "next"
 import type { Locale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { FlagHeart } from "@/components/about/flag-heart"
 import { CategoryPanel } from "@/components/menu/category-panel"
 import { PlacePhotos } from "@/components/sections/place-photos"
+import { JsonLd } from "@/components/seo/json-ld"
 import { site } from "@/data/site"
+import { localizedUrl, pageMetadata } from "@/lib/seo"
+import { breadcrumbs } from "@/lib/structured-data"
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/o-nama">): Promise<Metadata> {
+  const locale = (await params).locale as Locale
+  const t = await getTranslations({ locale, namespace: "meta.about" })
+  return pageMetadata({
+    locale,
+    href: "/o-nama",
+    title: t("title"),
+    description: t("description", { name: site.fullName }),
+    image: "/og/about.jpg",
+  })
+}
 
 // The story from the printed menu's first page, on the same dark panel as
 // the menu's category pages: the welcome as the h1, the text beside the
@@ -14,13 +32,20 @@ import { site } from "@/data/site"
 export default async function AboutPage({
   params,
 }: PageProps<"/[locale]/o-nama">) {
-  const { locale } = await params
-  setRequestLocale(locale as Locale)
+  const locale = (await params).locale as Locale
+  setRequestLocale(locale)
   const t = await getTranslations("about")
+  const tNav = await getTranslations("nav")
   const name = site.fullName
 
   return (
     <main>
+      <JsonLd
+        data={breadcrumbs([
+          { name, url: localizedUrl(locale, "/") },
+          { name: tNav("about"), url: localizedUrl(locale, "/o-nama") },
+        ])}
+      />
       <CategoryPanel>
         <div className="pb-6 md:pb-10">
           <h1 className="text-center text-3xl font-semibold text-balance sm:text-4xl md:text-5xl">
@@ -41,13 +66,14 @@ export default async function AboutPage({
           </p>
         </div>
       </CategoryPanel>
-      {/* One of each: the room, the mural, a set table and the menu */}
+      {/* The place and the food in turn: the room, a crepe on its way to the
+          table, the mural, the baked eggs */}
       <PlacePhotos
         photos={[
           "diningRoomTiledFloor",
+          "waiterServingStrawberryPistachioCrepe",
           "muralArchWallLamp",
-          "tableSettingRedDoors",
-          "menuBookOnTable",
+          "bakedEggsClayDishFlatbread",
         ]}
         className="py-16 md:py-24"
       />

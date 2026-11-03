@@ -1,19 +1,59 @@
+import type { Metadata } from "next"
 import type { Locale } from "next-intl"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { AboutIntro } from "@/components/sections/about-intro"
 import { Hero } from "@/components/sections/hero"
 import { MenuPreview } from "@/components/sections/menu-preview"
+import { PlacePhotos } from "@/components/sections/place-photos"
+import { JsonLd } from "@/components/seo/json-ld"
+import { site } from "@/data/site"
+import { pageMetadata } from "@/lib/seo"
+import { restaurant, website } from "@/lib/structured-data"
 
-// TODO more home sections (gallery, contact CTA)
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]">): Promise<Metadata> {
+  const locale = (await params).locale as Locale
+  const t = await getTranslations({ locale, namespace: "meta.home" })
+  return pageMetadata({
+    locale,
+    href: "/",
+    title: t("title", { name: site.fullName }),
+    description: t("description", { name: site.fullName, street: site.street }),
+    image: "/og/home.jpg",
+    absolute: true,
+  })
+}
+
+// TODO more home sections (contact CTA)
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
-  const { locale } = await params
-  setRequestLocale(locale as Locale)
+  const locale = (await params).locale as Locale
+  setRequestLocale(locale)
+  const t = await getTranslations("home.gallery")
+  const tMeta = await getTranslations("meta.home")
+  const description = tMeta("description", {
+    name: site.fullName,
+    street: site.street,
+  })
 
   return (
     <main>
+      <JsonLd data={[restaurant(locale, description), website(locale)]} />
       <Hero />
       <AboutIntro />
       <MenuPreview />
+      {/* "Iz naše kuhinje": a burger, a pizza and two sweet crepes. No top
+          padding: the menu preview above ends with its own. */}
+      <PlacePhotos
+        title={t("title")}
+        photos={[
+          "burgerFriesBlackPlate",
+          "chocolateHazelnutCrepeWafer",
+          "flatbreadPizzaHamWoodenBoard",
+          "strawberryPistachioCrepeChocolate",
+        ]}
+        className="pb-16 md:pb-24"
+      />
     </main>
   )
 }

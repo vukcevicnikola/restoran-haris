@@ -167,7 +167,7 @@ export const slatkeKrepeSections: MenuSection[] = [
       },
       {
         number: 14,
-        name: meEn("Dubai krepa", "Dupai crepe"),
+        name: meEn("Dubai krepa", "Dubai crepe"),
         description: meEn(
           "Pistaći čokolada, mliječna čokolada, kadaif, pistaći",
           "Pistachio chocolate, milk chocolate, kadaif, pistachios"

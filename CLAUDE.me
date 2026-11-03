@@ -16,7 +16,7 @@ The logo reads **"creperie hari's, waffle ice cream"**: a round badge, maroon an
 **Not yet confirmed with the client. Do not hardcode these, keep them in one place (`data/site.ts`) so they are easy to change:**
 
 - Public name: "Hari's" vs "Restoran Haris" (domain is `restoranharis.com`). Provisional: **Hari's** (`site.name`); in running text **Hari's Creperie** (`site.fullName`, used in the hero heading)
-- Photos of the place and the food: the phone hero `public/images/hero/mobile-bg.jpg`, and **19 photos of the place** (November 2026), `public/images/gallery/haris-NN-<subject>.webp`, all 1600x2400 (2:3), listed in `data/gallery.ts` (see "Gallery" in section 9). No food photos yet apart from the menu cut-outs. The tablet and desktop hero images (`tablet.jpg`, `desktop.jpg`, see "Hero" in section 9) are still stock placeholders that must be replaced before launch.
+- Photos of the place and the food: the phone hero `public/images/hero/mobile-bg.jpg`, and **19 photos of the place** (`public/images/gallery/haris-NN-<subject>.webp`) and **7 of the food** (`haris-food-NN-<subject>.webp`, 2026-11-03: a burger, baked eggs, a pizza, four sweet crepes), all November 2026, 1600x2400 (2:3), listed in `data/gallery.ts` (see "Gallery" in section 9). The tablet and desktop hero images (`tablet.jpg`, `desktop.jpg`, see "Hero" in section 9) are still stock placeholders that must be replaced before launch.
 - Address: **Njegoševa 25, Podgorica, Crna Gora** (user, 2026-11-03; on Google Maps as "Hari's Creperie Podgorica"). Social links: see "Social links" in section 9. Phone, opening hours, GPS coordinates: **unknown** (not on the public Google listing either, 2026-11-03). **Use clearly marked TODO placeholders, never invent them.**
 - Menu categories: **the categories of the client's printed menus, all of them, with their printed names and in their order** (user, 2026-10-19; `data/menu/index.ts`): the main menu (*Jelovnik*, `main-menu-small.pdf`) **Doručak, Potaži, Burgeri, Pica, Salate, Slatke krepe, Penkejk, Slatke vafle, Slane krepe, Budi sam svoj šef, Naši proizvodi**, then the two menus of their own, **Slatka karta** (October 2026: Kafa, Šejk, Milkšejk, Limunada, Topla čokolada, Kup, Desert and Sladoled as its sections) and **Posni meni** (client's PDF, October 2026). Every category has its dishes and prices. Prices are EUR only (the PDF's "6.40 RSD" for Banana split is a typo: user, 2026-10-16). The first list from the client (2026-10-06: Doručak, Ručak, Večera, Dezerti, Posni meni, Hari's Kolači, Sladoledi, Voćne torte, Piće) is replaced; Slatka karta was three cards (Piće, Dezerti, Sladoledi) until 2026-10-19.
 - Original vector logo (SVG/AI/PDF): the provided file is `public/logoharis.png` (1200x1200 PNG, transparent background, the same badge as the printed menu). The older `public/logo.png` ("waffle pan cake", 567x529) is no longer used.
@@ -73,12 +73,19 @@ Notes:
 | Code | Language | `<html lang>` | hreflang | og:locale |
 |---|---|---|---|---|
 | `me` (default) | Montenegrin | `sr-Latn-ME` | `sr-Latn-ME` | `sr_ME` |
-| `en` | English | `en` | `en` | `en_US` |
+| `en` | English | `en` | `en` | `en_GB` |
 | `it` | Italian | `it` | `it` | `it_IT` |
 | `ru` | Russian | `ru` | `ru` | `ru_RU` |
 | `tr` | Turkish | `tr` | `tr` | `tr_TR` |
 
 The switcher shows uppercase codes in this order: **EN, RU, IT, TR, ME**. The native names (**Crnogorski, English, Italiano, Русский, Türkçe**) are read only by screen readers.
+
+Translation status:
+- **EN done (2026-11-03)**, in British spelling, since EN shows the UK flag ("savoury", "flavours", "colour"). `messages/en.json` is all ours. Category names (`data/menu/index.ts`) are the client's printed English (Breakfast, Cream soups, Burgers, Pizza, Salads, Sweet crepes, Pancakes, Sweet waffles, Our products), except **Savoury crepes** (printed "Salty crepes") and **Be your own chef** (printed "Make it by yourself"), which read better. Slatka karta is **Sweet menu** and Posni meni **Lenten menu** (ours). Dishes: the client's English from the JSON menus as sent (`meEn`, their typos included); the Posni meni PDF is Montenegrin only, so its English is ours ("Vegan cheese", "vegan mayonnaise", "Wellness biscuits", "Rosehip jam" for *džem od šipka*).
+- **RU done (2026-11-03)**, all ours (the client sent no Russian). `messages/ru.json`; category names in `data/menu/index.ts` (Завтраки, Крем-супы, Бургеры, Пицца, Салаты, Сладкие крепы, Панкейки, Сладкие вафли, Сытные крепы, Будь сам себе шеф, Наша продукция, Сладкое меню, Постное меню); the dishes in `data/menu/translations/ru.ts` (see section 8). Crepes are "креп/крепы" (the brand is a creperie), savoury ones "сытные"; Njeguška pršuta "негушский пршут", kajmak "каймак", kadaif "катаифи", *kup* "кубок". Brand names stay in Latin (Bueno, Plazma, Oreo, Kinder, KitKat, Smarties, Speculoos, Ferrero, Wellness), as do the address and the "Made by" credit. "Doručak" and "Penkejk" are both a section title and a dish name, so they stay singular (Завтрак, Панкейк), like the Montenegrin.
+- **IT done (2026-11-03)**, all ours, like RU: `messages/it.json` (formal "voi", like the Montenegrin "Vi"), category names (Colazione, Vellutate, Burger, Pizza, Insalate, Crêpes dolci, Pancake, Waffle dolci, Crêpes salate, Lo chef siete voi, I nostri prodotti, Carta dei dolci, Menu di magro) and `data/menu/translations/it.ts`. Posni meni is **"Menu di magro"** (meatless; it has tuna and salmon, so not "vegano"), its dishes "di magro"; Šunka is "prosciutto cotto", svinjska pršuta "prosciutto crudo", Njeguška pršuta "prosciutto di Njeguši", kadaif "kataifi", *kup* "coppa"; kajmak, ajvar and kulen stay as they are.
+- **TR done (2026-11-03)**, all ours: `messages/tr.json` (formal "siz"), category names (Kahvaltı, Kremalı çorbalar, Burgerler, Pizza, Salatalar, Tatlı krepler, Pankekler, Tatlı waffle'lar, Tuzlu krepler, Kendi şefin ol, Ürünlerimiz, Tatlı menüsü, Perhiz menüsü) and `data/menu/translations/tr.ts`. Posni meni is **"Perhiz menüsü"** (*Büyük Perhiz* is Lent in Turkish; "oruç" would read as Ramadan fasting). **Pork is always named** ("domuz pastırması" for pančeta, "didiklenmiş domuz eti", "domuz prosciutto"), for guests who avoid it; the "Domuz eti içermez" badge does the rest. Avoided false friends: *pekmez* is "meyve ezmesi" (Turkish pekmez is grape molasses), *šakšuka* is "shakshuka" (Turkish şakşuka is an eggplant meze). Pistachio is "Antep fıstığı", peanut "yer fıstığı". Turkish suffixes depend on how a name sounds, so no message adds one to `{name}` ("{name} dünyasına", "{name} olarak").
+- All five languages are complete. The site's English is the only one partly from the client (the JSON menus); the rest of the translations are ours and should be checked by native speakers before launch.
 
 ---
 
@@ -121,12 +128,12 @@ restoranharis/
 │   │   └── not-found.tsx         (todo)
 │   ├── fonts/                    self-hosted Lora.woff2, Inter.woff2 + OFL licences
 │   ├── globals.css               Tailwind + shadcn tokens + brand theme
-│   ├── icon.png                  favicon (square crop of the logo) (todo)
-│   ├── sitemap.ts                (todo)
+│   ├── favicon.ico, icon.png, apple-icon.png  from the logo (npm run seo:images)
+│   ├── sitemap.ts, robots.ts, manifest.ts     see section 10
 │   └── robots.ts                 (todo)
 ├── components/
 │   ├── ui/                       shadcn primitives (generated by CLI, edit sparingly)
-│   ├── sections/                 hero.tsx, about-intro.tsx, menu-preview.tsx (+ rise-in-list.tsx); gallery, contact-cta... (todo)
+│   ├── sections/                 hero.tsx, about-intro.tsx, menu-preview.tsx (+ rise-in-list.tsx), place-photos.tsx; contact-cta... (todo)
 │   ├── layout/                   site-header, nav-links, mobile-nav, language-switcher,
 │   │                             header-styles.ts, page-heading, social-links; site-footer, nav-items (the pages, shared by header and footer)
 │   └── menu/                     category-card, category-panel, dish-browser (client), dish-card
@@ -138,14 +145,16 @@ restoranharis/
 ├── lib/
 │   ├── utils.ts                  shadcn cn()
 │   ├── fonts.ts                  next/font/local setup
-│   └── seo.ts                    hreflang map now; URL + alternates helpers (todo)
+│   ├── seo.ts                    hreflang, URLs, pageMetadata (section 10)
+│   └── structured-data.ts        schema.org JSON-LD (section 10)
 ├── public/
 │   ├── logoharis.png             the logo (replace with SVG when available)
 │   ├── flags/                    official national flags for the language switcher (Wikimedia Commons)
 │   ├── social/                   official Facebook and Instagram logos (Wikimedia Commons)
 │   ├── images/hero/              mobile-bg.jpg (client photo); tablet.jpg, desktop.jpg (stock, TODO replace)
 │   ├── images/menu/              one round-crop photo per category (stock, TODO replace)
-│   └── og.jpg                    1200x630: logo on cream (todo)
+│   ├── og/                       share images, 1200x630 (npm run seo:images)
+│   └── icons/                    manifest icons
 ├── scripts/                      check-translations.ts; generate-qr.ts (todo)
 ├── qr/                           generated QR files (todo)
 ├── global.d.ts                   next-intl AppConfig types (Locale, Messages)
@@ -281,7 +290,7 @@ export default async function MenuPage({ params }: PageProps<"/[locale]/meni">) 
 
 Text lives in files, never in components.
 
-- `messages/*.json`: website text, grouped by page/section (`home.title`, `contact.hours`, `meta.homeTitle`). Current groups: `nav` (header links, mobile menu labels), `localeSwitcher`, `social` (link names for the Facebook/Instagram logos), `home` (`home.hero.title`, `home.hero.cta`, `home.about.*`, `home.menu.*`), `menu`, `gallery`, `about`, `contact`. Brand names go in as ICU placeholders filled from `data/site.ts` (`"Dobrodošli u svijet {name}"` with `t("title", { name: site.fullName })`), never typed into the JSON.
+- `messages/*.json`: website text, grouped by page/section (`home.title`, `contact.hours`, `meta.homeTitle`). Current groups: `nav` (header links, mobile menu labels), `localeSwitcher`, `social` (link names for the Facebook/Instagram logos), `home` (`home.hero.title`, `home.hero.cta`, `home.about.*`, `home.menu.*`, `home.gallery.title`), `menu`, `gallery`, `about`, `contact`. Brand names go in as ICU placeholders filled from `data/site.ts` (`"Dobrodošli u svijet {name}"` with `t("title", { name: site.fullName })`), never typed into the JSON.
 - `data/menu/`: `index.ts` (the categories), one file of sections per category (`dorucak.ts`, `potazi.ts`, ... `nasi-proizvodi.ts`, `posni-meni.ts`; Slatka karta is still in the three files it was imported into, `pice.ts`, `dezerti.ts`, `sladoledi.ts`), `types.ts`. The client's main-menu export is kept in `data/menu/incoming/` (`menu.json` and its README with the known typos and missing numbers; its photos were deleted after the import, as they are in `public/images/menu/`), so texts can be fixed in the JSON and re-imported. (An old `data/menu/index.ts` shadowed this folder, since a file wins over a folder's `index.ts`; it was deleted on 2026-10-16.)
 - `scripts/import-menu.ts` (`npm run menu:import -- <menu.json> <slug>=<category id>,... ... [--skip=<item id>,...]`) turns a client JSON menu (Montenegrin + English, photos with transparent backgrounds) into `data/menu/<slug>.ts` and copies the photos to `public/images/menu/<slug>/`. Each JSON category becomes a section of the given site category, with its id as the section id; one with `sections` of its own (Budi sam svoj šef) becomes those sections. It keeps the printed dish `number` (numbered dishes sorted by it) and the `noPork` badge; `--skip` leaves out dishes already in another category. The command for the main menu is in the script's header. It overwrites the file, so hand fixes there are lost on a re-import.
 - `data/site.ts`: brand name, address, phone, hours, socials (same in every language; only the labels go in JSON)
@@ -293,7 +302,7 @@ Process:
 4. Run `npm run i18n:check`.
 5. Native speakers proofread IT, RU, TR (food terms and allergen information especially).
 
-**`data/menu/index.ts` format**: each category has optional `sections` (like "Posni sendviči"), each section a list of dishes. Dish and section texts are `L` objects in `menu.ts`, not in `messages/*.json`. Until a dish is translated, `untranslated("...")` puts the Montenegrin text in all 5 languages (`meEn(me, en)` when the client sent English too: the JSON menus), so searching for `untranslated(` lists what is left to translate (`npm run i18n:check` does not see `menu.ts`; the `L` type makes a missing language fail the build).
+**`data/menu/index.ts` format**: each category has optional `sections` (like "Posni sendviči"), each section a list of dishes. Dish and section texts are `L` objects in `menu.ts`, not in `messages/*.json`. `meEn(me, en)` takes the client's Montenegrin and English (the JSON menus); `untranslated("...")` is for a text sent in Montenegrin only and keeps it in English until translated, so searching for `untranslated(` lists what is left (none since 2026-11-03) (the `L` type makes a missing language fail the build). **Languages the client did not send are dictionaries** (2026-11-03): `data/menu/translations/<locale>.ts` maps each Montenegrin text to its translation, and `meEn`/`untranslated` look it up (`it.ts`, `ru.ts`, `tr.ts`), so the menu files and the import script stay as they are and a re-import keeps the translations. One Montenegrin text has one translation everywhere; a text missing from a dictionary shows in Montenegrin, and `npm run i18n:check` lists it.
 ```ts
 {
   id: 'posni-sendvici', // id of the section heading, unique on the page
@@ -388,7 +397,7 @@ The generated components contain some hardcoded English (for example the Sheet c
 
 - Header: the real logo (`public/logoharis.png`, static import) via `next/image`, with `site.name` as `alt`. Do not type the brand name as text instead of the logo.
 - Favicon: square version of the logo as `app/icon.png`.
-- OG image: `public/og.jpg`, 1200x630, logo on cream.
+- Share images: `public/og/`, see section 10.
 - Food photos: warm natural light, close-ups, one consistent aspect ratio, `rounded-2xl`, always `next/image`, compressed.
 
 ### Header (`components/layout/site-header.tsx`)
@@ -415,11 +424,11 @@ On every page (2026-11-03), the header bar again at the bottom: `bg-brand-maroon
 ### Page heading (`components/layout/page-heading.tsx`)
 
 Galerija, O nama, Kontakt and the category pages start with `<PageHeading>`: the page's h1 under the header bar, in the same `max-w-7xl px-4` container as the header, `pt-16 md:pt-24` (clears the hanging logo badge), Lora bold `text-3xl md:text-4xl`, `text-balance`. Until 2026-10-14 it sat beside the badge's lower half (the client's request, 2026-10-06).
-- Contact: "Kontakt" (the page: see "Contact page" below). **About (`/o-nama`) has no `PageHeading`** (2026-10-16): it is the printed menu's first page on the category pages' dark `CategoryPanel`: h1 `about.welcome` "Dobrodošli u {name}!", centred; the story (`about.origin`, `about.recipe`, `about.team`, Montenegrin only, the printed English is left to the translations) beside `components/about/flag-heart.tsx` (above it on phones); then `about.since` "od 1997." in peach between two thin lines. All text in Lora (user: "all text should use primary font"). The heart is three crops of the official flags (Serbia, Montenegro, Greece; Wikimedia Commons, rasterised to `public/images/about/flag-*.webp`), masked to a heart with a thin cream line inside the edge: the Montenegrin strip is wide enough for the whole coat of arms (never cut), Serbia shows its stripes from the fly end, Greece its canton's cross. Under the panel, on cream (2026-11-03): `PlacePhotos` (`components/sections/place-photos.tsx`, shared with `/kontakt`): h2 `place.title` "Naš restoran" (user, 2026-11-03; "Naš prostor" first), four photos from `data/gallery.ts` (here the room, the mural, a set table, the menu; 2 x 2 on phones, 4 in a row from `md`, `aspect-2/3 rounded-2xl`), then a button `place.cta` "Pogledajte galeriju" to `/galerija` (the About intro's button style). The page passes the photo ids and the padding. Category pages: the category name. `/meni` has its own h1 "Hari's Creperie Meni" (`menu.title` = `"{name} Meni"` with `site.fullName`) above the cards, with the same size and top padding (see Menu).
+- Contact: "Kontakt" (the page: see "Contact page" below). **About (`/o-nama`) has no `PageHeading`** (2026-10-16): it is the printed menu's first page on the category pages' dark `CategoryPanel`: h1 `about.welcome` "Dobrodošli u {name}!", centred; the story (`about.origin`, `about.recipe`, `about.team`; only the page's language is shown. The English is our translation (2026-11-03), since the printed English page isn't in the repo) beside `components/about/flag-heart.tsx` (above it on phones); then `about.since` "od 1997." in peach between two thin lines. All text in Lora (user: "all text should use primary font"). The heart is three crops of the official flags (Serbia, Montenegro, Greece; Wikimedia Commons, rasterised to `public/images/about/flag-*.webp`), masked to a heart with a thin cream line inside the edge: the Montenegrin strip is wide enough for the whole coat of arms (never cut), Serbia shows its stripes from the fly end, Greece its canton's cross. Under the panel, on cream (2026-11-03): `PlacePhotos` (`components/sections/place-photos.tsx`, shared with `/kontakt`): h2 `place.title` "Naš restoran" (user, 2026-11-03; "Naš prostor" first), four photos from `data/gallery.ts` (here the place and the food in turn: the room, a crepe being carried to a table, the mural, the baked eggs (2026-11-03); 2 x 2 on phones, 4 in a row from `md`, `aspect-2/3 rounded-2xl`), then a button `place.cta` "Pogledajte galeriju" to `/galerija` (the About intro's button style). The page passes the photo ids and the padding. Category pages: the category name. `/meni` has its own h1 "Hari's Creperie Meni" (`menu.title` = `"{name} Meni"` with `site.fullName`) above the cards, with the same size and top padding (see Menu).
 
 ### Gallery (`app/[locale]/galerija/page.tsx`)
 
-`PageHeading` "Galerija", then all 19 photos of the place from `data/gallery.ts`, in their numbered order (2026-11-03): a grid of 2 columns on phones, 3 from `md`, 4 from `lg`, `gap-3 sm:gap-4`, each `aspect-2/3 rounded-2xl object-cover` with `placeholder="blur"`. They rise in as they scroll into view (`RiseInList`, like the home cards). Alt texts are descriptive (the photos are the content), in `gallery.photos.<id>`, the id being the camelCase subject of the file name. No lightbox yet. Some photos are near-duplicates (03/04/13, 06/07, 09/10): the client may want to drop some. TODO food photos.
+`PageHeading` "Galerija", then all the photos from `data/gallery.ts` (2026-11-03): the 7 of the food first, then the 19 of the place, each in their numbered order, a grid of 2 columns on phones, 3 from `md`, 4 from `lg`, `gap-3 sm:gap-4`, each `aspect-2/3 rounded-2xl object-cover` with `placeholder="blur"`. They rise in as they scroll into view (`RiseInList`, like the home cards). Alt texts are descriptive (the photos are the content), in `gallery.photos.<id>`, the id being the camelCase subject of the file name. No lightbox yet. Some photos are near-duplicates (03/04/13, 06/07, 09/10): the client may want to drop some. Alt texts are Montenegrin in all five files for now, like the rest of the site's text.
 
 ### Contact page (`app/[locale]/kontakt/page.tsx`)
 
@@ -487,6 +496,10 @@ After the About intro (user, 2026-10-19): h2 `home.menu.title` "Pogledajte naš 
 - Card: `CategoryCard`, the same as on `/meni` (see Menu) with `heading="h3"` and **without the "Pogledajte meni" cue**: the photo at the left, the name only at the right (user). The `/meni` cards took this design over the same day.
 - Motion: the cards **rise in as they scroll into view, with the dish cards' animation** (user: "the same transition animation as for our menu items"), via `components/sections/rise-in-list.tsx` (a client `ul`; the cards stay server-rendered as its children). An IntersectionObserver (`rootMargin` -10% at the bottom) marks each item `data-reveal="in"` when it comes into view; items then use `animate-rise-in` with 80ms steps capped at 320ms, in list order even when they come in in several batches (a batch waits for the one before it), `motion-reduce:animate-fade-in`. Items below the screen when the page opens are hidden until then (`data-reveal="waiting"` → `opacity-0`); items already on the screen, and everything without JS, show at once.
 
+### Food photos (home page)
+
+After the menu preview (2026-11-03): `PlacePhotos` with its own title, h2 `home.gallery.title` "Iz naše kuhinje", four food photos (the burger, the chocolate crepe, the pizza, the strawberry and pistachio crepe), and the same "Pogledajte galeriju" button. `pb-16 md:pb-24` and no top padding, since the menu preview above ends with its own. `PlacePhotos` takes an optional `title`; without it, it is `place.title` "Naš restoran" (`/o-nama`, `/kontakt`).
+
 ### Menu (`app/[locale]/meni/`)
 
 Two levels (the client chose a page per category on 2026-10-06, after a reference screenshot of white category cards with a cut-out dish photo, title, "pogledajte našu ponudu" and an underlined "POGLEDAJ MENI"):
@@ -538,138 +551,19 @@ Still little motion overall: no fade-and-slide on every section, no hover animat
 
 ## 10. SEO (metadataBase, hreflang, sitemap)
 
-Status: `lib/seo.ts` currently contains only the `hreflang` map (typed `Record<Locale, string>`, used for `<html lang>` and the language switcher), and `data/site.ts` exists. Pages have no `<title>`/metadata yet. Because `global.d.ts` types `Locale` and the pathnames, the helpers below need `Locale` instead of `string`, and an `href` typed as a pathname key, for example `keyof typeof routing.pathnames`.
+Built 2026-11-03 (user: "prepare SEO for production"). All of it static, generated at build time.
 
-**`lib/seo.ts`** (target)
-```ts
-import type { Metadata } from 'next';
-import { getPathname } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
-import { site } from '@/data/site';
+- **`lib/seo.ts`**: `hreflang` (`<html lang>`, hreflang links), `ogLocale` (English is `en_GB`, the site's English being British), `localizedUrl(locale, href)` (`"/meni"` in `en` -> `https://restoranharis.com/en/menu`; the home page has no trailing slash), `languageAlternates(href)` (the five languages and `x-default` = Montenegrin), and **`pageMetadata({ locale, href, title, description, image, absolute? })`**, which every page's `generateMetadata` returns: title, description, canonical, hreflang links, Open Graph (site name, locale and alternate locales, URL, 1200x630 image) and the Twitter card (`summary_large_image`). Next replaces a nested field like `openGraph` whole instead of merging it with the layout's, so every page sets all of it through this helper. `href` is a pathname key or `{ pathname: "/meni/[category]", params }`.
+- **Layout** (`app/[locale]/layout.tsx`): `metadataBase` (`site.url`), title template `"%s | Hari's Creperie"` (default: the home title), default description, `applicationName`, robots `index, follow` with `max-image-preview: large`; `viewport.themeColor` maroon `#892e30`.
+- **Titles and descriptions**: `meta.<page>.title` / `.description` in the five message files (`home`, `menu`, `category`, `gallery`, `about`, `contact`), with `{name}`, `{street}` and `{category}` placeholders. Home uses its title as is (`absolute`): "Hari's Creperie Podgorica – krepe, vafle i doručak". Titles stay under about 60 characters with the template, descriptions under about 160. Category pages name 2-4 signature dishes in the page's language (`meta.category.descriptionDishes`), picked by their Montenegrin name in **`highlights`** on each category in `data/menu/index.ts`; with fewer than 2 (burgers, Budi sam svoj šef, Posni meni) they use `meta.category.description`.
+- **Share images** (`npm run seo:images`, `scripts/generate-seo-images.ts`, sharp from Next; the output is committed): `public/og/{home,menu,gallery,about,contact}.jpg`, the badge on maroon beside two of the client's photos, and `public/og/menu/<slug>.jpg`, the badge beside the category's dish photo on cream (read from `data/menu/index.ts`). No text, so one image serves all five languages (the card shows the translated title). 30-85 KB each. Rerun the script when the logo, a category photo or the chosen photos change.
+- **Icons** (same script): `app/favicon.ico` (16/32/48, replacing Next's default triangle), `app/icon.png` (512), `app/apple-icon.png` (180, badge on cream: iOS fills transparency with black), `public/icons/icon-192.png` and `icon-512.png` for **`app/manifest.ts`** (`/manifest.webmanifest`: name, cream background, maroon theme, `display: browser`).
+- **`app/robots.ts`**: allow all, the sitemap, `host` (Yandex, for Russian visitors). On Vercel preview deployments (`VERCEL_ENV` not `production`) it disallows everything.
+- **`app/sitemap.ts`**: every page in every language (90 URLs: home, `/meni`, 13 categories, gallery, about, contact), each with its six hreflang alternates, and its photos for image search (the gallery's 26, each category's dish photos). New pages go here too.
+- **Structured data** (`lib/structured-data.ts`, rendered by `components/seo/json-ld.tsx`, a plain `<script type="application/ld+json">` with `<` escaped, as Next's JSON-LD guide says): **Restaurant** on home and `/kontakt` (name, alternate name, URL, description, logo, photos, `servesCuisine` from `site.servesCuisine`, `priceRange` computed from the menu without Budi sam svoj šef's add-ons, now "€2–18", address, `hasMenu`, `sameAs` with the Instagram only, as the Facebook page is the Belgrade restaurant's; telephone, geo and opening hours are added automatically once `data/site.ts` has them, `hours[].days` in schema.org form like "Mo-Fr") and **WebSite** on home; **Menu** with its 13 sections on `/meni`; on each category page a **MenuSection** with every dish as a **MenuItem** (name, description, photo, `Offer` in EUR); **ImageGallery** on `/galerija` (each photo with its translated caption); **BreadcrumbList** on every page but home.
+- Typos in the client's English show in search results too: "Dupai crepe" was fixed to "Dubai crepe" (2026-11-03).
 
-export const SITE_URL = site.url;
-export const SITE_NAME = site.name;
-
-export const hreflang: Record<string, string> = {
-  me: 'sr-Latn-ME', en: 'en', it: 'it', ru: 'ru', tr: 'tr',
-};
-
-export const ogLocale: Record<string, string> = {
-  me: 'sr_ME', en: 'en_US', it: 'it_IT', ru: 'ru_RU', tr: 'tr_TR',
-};
-
-// '/meni' + 'me' -> https://restoranharis.com/meni
-// '/meni' + 'en' -> https://restoranharis.com/en/menu
-export function localizedUrl(locale: string, href: string) {
-  return SITE_URL + getPathname({ locale, href });
-}
-
-export function languageAlternates(href: string) {
-  return Object.fromEntries(
-    routing.locales.map((l) => [hreflang[l], localizedUrl(l, href)]),
-  );
-}
-
-export function buildAlternates(locale: string, href: string): Metadata['alternates'] {
-  return {
-    canonical: localizedUrl(locale, href),
-    languages: {
-      ...languageAlternates(href),
-      'x-default': localizedUrl(routing.defaultLocale, href),
-    },
-  };
-}
-```
-
-**`data/site.ts`** (fill the TODOs with the client, never guess)
-```ts
-export const site = {
-  name: "Hari's",            // TODO confirm public name
-  fullName: "Hari's Creperie", // used in running text, e.g. the hero heading
-  url: 'https://restoranharis.com',
-  cuisine: 'Crêperie',
-  phone: '',                 // TODO
-  street: '',                // TODO
-  city: '',                  // TODO
-  geo: { lat: 0, lng: 0 },   // TODO
-  hours: [] as { days: string; open: string; close: string }[], // TODO
-  social: { instagram: '', facebook: '' }, // TODO
-};
-```
-
-**`app/[locale]/layout.tsx`** (metadata part)
-```tsx
-export async function generateMetadata(
-  { params }: { params: Promise<{ locale: string }> },
-): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'meta' });
-
-  return {
-    metadataBase: new URL(SITE_URL),
-    title: { default: t('homeTitle'), template: `%s | ${SITE_NAME}` },
-    description: t('homeDescription'),
-    openGraph: {
-      siteName: SITE_NAME,
-      type: 'website',
-      locale: ogLocale[locale],
-      images: ['/og.jpg'],
-    },
-  };
-}
-```
-
-**Per page** (home uses `title: { absolute: t('homeTitle') }`):
-```tsx
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'meta' });
-  return {
-    title: t('menuTitle'),
-    description: t('menuDescription'),
-    alternates: buildAlternates(locale, '/meni'),
-  };
-}
-```
-Add `menuTitle`, `menuDescription` etc. to the `meta` group in all five JSON files.
-
-**`app/sitemap.ts`**
-```ts
-import type { MetadataRoute } from 'next';
-import { routing } from '@/i18n/routing';
-import { languageAlternates, localizedUrl } from '@/lib/seo';
-
-const pages = ['/', '/meni', '/galerija', '/o-nama', '/kontakt'];
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.flatMap((href) =>
-    routing.locales.map((locale) => ({
-      url: localizedUrl(locale, href),
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: href === '/' ? 1 : 0.8,
-      alternates: { languages: languageAlternates(href) },
-    })),
-  );
-}
-```
-
-**`app/robots.ts`**
-```ts
-import type { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/seo';
-
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: { userAgent: '*', allow: '/' },
-    sitemap: `${SITE_URL}/sitemap.xml`,
-  };
-}
-```
-
-**Optional:** `Restaurant` JSON-LD on the home page, fed from `data/site.ts` (`@type: 'Restaurant'`, `servesCuisine`, `hasMenu: https://restoranharis.com/meni`). Only output it once real address and phone exist.
-
-After deploy: submit `https://restoranharis.com/sitemap.xml` in Google Search Console.
+After deploy: verify the domain in Google Search Console (DNS) and submit `https://restoranharis.com/sitemap.xml`, also in Bing Webmaster Tools and Yandex Webmaster; test a page in Google's Rich Results Test and the share card in Facebook's Sharing Debugger. Create or claim the Google Business Profile for the Podgorica restaurant (the strongest local signal) with the same name, address and the site's URL.
 
 ---
 
@@ -703,7 +597,7 @@ One-off QR for anything else: `npx qrcode -o code.svg -e H "https://example.com"
 
 ## 12. Translation check script
 
-Implemented in `scripts/check-translations.ts` (run with `npm run i18n:check`). It loads every `messages/*.json`, flattens the keys (`nav.menu`, ...) and lists the keys missing from or extra in each language compared with `me.json`. It exits with code 1 if they differ. `flat` takes `o: object`, not `any`, so ESLint passes.
+Implemented in `scripts/check-translations.ts` (run with `npm run i18n:check`). It loads every `messages/*.json`, flattens the keys (`nav.menu`, ...) and lists the keys missing from or extra in each language compared with `me.json`. It exits with code 1 if they differ. `flat` takes `o: object`, not `any`, so ESLint passes. Then the menu (2026-11-03): it reads `data/menu/*.ts` as text (they import photos), collects every Montenegrin text (the first argument of `meEn`/`untranslated`, in double or single quotes, and the flavour pairs) and lists the ones missing from each dictionary in `data/menu/translations/` (read as text too, as they import `server-only`), and the dictionary entries no menu text uses. Missing ones fail the check.
 
 ---
 
@@ -757,7 +651,7 @@ Decided and done:
 - Architecture, i18n strategy, localized URLs, QR approach
 - shadcn/create choices (section 3), brand colors and `globals.css`
 - Project generated; `app/layout.tsx` and `app/page.tsx` moved into `app/[locale]/`
-- next-intl set up: `i18n/`, `proxy.ts`, `next.config.ts`, `global.d.ts`, `messages/*.json` (EN/IT/RU/TR are copies of `me.json`)
+- next-intl set up: `i18n/`, `proxy.ts`, `next.config.ts`, `global.d.ts`, `messages/*.json` (all five languages translated 2026-11-03, see section 4)
 - Fonts self-hosted in `app/fonts/` via `next/font/local`
 - `app/[locale]/layout.tsx` with the header (hanging logo badge, centred links Meni · Galerija · O nama · Kontakt, language dropdown, mobile sheet)
 - Home: hero (placeholder photo), then the About intro with a button to `/o-nama`, then the menu preview (all categories as cards, button to `/meni`) (2026-10-19). `/o-nama` has the story (2026-10-16) and photos of the place; `/galerija` has the 19 photos of the place (2026-11-03)
@@ -770,7 +664,7 @@ Next:
 1. Phone and opening hours (contact page and footer) once the client gives them
 2. Dishes on the category pages (the client's list and prices; the QR depends on the menu)
 3. More home sections (about, gallery, contact CTA), about and contact pages
-4. SEO: page titles/metadata, `lib/seo.ts` helpers, sitemap, robots, favicon, OG image; custom `not-found`
+4. SEO done (2026-11-03, section 10); custom `not-found` still todo
 5. Fill content (Montenegrin first), translations, proofreading
 6. Deploy, verify `/meni`, generate and test the QR, then print
 
@@ -785,7 +679,10 @@ Next:
 - [ ] All five languages checked on a phone for overflow and missing characters (č ć š ž đ, ğ ı ş, Cyrillic)
 - [ ] Native speakers proofread IT, RU, TR
 - [ ] `/sitemap.xml` and `/robots.txt` load
-- [ ] Real logo, favicon and `og.jpg` in place; no leftover TODO placeholders
+- [x] Real logo, favicon and share images in place (2026-11-03)
+- [ ] No leftover TODO placeholders
+- [ ] Search Console (and Bing, Yandex) verified, sitemap submitted; Rich Results Test and Facebook Sharing Debugger checked on the live domain
+- [ ] Google Business Profile for Podgorica claimed, with the site's URL
 - [x] Facebook and Instagram URLs in `data/site.ts` (2026-11-03; Facebook is the Belgrade page for now)
 - [ ] Hero placeholder photos (`public/images/hero/tablet.jpg`, `desktop.jpg`) replaced with real photos of the place (and heading contrast re-checked). The phone one (`mobile-bg.jpg`) is already the client's.
 - [x] Menu category placeholder photos replaced with the client's dishes (2026-10-19)

@@ -1,17 +1,60 @@
 import { ArrowLeftIcon } from "lucide-react"
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import type { Locale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { CategoryPanel } from "@/components/menu/category-panel"
 import { DishBrowser } from "@/components/menu/dish-browser"
+import { JsonLd } from "@/components/seo/json-ld"
 import { categories, getCategory } from "@/data/menu"
+import type { MenuCategory } from "@/data/menu/types"
+import { site } from "@/data/site"
 import { Link } from "@/i18n/navigation"
+import { localizedUrl, pageMetadata } from "@/lib/seo"
+import { breadcrumbs, menuCategory } from "@/lib/structured-data"
 
 // Only the categories in data/menu.ts exist; any other slug is a 404
 export const dynamicParams = false
 
 export function generateStaticParams() {
   return categories.map(({ slug }) => ({ category: slug }))
+}
+
+// The category's signature dishes (data/menu/index.ts), in this language
+function highlightedDishes(category: MenuCategory, locale: Locale) {
+  const dishes = (category.sections ?? []).flatMap((s) => s.dishes)
+  return (category.highlights ?? []).flatMap((me) => {
+    const dish = dishes.find((d) => d.name.me === me)
+    return dish ? [dish.name[locale]] : []
+  })
+}
+
+const href = (slug: string) => ({
+  pathname: "/meni/[category]" as const,
+  params: { category: slug },
+})
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/meni/[category]">): Promise<Metadata> {
+  const { locale: param, category: slug } = await params
+  const locale = param as Locale
+  const category = getCategory(slug)
+  if (!category) return {}
+  const t = await getTranslations({ locale, namespace: "meta.category" })
+  const name = category.title[locale]
+  const dishes = highlightedDishes(category, locale)
+  const values = { category: name, name: site.fullName }
+  return pageMetadata({
+    locale,
+    href: href(slug),
+    title: t("title", { category: name }),
+    description:
+      dishes.length >= 2
+        ? t("descriptionDishes", { ...values, dishes: dishes.join(", ") })
+        : t("description", values),
+    image: `/og/menu/${slug}.jpg`,
+  })
 }
 
 // A category page: a dark panel with the name, sticky chips that pick a
@@ -26,6 +69,15 @@ export default async function MenuCategoryPage({
   const category = getCategory(slug)
   if (!category) notFound()
   const t = await getTranslations("menu.category")
+  const tNav = await getTranslations("nav")
+  const structuredData = [
+    menuCategory(locale, category),
+    breadcrumbs([
+      { name: site.fullName, url: localizedUrl(locale, "/") },
+      { name: tNav("menu"), url: localizedUrl(locale, "/meni") },
+      { name: category.title[locale], url: localizedUrl(locale, href(slug)) },
+    ]),
+  ]
 
   const heading = (
     <>
@@ -44,6 +96,7 @@ export default async function MenuCategoryPage({
 
   return (
     <main className="pb-16 md:pb-24">
+      <JsonLd data={structuredData} />
       {category.sections ? (
         // Only this page's language goes to the browser
         <DishBrowser

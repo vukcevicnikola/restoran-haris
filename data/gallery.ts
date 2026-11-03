@@ -1,4 +1,11 @@
 import "server-only"
+import burgerFriesBlackPlate from "@/public/images/gallery/haris-food-01-burger-fries-black-plate.webp"
+import bakedEggsClayDishFlatbread from "@/public/images/gallery/haris-food-02-baked-eggs-clay-dish-flatbread.webp"
+import flatbreadPizzaHamWoodenBoard from "@/public/images/gallery/haris-food-03-flatbread-pizza-ham-wooden-board.webp"
+import chocolateHazelnutCrepeWafer from "@/public/images/gallery/haris-food-04-chocolate-hazelnut-crepe-wafer.webp"
+import rolledCrepeCreamBiscuit from "@/public/images/gallery/haris-food-05-rolled-crepe-cream-biscuit.webp"
+import waiterServingStrawberryPistachioCrepe from "@/public/images/gallery/haris-food-06-waiter-serving-strawberry-pistachio-crepe.webp"
+import strawberryPistachioCrepeChocolate from "@/public/images/gallery/haris-food-07-strawberry-pistachio-crepe-chocolate.webp"
 import diningRoomTiledFloor from "@/public/images/gallery/haris-01-dining-room-tiled-floor.webp"
 import muralArchWallLamp from "@/public/images/gallery/haris-02-mural-arch-wall-lamp.webp"
 import barCounterMuralFruitBasket from "@/public/images/gallery/haris-03-bar-counter-mural-fruit-basket.webp"
@@ -19,10 +26,23 @@ import tablesTowardsBarMenu from "@/public/images/gallery/haris-17-tables-toward
 import tablesTowardsBarLamp from "@/public/images/gallery/haris-18-tables-towards-bar-lamp.webp"
 import tableOilBottlesMural from "@/public/images/gallery/haris-19-table-oil-bottles-mural.webp"
 
-// The client's photos of the place (November 2026), in their numbered order.
-// All are 1600x2400 (2:3, portrait). Each one's alt text is in the messages,
-// gallery.photos.<id>.
+// The client's photos (November 2026): the food first, then the place, each
+// in their numbered order. All are 1600x2400 (2:3, portrait). Each one's alt
+// text is in the messages, gallery.photos.<id>.
 export const galleryPhotos = [
+  { id: "burgerFriesBlackPlate", image: burgerFriesBlackPlate },
+  { id: "bakedEggsClayDishFlatbread", image: bakedEggsClayDishFlatbread },
+  { id: "flatbreadPizzaHamWoodenBoard", image: flatbreadPizzaHamWoodenBoard },
+  { id: "chocolateHazelnutCrepeWafer", image: chocolateHazelnutCrepeWafer },
+  { id: "rolledCrepeCreamBiscuit", image: rolledCrepeCreamBiscuit },
+  {
+    id: "waiterServingStrawberryPistachioCrepe",
+    image: waiterServingStrawberryPistachioCrepe,
+  },
+  {
+    id: "strawberryPistachioCrepeChocolate",
+    image: strawberryPistachioCrepeChocolate,
+  },
   { id: "diningRoomTiledFloor", image: diningRoomTiledFloor },
   { id: "muralArchWallLamp", image: muralArchWallLamp },
   { id: "barCounterMuralFruitBasket", image: barCounterMuralFruitBasket },

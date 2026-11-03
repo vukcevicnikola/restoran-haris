@@ -6,14 +6,17 @@ import { type GalleryPhoto, galleryPhoto } from "@/data/gallery"
 import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
-// "Naš restoran": four photos of the place from the gallery (2 x 2 on phones,
-// 4 in a row from md) and a button to the rest, on cream. On /o-nama and
-// /kontakt, each with its own photos; the page sets the padding.
+// "Naš restoran": four photos from the gallery (2 x 2 on phones, 4 in a row
+// from md) and a button to the rest, on cream. On /o-nama and /kontakt, each
+// with its own photos, and on the home page with a title of its own; the page
+// sets the padding.
 export async function PlacePhotos({
   photos,
+  title,
   className,
 }: {
   photos: GalleryPhoto["id"][]
+  title?: string
   className?: string
 }) {
   const t = await getTranslations("place")
@@ -21,7 +24,9 @@ export async function PlacePhotos({
 
   return (
     <section className={cn("mx-auto w-full max-w-7xl px-4", className)}>
-      <h2 className="text-3xl text-balance md:text-4xl">{t("title")}</h2>
+      <h2 className="text-3xl text-balance md:text-4xl">
+        {title ?? t("title")}
+      </h2>
       <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
         {photos.map(galleryPhoto).map((photo) => (
           <li key={photo.id}>

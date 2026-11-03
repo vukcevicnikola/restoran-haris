@@ -29,6 +29,9 @@
       "title": "Pogledajte naš meni",
       "text": "Naš meni počinje doručkom: sendvičima, omletima i tortiljama. Tu su i potaži, burgeri, pice i salate, a slatke i slane krepe, vafle i penkejke pripremamo na desetine načina. Sa slatke karte birajte kafu, šejkove, kupove i sladoled. Za dane posta tu je posni meni, a ako želite da birate sastojke, budite sami svoj šef.",
       "cta": "Pogledajte kompletan meni"
+    },
+    "gallery": {
+      "title": "Iz naše kuhinje"
     }
   },
   "menu": {
@@ -49,6 +52,13 @@
   "gallery": {
     "title": "Galerija",
     "photos": {
+      "burgerFriesBlackPlate": "Burger sa pomfritom i sosom na crnom tanjiru",
+      "bakedEggsClayDishFlatbread": "Jaja sa sirom zapečena u zemljanoj posudi, uz lepinju",
+      "flatbreadPizzaHamWoodenBoard": "Pica sa šunkom na drvenoj dasci",
+      "chocolateHazelnutCrepeWafer": "Krepa sa čokoladom i mljevenim lješnicima, ukrašena napolitankom",
+      "rolledCrepeCreamBiscuit": "Smotana krepa sa kremom, keksom i jestivim cvijetom",
+      "waiterServingStrawberryPistachioCrepe": "Krepa sa jagodama i pistaćima na putu do stola",
+      "strawberryPistachioCrepeChocolate": "Krepa sa pistaćima, jagodama i čokoladom",
       "diningRoomTiledFloor": "Sala sa drvenim stolovima na podu od crno-bijelih pločica, u dnu šank",
       "muralArchWallLamp": "Mural u luku i zidna lampa iznad postavljenog stola",
       "barCounterMuralFruitBasket": "Šank sa korpom voća, iza njega mural sa lukovima",
@@ -96,5 +106,32 @@
     "follow": "Pratite nas",
     "rights": "Sva prava zadržana.",
     "madeBy": "Made by <link>{studio}</link>"
+  },
+  "meta": {
+    "home": {
+      "title": "{name} Podgorica – krepe, vafle i doručak",
+      "description": "Slatke i slane krepe, vafle i penkejk po recepturi sa Krita, od 1997. Doručak, pice, burgeri, slatka karta i posni meni. {street}, Podgorica."
+    },
+    "menu": {
+      "title": "Meni i cijene",
+      "description": "Kompletan meni {name} u Podgorici, sa cijenama: doručak, slatke i slane krepe, vafle, penkejk, pice, burgeri, salate, slatka karta i posni meni."
+    },
+    "category": {
+      "title": "{category} – meni i cijene",
+      "description": "{category} u {name}, Podgorica. Pogledajte sva jela i cijene na našem meniju.",
+      "descriptionDishes": "{category} u {name}, Podgorica: {dishes} i još mnogo toga. Pogledajte sva jela i cijene."
+    },
+    "gallery": {
+      "title": "Galerija – naša jela i restoran",
+      "description": "Fotografije iz {name} u Podgorici: naše krepe, pica i burger, i restoran sa muralima, lukovima i zelenilom."
+    },
+    "about": {
+      "title": "O nama – naša priča od 1997.",
+      "description": "Priča {name} počela je 1997. na Kritu. Krepe, vafle i penkejk pravimo od specijalne mješavine žitarica sa Krita i više od 20 začina."
+    },
+    "contact": {
+      "title": "Kontakt i lokacija",
+      "description": "{name}, {street}, Podgorica. Pronađite nas na mapi i pratite nas na Instagramu i Facebooku."
+    }
   }
 }

@@ -1,100 +1,137 @@
 {
   "nav": {
-    "title": "Navigacija",
-    "menu": "Meni",
-    "gallery": "Galerija",
-    "about": "O nama",
-    "contact": "Kontakt",
-    "open": "Otvorite navigaciju",
-    "close": "Zatvorite navigaciju"
+    "title": "Gezinme",
+    "menu": "Menü",
+    "gallery": "Galeri",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "open": "Gezinme menüsünü açın",
+    "close": "Gezinme menüsünü kapatın"
   },
   "localeSwitcher": {
-    "label": "Izaberite jezik"
+    "label": "Dil seçin"
   },
   "social": {
-    "facebook": "{name} na Facebooku",
-    "instagram": "{name} na Instagramu"
+    "facebook": "Facebook'ta {name}",
+    "instagram": "Instagram'da {name}"
   },
   "home": {
     "hero": {
-      "title": "Dobrodošli u svijet {name}",
-      "cta": "Pogledajte meni"
+      "title": "{name} dünyasına hoş geldiniz",
+      "cta": "Menüye göz atın"
     },
     "about": {
-      "title": "Naša priča",
-      "text": "Sve je počelo 1997. godine na Kritu. Naše krepe, vafle i palačinke pripremamo od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Čokoladne prelive pravimo u Solunu, a sladoled pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku. Kod nas je svaka kombinacija moguća.",
-      "cta": "Saznajte više o nama"
+      "title": "Hikâyemiz",
+      "text": "Her şey 1997'de Girit'te başladı. Kreplerimizi, waffle'larımızı ve pankeklerimizi Girit'ten gelen özel bir tahıl karışımı ve özenle seçilmiş 20'den fazla baharatla hazırlıyoruz. Çikolata soslarımızı Selanik'te yapıyoruz, dondurmamızı ise en kaliteli İtalyan aroma pastaları, süt ve kremayla kendimiz hazırlıyoruz. Bizde her kombinasyon mümkün.",
+      "cta": "Bizi daha yakından tanıyın"
     },
     "menu": {
-      "title": "Pogledajte naš meni",
-      "text": "Naš meni počinje doručkom: sendvičima, omletima i tortiljama. Tu su i potaži, burgeri, pice i salate, a slatke i slane krepe, vafle i penkejke pripremamo na desetine načina. Sa slatke karte birajte kafu, šejkove, kupove i sladoled. Za dane posta tu je posni meni, a ako želite da birate sastojke, budite sami svoj šef.",
-      "cta": "Pogledajte kompletan meni"
+      "title": "Menümüze göz atın",
+      "text": "Menümüz kahvaltıyla başlıyor: sandviçler, omletler ve tortillalar. Ayrıca kremalı çorbalar, burgerler, pizzalar ve salatalar var; tatlı ve tuzlu krepleri, waffle'ları ve pankekleri onlarca farklı şekilde hazırlıyoruz. Tatlı menüsünden kahve, shake, dondurma kupları ve dondurma seçebilirsiniz. Perhiz günleri için perhiz menümüz var; malzemeleri kendiniz seçmek isterseniz, kendi şefiniz olun.",
+      "cta": "Tüm menüyü görün"
+    },
+    "gallery": {
+      "title": "Mutfağımızdan"
     }
   },
   "menu": {
-    "title": "{name} Meni",
-    "welcome": "Dobrodošli u svijet {name}",
-    "intro": "Od doručka do slatke karte, sve na jednom mjestu. Izaberite kategoriju i pogledajte jela i cijene.",
+    "title": "{name} Menüsü",
+    "welcome": "{name} dünyasına hoş geldiniz",
+    "intro": "Kahvaltıdan tatlı menüsüne kadar her şey tek bir yerde. Yemekleri ve fiyatları görmek için bir kategori seçin.",
     "categories": {
-      "cta": "Pogledajte meni"
+      "cta": "Menüyü görün"
     },
     "category": {
-      "back": "Nazad na meni",
-      "empty": "Ponudu iz ove kategorije uskoro dodajemo.",
-      "sections": "Odjeljci menija",
-      "flavors": "Ukusi",
-      "noPork": "Bez svinjetine"
+      "back": "Tüm menüye dön",
+      "empty": "Bu kategorideki ürünler yakında eklenecek.",
+      "sections": "Menü bölümleri",
+      "flavors": "Aromalar",
+      "noPork": "Domuz eti içermez"
     }
   },
   "gallery": {
-    "title": "Galerija",
+    "title": "Galeri",
     "photos": {
-      "diningRoomTiledFloor": "Sala sa drvenim stolovima na podu od crno-bijelih pločica, u dnu šank",
-      "muralArchWallLamp": "Mural u luku i zidna lampa iznad postavljenog stola",
-      "barCounterMuralFruitBasket": "Šank sa korpom voća, iza njega mural sa lukovima",
-      "muralArchesPalmLeaves": "Mural sa lukovima iza palminog lišća",
-      "barCounterArchedPanels": "Šank obložen panelima u obliku lukova",
-      "tableSettingRedDoors": "Postavljen sto sa čašama, u pozadini crvena vrata",
-      "tableSettingHangingGreenery": "Postavljen sto ispod zelenila koje visi sa plafona",
-      "barCounterMuralView": "Pogled preko šanka na mural i salu",
-      "diningRoomCurtains": "Sala sa stolovima i zavjesama na prozorima",
-      "diningRoomChairsTiledFloor": "Stolovi i stolice na podu od crno-bijelih pločica",
-      "menuBookOnTable": "Naš meni na postavljenom stolu",
-      "longRowOfTables": "Dugi niz postavljenih stolova",
-      "muralArchesFruitBasket": "Korpa voća na šanku ispred murala sa lukovima",
-      "barCounterLongView": "Dugi šank sa panelima u obliku lukova",
-      "barCounterTablePlacemat": "Postavljen sto ispred šanka",
-      "diningRoomPalmLeaf": "Sala, u prvom planu palmin list",
-      "tablesTowardsBarMenu": "Stolovi prema šanku, u prvom planu meni na stolu",
-      "tablesTowardsBarLamp": "Stolovi prema šanku, ispod viseće lampe",
-      "tableOilBottlesMural": "Sto sa bočicama ulja, u pozadini mural"
+      "burgerFriesBlackPlate": "Siyah tabakta patates kızartmalı ve soslu burger",
+      "bakedEggsClayDishFlatbread": "Toprak kapta peynirli fırın yumurta, yanında ekmek",
+      "flatbreadPizzaHamWoodenBoard": "Ahşap tahta üzerinde jambonlu pizza",
+      "chocolateHazelnutCrepeWafer": "Çikolatalı ve öğütülmüş fındıklı, gofretle süslenmiş krep",
+      "rolledCrepeCreamBiscuit": "Kremalı, bisküvili ve yenilebilir çiçekli rulo krep",
+      "waiterServingStrawberryPistachioCrepe": "Masaya götürülen çilekli ve Antep fıstıklı bir krep",
+      "strawberryPistachioCrepeChocolate": "Antep fıstıklı, çilekli ve çikolatalı krep",
+      "diningRoomTiledFloor": "Siyah beyaz karo zeminde ahşap masalarıyla salon, arkada bar",
+      "muralArchWallLamp": "Kemerli duvar resmi ve kurulu bir masanın üzerinde duvar lambası",
+      "barCounterMuralFruitBasket": "Meyve sepetli bar, arkasında kemerli duvar resmi",
+      "muralArchesPalmLeaves": "Palmiye yapraklarının ardında kemerli duvar resmi",
+      "barCounterArchedPanels": "Kemer biçimli panellerle kaplı bar",
+      "tableSettingRedDoors": "Bardaklarla kurulmuş masa, arka planda kırmızı kapılar",
+      "tableSettingHangingGreenery": "Tavandan sarkan yeşilliklerin altında kurulu masa",
+      "barCounterMuralView": "Barın üzerinden duvar resmine ve salona bakış",
+      "diningRoomCurtains": "Masaları ve perdeli pencereleriyle salon",
+      "diningRoomChairsTiledFloor": "Siyah beyaz karo zeminde masalar ve sandalyeler",
+      "menuBookOnTable": "Kurulu bir masada menümüz",
+      "longRowOfTables": "Uzun bir sıra kurulu masa",
+      "muralArchesFruitBasket": "Kemerli duvar resminin önünde, barda meyve sepeti",
+      "barCounterLongView": "Kemer biçimli panelli uzun bar",
+      "barCounterTablePlacemat": "Barın önünde kurulu bir masa",
+      "diningRoomPalmLeaf": "Salon, ön planda bir palmiye yaprağı",
+      "tablesTowardsBarMenu": "Bara doğru masalar, ön planda masada bir menü",
+      "tablesTowardsBarLamp": "Bara doğru masalar, sarkıt lambanın altında",
+      "tableOilBottlesMural": "Yağ şişeleriyle bir masa, arka planda duvar resmi"
     }
   },
   "about": {
-    "title": "O nama",
-    "welcome": "Dobrodošli u {name}!",
-    "origin": "Naša priča počinje 1997. godine u srcu grada Retimna na Kritu, gdje je otvoren prvi restoran {name}. Od 2014. godine, {name} s ponosom donosi autentične ukuse Krita u Beograd.",
-    "recipe": "Ono što nas izdvaja jeste jedinstveni recept – krepe, vafli i palačinke pripremljeni od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Trudimo se da sve što poslužimo bude savršeno – od čokoladnih preliva koje pravimo u Solunu, do sladoleda koji pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku.",
-    "team": "Za one koji žele da kreiraju svoj savršeni obrok, naš tim je tu da pomogne. Birajte sastojke, eksperimentišite i uživajte u svom idealnom ukusu, jer je u {name} svaka kombinacija moguća.",
-    "since": "od 1997."
+    "title": "Hakkımızda",
+    "welcome": "{name} dünyasına hoş geldiniz!",
+    "origin": "Hikâyemiz 1997'de Girit'te, Resmo kentinin kalbinde ilk {name} restoranının açılmasıyla başladı. 2014'ten bu yana {name}, Girit'in otantik lezzetlerini gururla Belgrad'a taşıyor.",
+    "recipe": "Bizi farklı kılan eşsiz tarifimiz: Girit'ten gelen özel bir tahıl karışımı ve özenle seçilmiş 20'den fazla baharatla hazırlanan krepler, waffle'lar ve pankekler. Sunduğumuz her şeyin mükemmel olması için çalışıyoruz; Selanik'te yaptığımız çikolata soslarından, en kaliteli İtalyan aroma pastaları, süt ve kremayla kendimiz hazırladığımız dondurmaya kadar.",
+    "team": "Kendi mükemmel yemeğini yaratmak isteyenler için ekibimiz her zaman yardıma hazır. Malzemelerinizi seçin, deneyin ve ideal lezzetinizin tadını çıkarın; çünkü {name} olarak bizde her kombinasyon mümkün.",
+    "since": "1997'den beri"
   },
   "place": {
-    "title": "Naš restoran",
-    "cta": "Pogledajte galeriju"
+    "title": "Restoranımız",
+    "cta": "Galeriye göz atın"
   },
   "contact": {
-    "title": "Kontakt",
-    "address": "Adresa",
-    "country": "Crna Gora",
-    "directions": "Otvorite u Google mapi",
+    "title": "İletişim",
+    "address": "Adres",
+    "country": "Karadağ",
+    "directions": "Google Haritalar'da açın",
     "phone": "Telefon",
-    "follow": "Pratite nas",
-    "map": "Mapa: {name}, {address}"
+    "follow": "Bizi takip edin",
+    "map": "Harita: {name}, {address}"
   },
   "footer": {
-    "pages": "Stranice",
-    "follow": "Pratite nas",
-    "rights": "Sva prava zadržana.",
+    "pages": "Sayfalar",
+    "follow": "Bizi takip edin",
+    "rights": "Tüm hakları saklıdır.",
     "madeBy": "Made by <link>{studio}</link>"
+  },
+  "meta": {
+    "home": {
+      "title": "{name} Podgorica – krep, waffle ve kahvaltı",
+      "description": "1997'den beri Girit tarifiyle tatlı ve tuzlu krepler, waffle'lar ve pankekler. Kahvaltı, pizza, burger, tatlı menüsü ve perhiz menüsü. {street}, Podgorica."
+    },
+    "menu": {
+      "title": "Menü ve fiyatlar",
+      "description": "{name} Podgorica menüsü ve fiyatları: kahvaltı, tatlı ve tuzlu krepler, waffle'lar, pankekler, pizza, burgerler, salatalar, tatlılar ve perhiz menüsü."
+    },
+    "category": {
+      "title": "{category} – menü ve fiyatlar",
+      "description": "{category} – {name} Podgorica. Tüm yemekleri ve fiyatları menümüzde görün.",
+      "descriptionDishes": "{category} – {name} Podgorica: {dishes} ve daha fazlası. Tüm yemekleri ve fiyatları görün."
+    },
+    "gallery": {
+      "title": "Galeri – yemeklerimiz ve restoranımız",
+      "description": "{name} Podgorica'dan fotoğraflar: kreplerimiz, pizza ve burgerlerimiz, duvar resimleri, kemerleri ve yeşillikleriyle restoranımız."
+    },
+    "about": {
+      "title": "Hakkımızda – 1997'den beri hikâyemiz",
+      "description": "{name} hikâyesi 1997'de Girit'te başladı. Krep, waffle ve pankeklerimizi Girit tahıllarından özel bir karışım ve 20'den fazla baharatla yapıyoruz."
+    },
+    "contact": {
+      "title": "İletişim ve konum",
+      "description": "{name}, {street}, Podgorica. Bizi haritada bulun, Instagram ve Facebook'ta takip edin."
+    }
   }
 }

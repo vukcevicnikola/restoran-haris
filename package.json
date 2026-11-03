@@ -11,7 +11,8 @@
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "i18n:check": "tsx scripts/check-translations.ts",
-    "menu:import": "tsx scripts/import-menu.ts"
+    "menu:import": "tsx scripts/import-menu.ts",
+    "seo:images": "tsx scripts/generate-seo-images.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

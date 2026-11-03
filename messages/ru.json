@@ -1,100 +1,137 @@
 {
   "nav": {
-    "title": "Navigacija",
-    "menu": "Meni",
-    "gallery": "Galerija",
-    "about": "O nama",
-    "contact": "Kontakt",
-    "open": "Otvorite navigaciju",
-    "close": "Zatvorite navigaciju"
+    "title": "Навигация",
+    "menu": "Меню",
+    "gallery": "Галерея",
+    "about": "О нас",
+    "contact": "Контакты",
+    "open": "Открыть навигацию",
+    "close": "Закрыть навигацию"
   },
   "localeSwitcher": {
-    "label": "Izaberite jezik"
+    "label": "Выберите язык"
   },
   "social": {
-    "facebook": "{name} na Facebooku",
-    "instagram": "{name} na Instagramu"
+    "facebook": "{name} в Facebook",
+    "instagram": "{name} в Instagram"
   },
   "home": {
     "hero": {
-      "title": "Dobrodošli u svijet {name}",
-      "cta": "Pogledajte meni"
+      "title": "Добро пожаловать в мир {name}",
+      "cta": "Смотреть меню"
     },
     "about": {
-      "title": "Naša priča",
-      "text": "Sve je počelo 1997. godine na Kritu. Naše krepe, vafle i palačinke pripremamo od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Čokoladne prelive pravimo u Solunu, a sladoled pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku. Kod nas je svaka kombinacija moguća.",
-      "cta": "Saznajte više o nama"
+      "title": "Наша история",
+      "text": "Всё началось в 1997 году на Крите. Наши крепы, вафли и панкейки мы готовим из особой смеси критских злаков и более чем 20 тщательно подобранных специй. Шоколадные топпинги мы делаем в Салониках, а мороженое готовим сами из лучших итальянских паст, молока и сливок. У нас возможна любая комбинация.",
+      "cta": "Подробнее о нас"
     },
     "menu": {
-      "title": "Pogledajte naš meni",
-      "text": "Naš meni počinje doručkom: sendvičima, omletima i tortiljama. Tu su i potaži, burgeri, pice i salate, a slatke i slane krepe, vafle i penkejke pripremamo na desetine načina. Sa slatke karte birajte kafu, šejkove, kupove i sladoled. Za dane posta tu je posni meni, a ako želite da birate sastojke, budite sami svoj šef.",
-      "cta": "Pogledajte kompletan meni"
+      "title": "Посмотрите наше меню",
+      "text": "Наше меню начинается с завтраков: сэндвичей, омлетов и тортилий. Есть также крем-супы, бургеры, пиццы и салаты, а сладкие и сытные крепы, вафли и панкейки мы готовим десятками способов. В сладком меню выбирайте кофе, шейки, кубки и мороженое. Для постных дней есть постное меню, а если хотите сами выбрать ингредиенты, будьте сами себе шефом.",
+      "cta": "Смотреть всё меню"
+    },
+    "gallery": {
+      "title": "С нашей кухни"
     }
   },
   "menu": {
-    "title": "{name} Meni",
-    "welcome": "Dobrodošli u svijet {name}",
-    "intro": "Od doručka do slatke karte, sve na jednom mjestu. Izaberite kategoriju i pogledajte jela i cijene.",
+    "title": "Меню {name}",
+    "welcome": "Добро пожаловать в мир {name}",
+    "intro": "От завтраков до сладкого меню — всё в одном месте. Выберите категорию, чтобы посмотреть блюда и цены.",
     "categories": {
-      "cta": "Pogledajte meni"
+      "cta": "Смотреть меню"
     },
     "category": {
-      "back": "Nazad na meni",
-      "empty": "Ponudu iz ove kategorije uskoro dodajemo.",
-      "sections": "Odjeljci menija",
-      "flavors": "Ukusi",
-      "noPork": "Bez svinjetine"
+      "back": "Назад ко всему меню",
+      "empty": "Блюда этой категории скоро появятся.",
+      "sections": "Разделы меню",
+      "flavors": "Вкусы",
+      "noPork": "Без свинины"
     }
   },
   "gallery": {
-    "title": "Galerija",
+    "title": "Галерея",
     "photos": {
-      "diningRoomTiledFloor": "Sala sa drvenim stolovima na podu od crno-bijelih pločica, u dnu šank",
-      "muralArchWallLamp": "Mural u luku i zidna lampa iznad postavljenog stola",
-      "barCounterMuralFruitBasket": "Šank sa korpom voća, iza njega mural sa lukovima",
-      "muralArchesPalmLeaves": "Mural sa lukovima iza palminog lišća",
-      "barCounterArchedPanels": "Šank obložen panelima u obliku lukova",
-      "tableSettingRedDoors": "Postavljen sto sa čašama, u pozadini crvena vrata",
-      "tableSettingHangingGreenery": "Postavljen sto ispod zelenila koje visi sa plafona",
-      "barCounterMuralView": "Pogled preko šanka na mural i salu",
-      "diningRoomCurtains": "Sala sa stolovima i zavjesama na prozorima",
-      "diningRoomChairsTiledFloor": "Stolovi i stolice na podu od crno-bijelih pločica",
-      "menuBookOnTable": "Naš meni na postavljenom stolu",
-      "longRowOfTables": "Dugi niz postavljenih stolova",
-      "muralArchesFruitBasket": "Korpa voća na šanku ispred murala sa lukovima",
-      "barCounterLongView": "Dugi šank sa panelima u obliku lukova",
-      "barCounterTablePlacemat": "Postavljen sto ispred šanka",
-      "diningRoomPalmLeaf": "Sala, u prvom planu palmin list",
-      "tablesTowardsBarMenu": "Stolovi prema šanku, u prvom planu meni na stolu",
-      "tablesTowardsBarLamp": "Stolovi prema šanku, ispod viseće lampe",
-      "tableOilBottlesMural": "Sto sa bočicama ulja, u pozadini mural"
+      "burgerFriesBlackPlate": "Бургер с картофелем фри и соусом на чёрной тарелке",
+      "bakedEggsClayDishFlatbread": "Яйца, запечённые с сыром в глиняной посуде, с лепёшкой",
+      "flatbreadPizzaHamWoodenBoard": "Пицца с ветчиной на деревянной доске",
+      "chocolateHazelnutCrepeWafer": "Креп с шоколадом и молотым фундуком, украшенный вафлей",
+      "rolledCrepeCreamBiscuit": "Свёрнутый креп с кремом, печеньем и съедобным цветком",
+      "waiterServingStrawberryPistachioCrepe": "Креп с клубникой и фисташками по пути к столу",
+      "strawberryPistachioCrepeChocolate": "Креп с фисташками, клубникой и шоколадом",
+      "diningRoomTiledFloor": "Зал с деревянными столами на чёрно-белом плиточном полу, в глубине барная стойка",
+      "muralArchWallLamp": "Роспись в арке и настенный светильник над сервированным столом",
+      "barCounterMuralFruitBasket": "Барная стойка с корзиной фруктов, за ней роспись с арками",
+      "muralArchesPalmLeaves": "Роспись с арками за пальмовыми листьями",
+      "barCounterArchedPanels": "Барная стойка, облицованная панелями в форме арок",
+      "tableSettingRedDoors": "Сервированный стол с бокалами, на заднем плане красные двери",
+      "tableSettingHangingGreenery": "Сервированный стол под зеленью, свисающей с потолка",
+      "barCounterMuralView": "Вид через барную стойку на роспись и зал",
+      "diningRoomCurtains": "Зал со столами и шторами на окнах",
+      "diningRoomChairsTiledFloor": "Столы и стулья на чёрно-белом плиточном полу",
+      "menuBookOnTable": "Наше меню на сервированном столе",
+      "longRowOfTables": "Длинный ряд сервированных столов",
+      "muralArchesFruitBasket": "Корзина фруктов на барной стойке перед росписью с арками",
+      "barCounterLongView": "Длинная барная стойка с панелями в форме арок",
+      "barCounterTablePlacemat": "Сервированный стол перед барной стойкой",
+      "diningRoomPalmLeaf": "Зал, на переднем плане пальмовый лист",
+      "tablesTowardsBarMenu": "Столы перед барной стойкой, на переднем плане меню на столе",
+      "tablesTowardsBarLamp": "Столы перед барной стойкой под подвесным светильником",
+      "tableOilBottlesMural": "Стол с бутылочками масла, на заднем плане роспись"
     }
   },
   "about": {
-    "title": "O nama",
-    "welcome": "Dobrodošli u {name}!",
-    "origin": "Naša priča počinje 1997. godine u srcu grada Retimna na Kritu, gdje je otvoren prvi restoran {name}. Od 2014. godine, {name} s ponosom donosi autentične ukuse Krita u Beograd.",
-    "recipe": "Ono što nas izdvaja jeste jedinstveni recept – krepe, vafli i palačinke pripremljeni od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Trudimo se da sve što poslužimo bude savršeno – od čokoladnih preliva koje pravimo u Solunu, do sladoleda koji pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku.",
-    "team": "Za one koji žele da kreiraju svoj savršeni obrok, naš tim je tu da pomogne. Birajte sastojke, eksperimentišite i uživajte u svom idealnom ukusu, jer je u {name} svaka kombinacija moguća.",
-    "since": "od 1997."
+    "title": "О нас",
+    "welcome": "Добро пожаловать в {name}!",
+    "origin": "Наша история начинается в 1997 году в самом сердце Ретимно на Крите, где открылся первый ресторан {name}. С 2014 года {name} с гордостью приносит подлинные вкусы Крита в Белград.",
+    "recipe": "Нас отличает уникальный рецепт: крепы, вафли и панкейки из особой смеси критских злаков и более чем 20 тщательно подобранных специй. Мы стремимся к тому, чтобы всё, что мы подаём, было идеальным: от шоколадных топпингов, которые мы делаем в Салониках, до мороженого, которое мы готовим сами из лучших итальянских паст, молока и сливок.",
+    "team": "Если Вы хотите создать своё идеальное блюдо, наша команда всегда поможет. Выбирайте ингредиенты, экспериментируйте и наслаждайтесь своим идеальным вкусом, ведь в {name} возможна любая комбинация.",
+    "since": "с 1997 года"
   },
   "place": {
-    "title": "Naš restoran",
-    "cta": "Pogledajte galeriju"
+    "title": "Наш ресторан",
+    "cta": "Смотреть галерею"
   },
   "contact": {
-    "title": "Kontakt",
-    "address": "Adresa",
-    "country": "Crna Gora",
-    "directions": "Otvorite u Google mapi",
-    "phone": "Telefon",
-    "follow": "Pratite nas",
-    "map": "Mapa: {name}, {address}"
+    "title": "Контакты",
+    "address": "Адрес",
+    "country": "Черногория",
+    "directions": "Открыть в Google Картах",
+    "phone": "Телефон",
+    "follow": "Мы в соцсетях",
+    "map": "Карта: {name}, {address}"
   },
   "footer": {
-    "pages": "Stranice",
-    "follow": "Pratite nas",
-    "rights": "Sva prava zadržana.",
+    "pages": "Страницы",
+    "follow": "Мы в соцсетях",
+    "rights": "Все права защищены.",
     "madeBy": "Made by <link>{studio}</link>"
+  },
+  "meta": {
+    "home": {
+      "title": "{name} Подгорица – крепы, вафли и завтраки",
+      "description": "Сладкие и сытные крепы, вафли и панкейки по критскому рецепту с 1997 года. Завтраки, пицца, бургеры, сладкое и постное меню. {street}, Подгорица."
+    },
+    "menu": {
+      "title": "Меню и цены",
+      "description": "Полное меню {name} в Подгорице с ценами: завтраки, сладкие и сытные крепы, вафли, панкейки, пицца, бургеры, салаты, сладкое и постное меню."
+    },
+    "category": {
+      "title": "{category} – меню и цены",
+      "description": "{category} в {name}, Подгорица. Все блюда и цены в нашем меню.",
+      "descriptionDishes": "{category} в {name}, Подгорица: {dishes} и многое другое. Все блюда и цены в нашем меню."
+    },
+    "gallery": {
+      "title": "Галерея – наши блюда и ресторан",
+      "description": "Фотографии {name} в Подгорице: наши крепы, пицца и бургеры, а также ресторан с росписями, арками и зеленью."
+    },
+    "about": {
+      "title": "О нас – наша история с 1997 года",
+      "description": "История {name} началась на Крите в 1997 году. Наши крепы, вафли и панкейки мы готовим из особой смеси критских злаков и более чем 20 специй."
+    },
+    "contact": {
+      "title": "Контакты и как нас найти",
+      "description": "{name}, {street}, Подгорица. Найдите нас на карте и подписывайтесь на нас в Instagram и Facebook."
+    }
   }
 }

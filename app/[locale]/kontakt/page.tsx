@@ -1,10 +1,28 @@
 import { ArrowUpRightIcon, MapPinIcon, PhoneIcon } from "lucide-react"
+import type { Metadata } from "next"
 import type { Locale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { PageHeading } from "@/components/layout/page-heading"
 import { SocialLinks } from "@/components/layout/social-links"
 import { PlacePhotos } from "@/components/sections/place-photos"
+import { JsonLd } from "@/components/seo/json-ld"
 import { site } from "@/data/site"
+import { localizedUrl, pageMetadata } from "@/lib/seo"
+import { breadcrumbs, restaurant } from "@/lib/structured-data"
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/kontakt">): Promise<Metadata> {
+  const locale = (await params).locale as Locale
+  const t = await getTranslations({ locale, namespace: "meta.contact" })
+  return pageMetadata({
+    locale,
+    href: "/kontakt",
+    title: t("title"),
+    description: t("description", { name: site.fullName, street: site.street }),
+    image: "/og/contact.jpg",
+  })
+}
 
 const blockHeading = "text-2xl"
 const textLink =
@@ -17,9 +35,11 @@ const textLink =
 export default async function ContactPage({
   params,
 }: PageProps<"/[locale]/kontakt">) {
-  const { locale } = await params
-  setRequestLocale(locale as Locale)
+  const locale = (await params).locale as Locale
+  setRequestLocale(locale)
   const t = await getTranslations("contact")
+  const tNav = await getTranslations("nav")
+  const tMeta = await getTranslations("meta.home")
 
   const address = `${site.street}, ${site.city}`
   // What Google Maps looks up: the name, so it lands on the business, and
@@ -28,6 +48,20 @@ export default async function ContactPage({
 
   return (
     <main className="pb-16 md:pb-24">
+      {/* The restaurant's details here too: this is the page for its
+          address (and phone and hours, once data/site.ts has them) */}
+      <JsonLd
+        data={[
+          restaurant(
+            locale,
+            tMeta("description", { name: site.fullName, street: site.street })
+          ),
+          breadcrumbs([
+            { name: site.fullName, url: localizedUrl(locale, "/") },
+            { name: tNav("contact"), url: localizedUrl(locale, "/kontakt") },
+          ]),
+        ]}
+      />
       <PageHeading>{t("title")}</PageHeading>
       {/* The details beside the map from md, above it on phones */}
       <div className="mx-auto mt-8 grid max-w-7xl gap-10 px-4 md:mt-10 md:grid-cols-[2fr_3fr] md:gap-12">

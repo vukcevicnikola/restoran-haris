@@ -1,9 +1,13 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import type { Locale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { CategoryCard } from "@/components/menu/category-card"
+import { JsonLd } from "@/components/seo/json-ld"
 import { categories } from "@/data/menu"
 import { site } from "@/data/site"
+import { localizedUrl, pageMetadata } from "@/lib/seo"
+import { breadcrumbs, menu } from "@/lib/structured-data"
 // TODO placeholder (the Voćne torte card photo), until the client sends one
 import panelImage from "@/public/images/menu/vecera.jpg"
 
@@ -12,18 +16,42 @@ import panelImage from "@/public/images/menu/vecera.jpg"
 const besidePanel = categories.slice(0, 2)
 const inGrid = categories.slice(2)
 
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/meni">): Promise<Metadata> {
+  const locale = (await params).locale as Locale
+  const t = await getTranslations({ locale, namespace: "meta.menu" })
+  return pageMetadata({
+    locale,
+    href: "/meni",
+    title: t("title"),
+    description: t("description", { name: site.fullName }),
+    image: "/og/menu.jpg",
+  })
+}
+
 // QR code target: never rename, move or remove this route.
 // The overview: a dark welcome panel next to the heading and the first two
 // categories, then the other categories, each card opening /meni/[category].
 export default async function MenuPage({
   params,
 }: PageProps<"/[locale]/meni">) {
-  const { locale } = await params
-  setRequestLocale(locale as Locale)
+  const locale = (await params).locale as Locale
+  setRequestLocale(locale)
   const t = await getTranslations("menu")
+  const tNav = await getTranslations("nav")
 
   return (
     <main className="mx-auto max-w-7xl px-4 pt-16 pb-16 md:pt-24 md:pb-24">
+      <JsonLd
+        data={[
+          menu(locale, t("title", { name: site.fullName })),
+          breadcrumbs([
+            { name: site.fullName, url: localizedUrl(locale, "/") },
+            { name: tNav("menu"), url: localizedUrl(locale, "/meni") },
+          ]),
+        ]}
+      />
       {/* Two columns from md: the panel is at least 384px tall (or as tall as
           the column beside it), and in that column the heading and intro
           stay at the top, the two cards go to the bottom. On phones the panel

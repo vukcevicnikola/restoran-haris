@@ -1,100 +1,137 @@
 {
   "nav": {
-    "title": "Navigacija",
-    "menu": "Meni",
-    "gallery": "Galerija",
-    "about": "O nama",
-    "contact": "Kontakt",
-    "open": "Otvorite navigaciju",
-    "close": "Zatvorite navigaciju"
+    "title": "Navigation",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "about": "About us",
+    "contact": "Contact",
+    "open": "Open navigation",
+    "close": "Close navigation"
   },
   "localeSwitcher": {
-    "label": "Izaberite jezik"
+    "label": "Choose a language"
   },
   "social": {
-    "facebook": "{name} na Facebooku",
-    "instagram": "{name} na Instagramu"
+    "facebook": "{name} on Facebook",
+    "instagram": "{name} on Instagram"
   },
   "home": {
     "hero": {
-      "title": "Dobrodošli u svijet {name}",
-      "cta": "Pogledajte meni"
+      "title": "Welcome to the world of {name}",
+      "cta": "View the menu"
     },
     "about": {
-      "title": "Naša priča",
-      "text": "Sve je počelo 1997. godine na Kritu. Naše krepe, vafle i palačinke pripremamo od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Čokoladne prelive pravimo u Solunu, a sladoled pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku. Kod nas je svaka kombinacija moguća.",
-      "cta": "Saznajte više o nama"
+      "title": "Our story",
+      "text": "It all began in 1997 in Crete. We make our crepes, waffles and pancakes from a special blend of Cretan grains, with more than 20 carefully chosen spices. Our chocolate toppings are made in Thessaloniki, and we make our own ice cream from the finest Italian pastes with milk and cream. With us, every combination is possible.",
+      "cta": "Learn more about us"
     },
     "menu": {
-      "title": "Pogledajte naš meni",
-      "text": "Naš meni počinje doručkom: sendvičima, omletima i tortiljama. Tu su i potaži, burgeri, pice i salate, a slatke i slane krepe, vafle i penkejke pripremamo na desetine načina. Sa slatke karte birajte kafu, šejkove, kupove i sladoled. Za dane posta tu je posni meni, a ako želite da birate sastojke, budite sami svoj šef.",
-      "cta": "Pogledajte kompletan meni"
+      "title": "Explore our menu",
+      "text": "Our menu starts with breakfast: sandwiches, omelettes and tortillas. There are also cream soups, burgers, pizzas and salads, and we make sweet and savoury crepes, waffles and pancakes in dozens of ways. From the sweet menu, choose coffee, shakes, ice cream cups and ice cream. For fasting days there is the Lenten menu, and if you would like to pick your own ingredients, be your own chef.",
+      "cta": "View the full menu"
+    },
+    "gallery": {
+      "title": "From our kitchen"
     }
   },
   "menu": {
-    "title": "{name} Meni",
-    "welcome": "Dobrodošli u svijet {name}",
-    "intro": "Od doručka do slatke karte, sve na jednom mjestu. Izaberite kategoriju i pogledajte jela i cijene.",
+    "title": "{name} Menu",
+    "welcome": "Welcome to the world of {name}",
+    "intro": "From breakfast to the sweet menu, all in one place. Choose a category to see the dishes and prices.",
     "categories": {
-      "cta": "Pogledajte meni"
+      "cta": "View menu"
     },
     "category": {
-      "back": "Nazad na meni",
-      "empty": "Ponudu iz ove kategorije uskoro dodajemo.",
-      "sections": "Odjeljci menija",
-      "flavors": "Ukusi",
-      "noPork": "Bez svinjetine"
+      "back": "Back to the full menu",
+      "empty": "Dishes from this category are coming soon.",
+      "sections": "Menu sections",
+      "flavors": "Flavours",
+      "noPork": "No pork"
     }
   },
   "gallery": {
-    "title": "Galerija",
+    "title": "Gallery",
     "photos": {
-      "diningRoomTiledFloor": "Sala sa drvenim stolovima na podu od crno-bijelih pločica, u dnu šank",
-      "muralArchWallLamp": "Mural u luku i zidna lampa iznad postavljenog stola",
-      "barCounterMuralFruitBasket": "Šank sa korpom voća, iza njega mural sa lukovima",
-      "muralArchesPalmLeaves": "Mural sa lukovima iza palminog lišća",
-      "barCounterArchedPanels": "Šank obložen panelima u obliku lukova",
-      "tableSettingRedDoors": "Postavljen sto sa čašama, u pozadini crvena vrata",
-      "tableSettingHangingGreenery": "Postavljen sto ispod zelenila koje visi sa plafona",
-      "barCounterMuralView": "Pogled preko šanka na mural i salu",
-      "diningRoomCurtains": "Sala sa stolovima i zavjesama na prozorima",
-      "diningRoomChairsTiledFloor": "Stolovi i stolice na podu od crno-bijelih pločica",
-      "menuBookOnTable": "Naš meni na postavljenom stolu",
-      "longRowOfTables": "Dugi niz postavljenih stolova",
-      "muralArchesFruitBasket": "Korpa voća na šanku ispred murala sa lukovima",
-      "barCounterLongView": "Dugi šank sa panelima u obliku lukova",
-      "barCounterTablePlacemat": "Postavljen sto ispred šanka",
-      "diningRoomPalmLeaf": "Sala, u prvom planu palmin list",
-      "tablesTowardsBarMenu": "Stolovi prema šanku, u prvom planu meni na stolu",
-      "tablesTowardsBarLamp": "Stolovi prema šanku, ispod viseće lampe",
-      "tableOilBottlesMural": "Sto sa bočicama ulja, u pozadini mural"
+      "burgerFriesBlackPlate": "Burger with fries and a dip on a black plate",
+      "bakedEggsClayDishFlatbread": "Eggs baked with cheese in a clay dish, with flatbread",
+      "flatbreadPizzaHamWoodenBoard": "Pizza with ham on a wooden board",
+      "chocolateHazelnutCrepeWafer": "Crepe with chocolate and ground hazelnuts, topped with a wafer",
+      "rolledCrepeCreamBiscuit": "Rolled crepe with cream, a biscuit and an edible flower",
+      "waiterServingStrawberryPistachioCrepe": "A strawberry and pistachio crepe on its way to the table",
+      "strawberryPistachioCrepeChocolate": "Crepe with pistachios, strawberries and chocolate",
+      "diningRoomTiledFloor": "Dining room with wooden tables on a black-and-white tiled floor, the bar at the back",
+      "muralArchWallLamp": "Arched mural and a wall lamp above a set table",
+      "barCounterMuralFruitBasket": "The bar with a fruit basket, an arched mural behind it",
+      "muralArchesPalmLeaves": "Arched mural behind palm leaves",
+      "barCounterArchedPanels": "The bar, clad in arch-shaped panels",
+      "tableSettingRedDoors": "A table set with glasses, red doors in the background",
+      "tableSettingHangingGreenery": "A set table under greenery hanging from the ceiling",
+      "barCounterMuralView": "View across the bar to the mural and the dining room",
+      "diningRoomCurtains": "Dining room with tables and curtained windows",
+      "diningRoomChairsTiledFloor": "Tables and chairs on a black-and-white tiled floor",
+      "menuBookOnTable": "Our menu on a set table",
+      "longRowOfTables": "A long row of set tables",
+      "muralArchesFruitBasket": "A fruit basket on the bar in front of the arched mural",
+      "barCounterLongView": "The long bar with arch-shaped panels",
+      "barCounterTablePlacemat": "A set table in front of the bar",
+      "diningRoomPalmLeaf": "Dining room, a palm leaf in the foreground",
+      "tablesTowardsBarMenu": "Tables towards the bar, a menu on a table in the foreground",
+      "tablesTowardsBarLamp": "Tables towards the bar, under a pendant lamp",
+      "tableOilBottlesMural": "A table with oil bottles, the mural in the background"
     }
   },
   "about": {
-    "title": "O nama",
-    "welcome": "Dobrodošli u {name}!",
-    "origin": "Naša priča počinje 1997. godine u srcu grada Retimna na Kritu, gdje je otvoren prvi restoran {name}. Od 2014. godine, {name} s ponosom donosi autentične ukuse Krita u Beograd.",
-    "recipe": "Ono što nas izdvaja jeste jedinstveni recept – krepe, vafli i palačinke pripremljeni od specijalne mješavine žitarica sa Krita, uz više od 20 pažljivo biranih začina. Trudimo se da sve što poslužimo bude savršeno – od čokoladnih preliva koje pravimo u Solunu, do sladoleda koji pripremamo sami, koristeći najfinije italijanske paste uz mlijeko i pavlaku.",
-    "team": "Za one koji žele da kreiraju svoj savršeni obrok, naš tim je tu da pomogne. Birajte sastojke, eksperimentišite i uživajte u svom idealnom ukusu, jer je u {name} svaka kombinacija moguća.",
-    "since": "od 1997."
+    "title": "About us",
+    "welcome": "Welcome to {name}!",
+    "origin": "Our story begins in 1997 in the heart of Rethymno, Crete, where the first {name} restaurant opened. Since 2014, {name} has proudly brought the authentic flavours of Crete to Belgrade.",
+    "recipe": "What sets us apart is our unique recipe: crepes, waffles and pancakes made from a special blend of Cretan grains, with more than 20 carefully chosen spices. We want everything we serve to be perfect, from the chocolate toppings we make in Thessaloniki to the ice cream we make ourselves from the finest Italian pastes with milk and cream.",
+    "team": "For those who want to create their perfect meal, our team is here to help. Choose your ingredients, experiment and enjoy your ideal taste, because at {name} every combination is possible.",
+    "since": "since 1997"
   },
   "place": {
-    "title": "Naš restoran",
-    "cta": "Pogledajte galeriju"
+    "title": "Our restaurant",
+    "cta": "View the gallery"
   },
   "contact": {
-    "title": "Kontakt",
-    "address": "Adresa",
-    "country": "Crna Gora",
-    "directions": "Otvorite u Google mapi",
-    "phone": "Telefon",
-    "follow": "Pratite nas",
-    "map": "Mapa: {name}, {address}"
+    "title": "Contact",
+    "address": "Address",
+    "country": "Montenegro",
+    "directions": "Open in Google Maps",
+    "phone": "Phone",
+    "follow": "Follow us",
+    "map": "Map: {name}, {address}"
   },
   "footer": {
-    "pages": "Stranice",
-    "follow": "Pratite nas",
-    "rights": "Sva prava zadržana.",
+    "pages": "Pages",
+    "follow": "Follow us",
+    "rights": "All rights reserved.",
     "madeBy": "Made by <link>{studio}</link>"
+  },
+  "meta": {
+    "home": {
+      "title": "{name} Podgorica – crepes, waffles and breakfast",
+      "description": "Sweet and savoury crepes, waffles and pancakes from a Cretan recipe since 1997. Breakfast, pizza, burgers, sweets and a Lenten menu. {street}, Podgorica."
+    },
+    "menu": {
+      "title": "Menu and prices",
+      "description": "The {name} menu in Podgorica with prices: breakfast, sweet and savoury crepes, waffles, pancakes, pizza, burgers, salads, sweets and Lenten dishes."
+    },
+    "category": {
+      "title": "{category} – menu and prices",
+      "description": "{category} at {name}, Podgorica. See every dish and its price on our menu.",
+      "descriptionDishes": "{category} at {name}, Podgorica: {dishes} and more. See every dish and its price."
+    },
+    "gallery": {
+      "title": "Gallery – our food and restaurant",
+      "description": "Photos from {name} in Podgorica: our crepes, pizza and burgers, and the restaurant with its murals, arches and greenery."
+    },
+    "about": {
+      "title": "About us – our story since 1997",
+      "description": "The story of {name} began in Crete in 1997. We make our crepes, waffles and pancakes from a special blend of Cretan grains and more than 20 spices."
+    },
+    "contact": {
+      "title": "Contact and location",
+      "description": "{name}, {street}, Podgorica. Find us on the map and follow us on Instagram and Facebook."
+    }
   }
 }
