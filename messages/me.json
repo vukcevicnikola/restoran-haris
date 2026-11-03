@@ -47,7 +47,28 @@
     }
   },
   "gallery": {
-    "title": "Galerija"
+    "title": "Galerija",
+    "photos": {
+      "diningRoomTiledFloor": "Sala sa drvenim stolovima na podu od crno-bijelih pločica, u dnu šank",
+      "muralArchWallLamp": "Mural u luku i zidna lampa iznad postavljenog stola",
+      "barCounterMuralFruitBasket": "Šank sa korpom voća, iza njega mural sa lukovima",
+      "muralArchesPalmLeaves": "Mural sa lukovima iza palminog lišća",
+      "barCounterArchedPanels": "Šank obložen panelima u obliku lukova",
+      "tableSettingRedDoors": "Postavljen sto sa čašama, u pozadini crvena vrata",
+      "tableSettingHangingGreenery": "Postavljen sto ispod zelenila koje visi sa plafona",
+      "barCounterMuralView": "Pogled preko šanka na mural i salu",
+      "diningRoomCurtains": "Sala sa stolovima i zavjesama na prozorima",
+      "diningRoomChairsTiledFloor": "Stolovi i stolice na podu od crno-bijelih pločica",
+      "menuBookOnTable": "Naš meni na postavljenom stolu",
+      "longRowOfTables": "Dugi niz postavljenih stolova",
+      "muralArchesFruitBasket": "Korpa voća na šanku ispred murala sa lukovima",
+      "barCounterLongView": "Dugi šank sa panelima u obliku lukova",
+      "barCounterTablePlacemat": "Postavljen sto ispred šanka",
+      "diningRoomPalmLeaf": "Sala, u prvom planu palmin list",
+      "tablesTowardsBarMenu": "Stolovi prema šanku, u prvom planu meni na stolu",
+      "tablesTowardsBarLamp": "Stolovi prema šanku, ispod viseće lampe",
+      "tableOilBottlesMural": "Sto sa bočicama ulja, u pozadini mural"
+    }
   },
   "about": {
     "title": "O nama",
@@ -57,7 +78,23 @@
     "team": "Za one koji žele da kreiraju svoj savršeni obrok, naš tim je tu da pomogne. Birajte sastojke, eksperimentišite i uživajte u svom idealnom ukusu, jer je u {name} svaka kombinacija moguća.",
     "since": "od 1997."
   },
+  "place": {
+    "title": "Naš restoran",
+    "cta": "Pogledajte galeriju"
+  },
   "contact": {
-    "title": "Kontakt"
+    "title": "Kontakt",
+    "address": "Adresa",
+    "country": "Crna Gora",
+    "directions": "Otvorite u Google mapi",
+    "phone": "Telefon",
+    "follow": "Pratite nas",
+    "map": "Mapa: {name}, {address}"
+  },
+  "footer": {
+    "pages": "Stranice",
+    "follow": "Pratite nas",
+    "rights": "Sva prava zadržana.",
+    "madeBy": "Made by <link>{studio}</link>"
   }
 }

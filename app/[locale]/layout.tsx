@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
+import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { routing } from "@/i18n/routing"
 import { inter, lora } from "@/lib/fonts"
@@ -23,17 +24,15 @@ export default async function LocaleLayout({
   return (
     <html
       lang={hreflang[locale]}
-      className={cn(
-        "antialiased",
-        lora.variable,
-        inter.variable,
-        "font-sans"
-      )}
+      className={cn("antialiased", lora.variable, inter.variable, "font-sans")}
     >
-      <body>
+      {/* A column at least a screen tall, so the footer (mt-auto) stays at
+          the bottom of short pages */}
+      <body className="flex min-h-svh flex-col">
         <NextIntlClientProvider>
           <SiteHeader />
           {children}
+          <SiteFooter />
         </NextIntlClientProvider>
       </body>
     </html>

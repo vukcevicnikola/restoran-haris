@@ -56,7 +56,8 @@ export function MobileNav({ className }: { className?: string }) {
           </SheetClose>
         </SheetHeader>
         <NavLinks orientation="vertical" onNavigate={() => setOpen(false)} />
-        <SocialLinks className="mt-4 px-4" />
+        {/* Peach focus outline: the default maroon is invisible here */}
+        <SocialLinks className="mt-6 px-6 [&_:focus-visible]:outline-brand-peach" />
       </SheetContent>
     </Sheet>
   )

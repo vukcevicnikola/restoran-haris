@@ -3,13 +3,7 @@
 import { useTranslations } from "next-intl"
 import { Link, usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
-
-const links = [
-  { href: "/meni", label: "menu" },
-  { href: "/galerija", label: "gallery" },
-  { href: "/o-nama", label: "about" },
-  { href: "/kontakt", label: "contact" },
-] as const
+import { navItems } from "./nav-items"
 
 export function NavLinks({
   orientation = "horizontal",
@@ -33,7 +27,7 @@ export function NavLinks({
             : "items-center gap-6"
         )}
       >
-        {links.map(({ href, label }) => (
+        {navItems.map(({ href, label }) => (
           <li key={href}>
             <Link
               href={href}

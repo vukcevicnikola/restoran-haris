@@ -2,13 +2,15 @@ import type { Locale } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { FlagHeart } from "@/components/about/flag-heart"
 import { CategoryPanel } from "@/components/menu/category-panel"
+import { PlacePhotos } from "@/components/sections/place-photos"
 import { site } from "@/data/site"
 
 // The story from the printed menu's first page, on the same dark panel as
 // the menu's category pages: the welcome as the h1, the text beside the
 // flag heart (above it on phones), then "since 1997". All of it in Lora,
 // like the printed page's serif. Only the page's language is shown; the
-// printed page has Montenegrin and English side by side.
+// printed page has Montenegrin and English side by side. Under the panel,
+// photos of the place with a button to the gallery.
 export default async function AboutPage({
   params,
 }: PageProps<"/[locale]/o-nama">) {
@@ -39,6 +41,16 @@ export default async function AboutPage({
           </p>
         </div>
       </CategoryPanel>
+      {/* One of each: the room, the mural, a set table and the menu */}
+      <PlacePhotos
+        photos={[
+          "diningRoomTiledFloor",
+          "muralArchWallLamp",
+          "tableSettingRedDoors",
+          "menuBookOnTable",
+        ]}
+        className="py-16 md:py-24"
+      />
     </main>
   )
 }
