@@ -31,7 +31,7 @@
       "cta": "View the full menu"
     },
     "gallery": {
-      "title": "From our kitchen"
+      "title": "From our restaurant"
     }
   },
   "menu": {
@@ -59,6 +59,16 @@
       "rolledCrepeCreamBiscuit": "Rolled crepe with cream, a biscuit and an edible flower",
       "waiterServingStrawberryPistachioCrepe": "A strawberry and pistachio crepe on its way to the table",
       "strawberryPistachioCrepeChocolate": "Crepe with pistachios, strawberries and chocolate",
+      "bakedPastaClayBowlGuests": "Baked pasta in a clay dish, guests in the background",
+      "guestDelightedStrawberryCrepe": "A delighted guest with clasped hands in front of a strawberry crepe",
+      "waiterServingCrepesGuests": "A waiter serving crepes to guests at a table",
+      "cheeseProsciuttoPlatter": "A board of cheeses and prosciutto",
+      "threeFriendsLaughingTable": "Three friends laughing at a table",
+      "pancakeTowerWaffleConePlate": "Pancake tower with strawberries and a chocolate-dipped wafer cone",
+      "strawberryWaffleChocolateDrizzle": "Strawberry waffle with a wafer roll and a chocolate drizzle",
+      "guestWithPancakeTower": "A guest with a pancake tower, topped with a wafer cone and edible flowers",
+      "pistachioCreamPressDessertGuest": "A waiter pressing strands of pistachio cream over a guest's dessert",
+      "toastWineGlassesDessert": "Guests raising a toast with wine over dessert",
       "diningRoomTiledFloor": "Dining room with wooden tables on a black-and-white tiled floor, the bar at the back",
       "muralArchWallLamp": "Arched mural and a wall lamp above a set table",
       "barCounterMuralFruitBasket": "The bar with a fruit basket, an arched mural behind it",

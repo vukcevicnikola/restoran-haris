@@ -42,15 +42,15 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Hero />
       <AboutIntro />
       <MenuPreview />
-      {/* "Iz naše kuhinje": a burger, a pizza and two sweet crepes. No top
+      {/* "Iz našeg restorana": moments with guests and the desserts. No top
           padding: the menu preview above ends with its own. */}
       <PlacePhotos
         title={t("title")}
         photos={[
-          "burgerFriesBlackPlate",
-          "chocolateHazelnutCrepeWafer",
-          "flatbreadPizzaHamWoodenBoard",
-          "strawberryPistachioCrepeChocolate",
+          "guestDelightedStrawberryCrepe",
+          "pancakeTowerWaffleConePlate",
+          "pistachioCreamPressDessertGuest",
+          "threeFriendsLaughingTable",
         ]}
         className="pb-16 md:pb-24"
       />

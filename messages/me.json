@@ -31,7 +31,7 @@
       "cta": "Pogledajte kompletan meni"
     },
     "gallery": {
-      "title": "Iz naše kuhinje"
+      "title": "Iz našeg restorana"
     }
   },
   "menu": {
@@ -59,6 +59,16 @@
       "rolledCrepeCreamBiscuit": "Smotana krepa sa kremom, keksom i jestivim cvijetom",
       "waiterServingStrawberryPistachioCrepe": "Krepa sa jagodama i pistaćima na putu do stola",
       "strawberryPistachioCrepeChocolate": "Krepa sa pistaćima, jagodama i čokoladom",
+      "bakedPastaClayBowlGuests": "Zapečena pasta u zemljanoj posudi, u pozadini gosti",
+      "guestDelightedStrawberryCrepe": "Oduševljena gošća pred krepom sa jagodama",
+      "waiterServingCrepesGuests": "Konobar služi krepe gostima za stolom",
+      "cheeseProsciuttoPlatter": "Daska sa sirevima i pršutom",
+      "threeFriendsLaughingTable": "Tri prijateljice se smiju za stolom",
+      "pancakeTowerWaffleConePlate": "Kula od palačinki sa jagodama i kornetom umočenim u čokoladu",
+      "strawberryWaffleChocolateDrizzle": "Vafl sa jagodama, rolnicom od napolitanke i čokoladnim prelivom",
+      "guestWithPancakeTower": "Gošća sa kulom od palačinki, ukrašenom kornetom i jestivim cvijećem",
+      "pistachioCreamPressDessertGuest": "Konobar istiskuje krem od pistaća na desert pred gošćom",
+      "toastWineGlassesDessert": "Gosti nazdravljaju vinom uz desert",
       "diningRoomTiledFloor": "Sala sa drvenim stolovima na podu od crno-bijelih pločica, u dnu šank",
       "muralArchWallLamp": "Mural u luku i zidna lampa iznad postavljenog stola",
       "barCounterMuralFruitBasket": "Šank sa korpom voća, iza njega mural sa lukovima",

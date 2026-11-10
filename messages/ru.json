@@ -31,7 +31,7 @@
       "cta": "Смотреть всё меню"
     },
     "gallery": {
-      "title": "С нашей кухни"
+      "title": "Из нашего ресторана"
     }
   },
   "menu": {
@@ -59,6 +59,16 @@
       "rolledCrepeCreamBiscuit": "Свёрнутый креп с кремом, печеньем и съедобным цветком",
       "waiterServingStrawberryPistachioCrepe": "Креп с клубникой и фисташками по пути к столу",
       "strawberryPistachioCrepeChocolate": "Креп с фисташками, клубникой и шоколадом",
+      "bakedPastaClayBowlGuests": "Запечённая паста в глиняной посуде, на заднем плане гости",
+      "guestDelightedStrawberryCrepe": "Восхищённая гостья перед крепом с клубникой",
+      "waiterServingCrepesGuests": "Официант подаёт крепы гостям за столом",
+      "cheeseProsciuttoPlatter": "Доска с сырами и прошутто",
+      "threeFriendsLaughingTable": "Три подруги смеются за столом",
+      "pancakeTowerWaffleConePlate": "Башня из панкейков с клубникой и вафельным рожком в шоколаде",
+      "strawberryWaffleChocolateDrizzle": "Вафля с клубникой, вафельной трубочкой и шоколадным соусом",
+      "guestWithPancakeTower": "Гостья с башней из панкейков, украшенной вафельным рожком и съедобными цветами",
+      "pistachioCreamPressDessertGuest": "Официант выдавливает фисташковый крем на десерт гостьи",
+      "toastWineGlassesDessert": "Гости поднимают бокалы с вином за десертом",
       "diningRoomTiledFloor": "Зал с деревянными столами на чёрно-белом плиточном полу, в глубине барная стойка",
       "muralArchWallLamp": "Роспись в арке и настенный светильник над сервированным столом",
       "barCounterMuralFruitBasket": "Барная стойка с корзиной фруктов, за ней роспись с арками",

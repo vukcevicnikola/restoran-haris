@@ -31,7 +31,7 @@
       "cta": "Tutto il menu"
     },
     "gallery": {
-      "title": "Dalla nostra cucina"
+      "title": "Dal nostro ristorante"
     }
   },
   "menu": {
@@ -59,6 +59,16 @@
       "rolledCrepeCreamBiscuit": "Crêpe arrotolata con crema, un biscotto e un fiore commestibile",
       "waiterServingStrawberryPistachioCrepe": "Una crêpe con fragole e pistacchi in arrivo al tavolo",
       "strawberryPistachioCrepeChocolate": "Crêpe con pistacchi, fragole e cioccolato",
+      "bakedPastaClayBowlGuests": "Pasta al forno in un tegame di terracotta, sullo sfondo gli ospiti",
+      "guestDelightedStrawberryCrepe": "Una cliente entusiasta davanti a una crêpe con fragole",
+      "waiterServingCrepesGuests": "Un cameriere serve le crêpes agli ospiti al tavolo",
+      "cheeseProsciuttoPlatter": "Tagliere di formaggi e prosciutto crudo",
+      "threeFriendsLaughingTable": "Tre amiche che ridono a tavola",
+      "pancakeTowerWaffleConePlate": "Torre di pancake con fragole e un cono di cialda ricoperto di cioccolato",
+      "strawberryWaffleChocolateDrizzle": "Waffle con fragole, un cannolo di cialda e un filo di cioccolato",
+      "guestWithPancakeTower": "Una cliente con una torre di pancake, decorata con un cono di cialda e fiori commestibili",
+      "pistachioCreamPressDessertGuest": "Un cameriere spreme la crema di pistacchio sul dessert di una cliente",
+      "toastWineGlassesDessert": "Ospiti che brindano con il vino, davanti a loro un dessert",
       "diningRoomTiledFloor": "Sala con tavoli di legno su un pavimento a piastrelle bianche e nere, in fondo il bancone",
       "muralArchWallLamp": "Murale ad arco e applique sopra un tavolo apparecchiato",
       "barCounterMuralFruitBasket": "Il bancone con un cesto di frutta, dietro un murale ad archi",

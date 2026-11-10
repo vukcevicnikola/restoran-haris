@@ -31,7 +31,7 @@
       "cta": "Tüm menüyü görün"
     },
     "gallery": {
-      "title": "Mutfağımızdan"
+      "title": "Restoranımızdan"
     }
   },
   "menu": {
@@ -59,6 +59,16 @@
       "rolledCrepeCreamBiscuit": "Kremalı, bisküvili ve yenilebilir çiçekli rulo krep",
       "waiterServingStrawberryPistachioCrepe": "Masaya götürülen çilekli ve Antep fıstıklı bir krep",
       "strawberryPistachioCrepeChocolate": "Antep fıstıklı, çilekli ve çikolatalı krep",
+      "bakedPastaClayBowlGuests": "Toprak kapta fırın makarna, arka planda misafirler",
+      "guestDelightedStrawberryCrepe": "Çilekli krepin karşısında sevinçli bir misafir",
+      "waiterServingCrepesGuests": "Garson masadaki misafirlere krep servis ediyor",
+      "cheeseProsciuttoPlatter": "Peynir ve prosciutto tahtası",
+      "threeFriendsLaughingTable": "Masada gülen üç arkadaş",
+      "pancakeTowerWaffleConePlate": "Çilekli ve çikolatalı külahlı pankek kulesi",
+      "strawberryWaffleChocolateDrizzle": "Çilekli, rulo gofretli ve çikolata soslu waffle",
+      "guestWithPancakeTower": "Külah ve yenilebilir çiçeklerle süslenmiş pankek kulesiyle bir misafir",
+      "pistachioCreamPressDessertGuest": "Garson, bir misafirin tatlısının üzerine fıstık kreması sıkıyor",
+      "toastWineGlassesDessert": "Tatlı eşliğinde şarapla kadeh kaldıran misafirler",
       "diningRoomTiledFloor": "Siyah beyaz karo zeminde ahşap masalarıyla salon, arkada bar",
       "muralArchWallLamp": "Kemerli duvar resmi ve kurulu bir masanın üzerinde duvar lambası",
       "barCounterMuralFruitBasket": "Meyve sepetli bar, arkasında kemerli duvar resmi",

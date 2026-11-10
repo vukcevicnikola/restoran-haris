@@ -8,8 +8,8 @@ import { categories } from "@/data/menu"
 import { site } from "@/data/site"
 import { localizedUrl, pageMetadata } from "@/lib/seo"
 import { breadcrumbs, menu } from "@/lib/structured-data"
-// TODO placeholder (the Voćne torte card photo), until the client sends one
-import panelImage from "@/public/images/menu/vecera.jpg"
+// The client's photo of three plates of crepes on a table
+import panelImage from "@/public/images/gallery/haris-moments-12-crepes-on-table-three-plates.webp"
 
 // The first two categories stand beside the welcome panel, the rest follow
 // in a grid below

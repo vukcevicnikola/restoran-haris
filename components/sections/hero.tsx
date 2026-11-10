@@ -5,11 +5,12 @@ import { buttonVariants } from "@/components/ui/button"
 import { site } from "@/data/site"
 import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
-// Phone: the client's own photo. TODO tablet (4:5) and desktop (wide) are
-// still Unsplash placeholders, see CLAUDE.me.
-import desktopImage from "@/public/images/hero/desktop.jpg"
-import mobileImage from "@/public/images/hero/mobile-bg.jpg"
-import tabletImage from "@/public/images/hero/tablet.jpg"
+// The client's photos, one per screen size. Phone: the bar with the arched
+// panels. Tablet: the tables towards the bar. Desktop: a waiter serving a
+// strawberry and pistachio crepe.
+import mobileImage from "@/public/images/gallery/haris-05-bar-counter-arched-panels.webp"
+import tabletImage from "@/public/images/gallery/haris-17-tables-towards-bar-menu.webp"
+import desktopImage from "@/public/images/gallery/haris-food-06-waiter-serving-strawberry-pistachio-crepe.webp"
 
 // Decorative: the heading carries the meaning
 const common = { alt: "", fill: true, sizes: "100vw" } as const
