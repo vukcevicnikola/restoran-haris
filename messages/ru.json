@@ -51,6 +51,12 @@
   },
   "gallery": {
     "title": "Галерея",
+    "viewer": {
+      "close": "Закрыть фотографию",
+      "previous": "Предыдущая фотография",
+      "next": "Следующая фотография",
+      "position": "Фотография {current} из {total}"
+    },
     "photos": {
       "burgerFriesBlackPlate": "Бургер с картофелем фри и соусом на чёрной тарелке",
       "bakedEggsClayDishFlatbread": "Яйца, запечённые с сыром в глиняной посуде, с лепёшкой",

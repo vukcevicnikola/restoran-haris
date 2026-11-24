@@ -51,6 +51,12 @@
   },
   "gallery": {
     "title": "Galeri",
+    "viewer": {
+      "close": "Fotoğrafı kapatın",
+      "previous": "Önceki fotoğraf",
+      "next": "Sonraki fotoğraf",
+      "position": "Fotoğraf {current} / {total}"
+    },
     "photos": {
       "burgerFriesBlackPlate": "Siyah tabakta patates kızartmalı ve soslu burger",
       "bakedEggsClayDishFlatbread": "Toprak kapta peynirli fırın yumurta, yanında ekmek",

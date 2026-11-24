@@ -51,6 +51,12 @@
   },
   "gallery": {
     "title": "Galerija",
+    "viewer": {
+      "close": "Zatvorite fotografiju",
+      "previous": "Prethodna fotografija",
+      "next": "Sljedeća fotografija",
+      "position": "Fotografija {current} od {total}"
+    },
     "photos": {
       "burgerFriesBlackPlate": "Burger sa pomfritom i sosom na crnom tanjiru",
       "bakedEggsClayDishFlatbread": "Jaja sa sirom zapečena u zemljanoj posudi, uz lepinju",

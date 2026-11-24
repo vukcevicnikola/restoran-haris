@@ -51,6 +51,12 @@
   },
   "gallery": {
     "title": "Gallery",
+    "viewer": {
+      "close": "Close the photo",
+      "previous": "Previous photo",
+      "next": "Next photo",
+      "position": "Photo {current} of {total}"
+    },
     "photos": {
       "burgerFriesBlackPlate": "Burger with fries and a dip on a black plate",
       "bakedEggsClayDishFlatbread": "Eggs baked with cheese in a clay dish, with flatbread",

@@ -42,9 +42,11 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Hero />
       <AboutIntro />
       <MenuPreview />
-      {/* "Iz našeg restorana": moments with guests and the desserts. No top
-          padding: the menu preview above ends with its own. */}
+      {/* "Iz našeg restorana": moments with guests and the desserts, opening
+          full screen. No top padding: the menu preview above ends with its
+          own. */}
       <PlacePhotos
+        viewer
         title={t("title")}
         photos={[
           "guestDelightedStrawberryCrepe",

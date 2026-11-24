@@ -51,6 +51,12 @@
   },
   "gallery": {
     "title": "Galleria",
+    "viewer": {
+      "close": "Chiudete la foto",
+      "previous": "Foto precedente",
+      "next": "Foto successiva",
+      "position": "Foto {current} di {total}"
+    },
     "photos": {
       "burgerFriesBlackPlate": "Burger con patatine fritte e salsa su un piatto nero",
       "bakedEggsClayDishFlatbread": "Uova al forno con formaggio in un tegame di terracotta, con pane",
